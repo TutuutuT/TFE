@@ -10,19 +10,13 @@ const count = ref(0)
 
 <template>
 
-  <div class="content__container">
-    <div class="text__line">PromptPilot</div>
-  </div>
+    <h1 class="text__line">PromptPilot</h1>
 
   <h2>{{ msg }}</h2>
 
 </template>
 
 <style scoped lang="scss">
-
-  .content-container {
-  text-align: center;
-}
 
 .text__line {
   font-variation-settings: "wght" 100, "ital" 0;
@@ -36,29 +30,27 @@ const count = ref(0)
   animation-iteration-count: infinite;
   animation-name: change;
   transition-timing-function: ease;
-
-  
 }
 
-@keyframes change {
-  0% {
-    font-variation-settings: "wght" 100, "ital" 0;
-  }
+// @keyframes change {
+//   0% {
+//     font-variation-settings: "wght" 100, "ital" 0;
+//   }
 
-  25% {
-    font-variation-settings: "wght" 900, "ital" 0;
-  }
+//   25% {
+//     font-variation-settings: "wght" 900, "ital" 0;
+//   }
 
-  50% {
-    font-variation-settings: "wght" 900, "ital" 1;
-  }
+//   50% {
+//     font-variation-settings: "wght" 900, "ital" 1;
+//   }
 
-  75% {
-    font-variation-settings: "wght" 100, "ital" 1;
-  }
+//   75% {
+//     font-variation-settings: "wght" 100, "ital" 1;
+//   }
 
-  100% {
-    font-variation-settings: "wght" 100, "ital" 0;
-  }
-}
+//   100% {
+//     font-variation-settings: "wght" 100, "ital" 0;
+//   }
+// }
 </style>
