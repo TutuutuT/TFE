@@ -18,7 +18,7 @@ import Card from './components/Card.vue'
 
 .component__container{
   width: 100%;
-  max-width: 1280px;
+  // max-width: 1280px;
 }
 
 .logo {
