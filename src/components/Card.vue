@@ -12,6 +12,8 @@ fetch('http://localhost:3000/prompts')
 
 </script>
 
+                        <!-- à faire -->
+                        <!-- au click -> hidden tous les autres -->
 
 <template>
 
@@ -70,13 +72,13 @@ fetch('http://localhost:3000/prompts')
     display: flex;
     flex-wrap: wrap;
 
-    &--favorite{
+    // &--favorite{
         
-    }
+    // }
 
-    &--category{
+    // &--category{
         
-    }
+    // }
 }
 
 
@@ -85,13 +87,20 @@ fetch('http://localhost:3000/prompts')
     margin: var(--grid-item-margin);
     font-size: 16px;
     font-weight: 700;
-    background-color: rgb(76, 76, 76);
+    background-image: url(../assets/image-test.jpg);
+    background-position: center;
+    background-size: 120%;
+    transition-duration: 0.2s;
     aspect-ratio: 230/300;
     border-radius: 20px;
     border: 0.5px solid white;
     display: flex;
     align-items: flex-end;
     padding: 10px;
+
+    &:hover{
+        background-size: 125%;
+    }
     
     &--favorite{
         width: 100%;
