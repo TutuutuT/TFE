@@ -28,7 +28,7 @@ fetch('http://localhost:3000/prompts')
         </div> -->
 
         <div class="card__container card__container--6">
-            <div v-for="prompt in prompts" class="card">
+            <div v-for="prompt in prompts" :key="prompt.id" class="card">
                 <!-- <div>{{ prompt.id }}</div> -->
                 <!-- <div>{{ prompt.category }}</div> -->
                 <p class="card__prompt">{{ prompt.original_prompt }}</p>

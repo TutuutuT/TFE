@@ -1,10 +1,16 @@
+<script setup>
+import HelloWorld from '../components/HelloWorld.vue'
+import Card from '../components/Card.vue'
+</script>
+
 <template>
   
-  <div class="nav">
-    <router-link :to=" { name: 'Home'}">Home</router-link>
-    <router-link :to=" { name: 'About'}">About</router-link>
-  </div>
-  <router-view/>
+  <section class="component__container">
+    
+    <HelloWorld msg="Thunus Bastien"/>
+    <Card></Card>
+    
+  </section>
 
 </template>
 
