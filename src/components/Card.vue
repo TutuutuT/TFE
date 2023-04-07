@@ -27,22 +27,14 @@ fetch('http://localhost:3000/prompts')
             </div>
         </div> -->
 
-        <!-- <div class="card__container card__container--6">
+        <div class="card__container card__container--6">
             <div v-for="prompt in prompts" :key="prompt.id" class="card">
-                <router-link :to="{ name: 'Card', params: { id: prompt.id }}">
+                <router-link :to="{ name: 'CardDetails', params: { id: prompt.id }}">
                     <p class="card__prompt">{{ prompt.original_prompt }}</p>
                 </router-link>
             </div>
-        </div> -->
-
-            <div v-for="prompt in prompts" :key="prompt.id" class="card__container card__container--6">
-                <router-link :to="{ name: 'Card', params: { id: prompt.id }}">
-                    <div class="card">
-                        <p class="card__prompt">{{ prompt.original_prompt }}</p>
-                    </div>
-                </router-link>
-            </div>
-
+        </div>
+        
         <!-- <div v-if="prompts">
             <div class="card__container--category">
                 <div class="card card--category">

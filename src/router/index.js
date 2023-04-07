@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Card from '../views/CardDetails.vue'
+import CardDetails from '../views/CardDetails.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
     {
@@ -15,10 +16,17 @@ const routes = [
         component: About
     },
     {
-        path: '/Card',
-        name: 'Card',
-        component: Card
+        path: '/Card/:id',
+        name: 'CardDetails',
+        component: CardDetails,
+        props: true
     },
+    // redirect
+    {
+        path: '/:catchALL(.*)',
+        name: 'NotFound',
+        component: NotFound
+    }
 ]
 
 const router = createRouter({
