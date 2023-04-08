@@ -1,15 +1,21 @@
 <script setup>
-    // fetch('http://localhost:3000/prompts/')
-    // .then(response => response.json())
-    // .then(data => prompts.value = data)
-    // .catch(err => console.log("error fetch"));
+import { defineProps, ref } from 'vue';
 
-    const props = defineProps(['id'])
+const props = defineProps(['id'])
+const prompt = ref(null);
+
+fetch('http://localhost:3000/prompts/' + props.id)
+.then(response => response.json())
+.then(data => prompt.value = data)
+.catch(err => console.log("error fetch details"));
 
 </script>
 
 <template>
 
-    <p>gros chibrax de {{ id }}</p>
+    <div v-if="prompt">
+        <p>gros chibrax de {{ id }}</p>
+        <p>bonjour {{ prompt.original_prompt }}</p>
+    </div>
 
 </template>

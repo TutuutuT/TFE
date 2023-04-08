@@ -21,7 +21,7 @@ const routes = [
         component: CardDetails,
         props: true
     },
-    // redirect
+    // 404
     {
         path: '/:catchALL(.*)',
         name: 'NotFound',
