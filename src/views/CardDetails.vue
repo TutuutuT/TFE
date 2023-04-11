@@ -15,15 +15,8 @@ fetch('http://localhost:3000/prompts/' + props.id)
 
 fetch('http://localhost:3000/AddParameters/')
 .then(response => response.json())
-.then(data => {
-  Addparams.value = data;
-  // initialiser les paramètres sélectionnés avec la valeur par défaut
-  data.forEach(param => {
-    selectedParams.value[param.titleShort] = param.params[0];
-  });
-})
+.then(data => Addparams.value = data)
 
-// un slot par paramtre et change au click
 
 function openDialog() {
   dialog.value.showModal();
@@ -33,12 +26,7 @@ function closeDialog() {
   dialog.value.close();
 }
 
-const modifiedPrompt = computed(() => {
-  return + prompt.original_prompt + paramPrompt.titleShort
-});
-
-
-// chaque titleshort = slot dont la valeur change en fonction du bouton radio selectionné
+computed
 
 </script>
 
@@ -46,8 +34,8 @@ const modifiedPrompt = computed(() => {
 
 <div v-if="prompt">
     <p>L'id est {{ id }}</p>
-    <div>{{ modifiedPrompt }}</div>
-    <div>{{ prompt.original_prompt }}</div>
+    <div>{{ selectedParams }}</div>
+    <div>{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }}</div>
   </div>
 
   <button @click="openDialog">Modifier</button>
@@ -55,15 +43,34 @@ const modifiedPrompt = computed(() => {
   <dialog ref="dialog">
     <h2>Modifier le prompt</h2>
     <form v-for="paramPrompt in Addparams" :key="paramPrompt.id">
-      <label>{{ paramPrompt.titleShort }}</label>
-        <label v-for="param in paramPrompt.params" :key="param.id">
-        {{ param.param }}
-        <input type="radio" :name="paramPrompt.titleShort" :value="param" v-model="paramPrompt.titleShort"/>
+
+      <label class="label__title">{{ paramPrompt.titleShort }}</label>
+
+        <label class="label__param" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
+
+        <input type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
+
     </label>
-    </form>
+    <input type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
+  </form>
     <div>
       <button @click="closeDialog">Fermer</button>
     </div>
   </dialog>
 
 </template>
+
+<style lang="scss">
+
+.label{
+  &__title{
+    margin-right: 30px;
+  }
+
+  &__param{
+    inline-size: 300px;
+  }
+  
+}
+
+</style>
