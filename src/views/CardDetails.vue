@@ -41,6 +41,9 @@ const modifiedPrompt = computed(() => {
   return modified;
 });
 
+
+// chaque titleshort = slot dont la valeur change en fonction du bouton radio selectionné
+
 </script>
 
 <template>
