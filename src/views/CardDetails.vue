@@ -5,7 +5,7 @@ const props = defineProps(['id'])
 const Addparams = ref(null);
 const prompt = ref(null);
 const dialog = ref(null);
-const editedPrompt = ref('');
+const paramPrompt = ref('')
 const selectedParams = ref({});
 
 fetch('http://localhost:3000/prompts/' + props.id)
@@ -23,7 +23,7 @@ fetch('http://localhost:3000/AddParameters/')
   });
 })
 
-console.log(Addparams);
+// un slot par paramtre et change au click
 
 function openDialog() {
   dialog.value.showModal();
@@ -34,11 +34,7 @@ function closeDialog() {
 }
 
 const modifiedPrompt = computed(() => {
-  let modified = prompt.value.original_prompt;
-  Object.values(selectedParams.value).forEach(param => {
-    modified = modified.replace(`{${param.title}}`, param.param);
-  });
-  return modified;
+  return + prompt.original_prompt + paramPrompt.titleShort
 });
 
 </script>
@@ -48,6 +44,7 @@ const modifiedPrompt = computed(() => {
 <div v-if="prompt">
     <p>L'id est {{ id }}</p>
     <div>{{ modifiedPrompt }}</div>
+    <div>{{ prompt.original_prompt }}</div>
   </div>
 
   <button @click="openDialog">Modifier</button>
@@ -58,7 +55,7 @@ const modifiedPrompt = computed(() => {
       <label>{{ paramPrompt.titleShort }}</label>
         <label v-for="param in paramPrompt.params" :key="param.id">
         {{ param.param }}
-        <input type="radio" :name="paramPrompt.titleShort" :value="param" v-model="selectedParams[paramPrompt.titleShort]"/>
+        <input type="radio" :name="paramPrompt.titleShort" :value="param" v-model="paramPrompt.titleShort"/>
     </label>
     </form>
     <div>
