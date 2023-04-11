@@ -51,7 +51,11 @@ computed
         <input type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
 
     </label>
+
+    <label class="label__param"> Reset
     <input type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
+    </label>
+    
   </form>
     <div>
       <button @click="closeDialog">Fermer</button>
