@@ -36,24 +36,25 @@ function closeDialog() {
     <div>{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }}</div>
   </div>
 
+  //computed pour avoir --ar + valeur si pas null
+
   <button @click="openDialog">Modifier</button>
 
-  <dialog ref="dialog" class=" p-1 space-x-1 bg-white/1 backdrop-blur-sm rounded-xl text-white border border-white/40 p-8">
-    <h2>Modifier le prompt</h2>
-    <form class="h-8 my-2 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
+  <dialog ref="dialog" class="bg-white/1 backdrop-blur-sm rounded-xl text-white border border-white/40 p-8">
+    <form class="h-8 my-3 rounded w-96 flex ml-0" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
       
-      <label class="label__title ml-2 mr-4 w-10">{{ paramPrompt.titleShort }}</label>
+      <label class="label__title mr-4 w-12">{{ paramPrompt.titleShort }}</label>
 
       <div class=" flex justify-between w-full bg-zinc-800 rounded-full">
 
-        <label class="label__param h-8 w-14 py-[3px] text-center text-sm leading-6 text-white hover:bg-zinc-500/30 rounded-full shadow"> None
+        <label class="hover:bg-zinc-500/30"> None
 
           <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
 
         </label>
 
   
-        <label class="label__param w-14 py-[3px] text-center label__param h-8 text-sm leading-6 text-white hover:hover:bg-zinc-500/30 rounded-full shadow transition-all" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
+        <label class="hover:bg-zinc-500/30" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
   
           <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
   
@@ -62,7 +63,7 @@ function closeDialog() {
       </div>
 
     </form>
-    <div>
+    <div class="w-96 flex justify-center mt-8">
       <button @click="closeDialog">Fermer</button>
     </div>
   </dialog>
@@ -73,6 +74,10 @@ function closeDialog() {
 
 label:has(input[type="radio"]:checked) {
   @apply bg-zinc-500;
+}
+
+label{
+  @apply w-14 py-[3px] text-center h-8 text-sm leading-6 text-white rounded-full shadow transition-all
 }
 
 </style>
