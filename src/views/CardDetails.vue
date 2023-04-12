@@ -43,8 +43,11 @@ computed
   <dialog ref="dialog">
     <h2>Modifier le prompt</h2>
     <form v-for="paramPrompt in Addparams" :key="paramPrompt.id">
-
+      
       <label class="label__title">{{ paramPrompt.titleShort }}</label>
+      <label class="label__param"> None
+      <input type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
+      </label>
 
         <label class="label__param" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
 
@@ -52,9 +55,6 @@ computed
 
     </label>
 
-    <label class="label__param"> Reset
-    <input type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
-    </label>
     
   </form>
     <div>
