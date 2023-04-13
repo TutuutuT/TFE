@@ -26,6 +26,8 @@ function closeDialog() {
   dialog.value.close();
 }
 
+  //computed pour avoir --ar + valeur si pas null
+
 </script>
 
 <template>
@@ -35,8 +37,6 @@ function closeDialog() {
     <div>{{ selectedParams }}</div>
     <div>{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }}</div>
   </div>
-
-  //computed pour avoir --ar + valeur si pas null
 
   <button @click="openDialog">Modifier</button>
 
