@@ -44,5 +44,40 @@
             {"paramId":"3", "param":"1"},
             {"paramId":"4", "param":"2"}
           ]}
+  ],
+  "SwitchParameters":[
+        {
+          "id":"4",
+          "title":"Uplight",
+          "titleShort":"--uplight",
+          "params":[
+            
+          ]},
+        {
+          "id":"5",
+          "title":"Niji",
+          "titleShort":"--niji",
+          "params":[
+            
+          ]},
+        {
+          "id":"6",
+          "title":"HD",
+          "titleShort":"--hd",
+          "params":[
+            
+          ]},
+        {
+          "id":"7",
+          "title":"Sameseed",
+          "titleShort":"--sameseed",
+          "params":[
+            
+          ]},
+        {
+          "id":"8",
+          "title":"Video",
+          "titleShort":"--video"
+          }    
   ]
 }
