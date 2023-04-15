@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer utilities {
+  .button-modifier{
+    @apply bg-white;
+  }
+} */
+
+@layer utilities {
+  .font-secondary{
+    font-family: oddval;
+  }
+}
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

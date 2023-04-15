@@ -1,13 +1,18 @@
 <script setup>
-  import HelloWorld from '../components/HelloWorld.vue'
   import Card from '../components/Card.vue'
+  import intro from '../components/intro.vue';
 </script>
 
 <template>
+
+  <section class="w-full h-full">
+   <intro></intro>
+
+  </section>
   
   <section class="component__container">
     
-    <HelloWorld msg="Thunus Bastien"/>
+    <HelloWorld/>
     <Card></Card>
     
   </section>
@@ -19,18 +24,5 @@
 .component__container{
   width: 100%;
   // max-width: 1280px;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
