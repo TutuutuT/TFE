@@ -17,7 +17,7 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -53,5 +53,5 @@ h1 {
 }
 
 button{
-  @apply bg-white/5 backdrop-blur-sm rounded-lg text-base font-semibold text-white border border-white/40 px-5 py-2 cursor-pointer hover:bg-white hover:text-zinc-950 transition-all duration-200;
+  @apply bg-white/5 backdrop-blur-sm rounded-lg text-base font-semibold text-white border-2 border-white/40 px-5 py-2 cursor-pointer hover:bg-white hover:text-zinc-950 transition-all duration-200;
 }

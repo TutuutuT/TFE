@@ -12,20 +12,11 @@ fetch('http://localhost:3000/prompts')
 
 </script>
 
-                        <!-- à faire -->
-                        <!-- au click -> hidden tous les autres -->
-
 <template>
 
+    <h2 class="text-center my-20 font-secondary text-white/20">PromptPilot</h2>
     <section class="card__container__section">
 
-        <!-- <div v-if="prompts">
-            <div class="card__container--favorite">
-                <div class="card card--favorite">
-                <p class="card__prompt">{{ prompts[0].original_prompt }}</p>
-                </div>
-            </div>
-        </div> -->
 
         <div class="card__container card__container--6">
             <div v-for="prompt in prompts" :key="prompt.id" class="card">
@@ -53,13 +44,11 @@ fetch('http://localhost:3000/prompts')
 
 :root{
     --grid-item-margin: 15px;
-    --grid-items-per-row: 6
 }
 
 @media (max-width: 1200px) {
     :root{
     --grid-item-margin: 15px;
-    --grid-items-per-row: 5
 }
 }
 
@@ -68,22 +57,15 @@ fetch('http://localhost:3000/prompts')
 }
 
 .card__container{
-    margin: 0 30px;
+    margin: 0 15px;
     display: flex;
     flex-wrap: wrap;
-
-    // &--favorite{
-        
-    // }
-
-    // &--category{
-        
-    // }
 }
 
 
 .card{
-    width: calc(100%/ var(--grid-items-per-row) - var(--grid-item-margin) - 0.01px);
+    @apply border-2 rounded-3xl border-white/40;
+    width: calc((100%/5) - (30px));
     margin: var(--grid-item-margin);
     font-size: 16px;
     font-weight: 700;
@@ -92,19 +74,14 @@ fetch('http://localhost:3000/prompts')
     background-size: 120%;
     transition-duration: 0.2s;
     aspect-ratio: 230/300;
-    border-radius: 20px;
-    border: 0.5px solid white;
     display: flex;
     align-items: flex-end;
     padding: 10px;
+    line-height: 130%;
 
     &:hover{
         background-size: 125%;
-    }
-    
-    &--favorite{
-        width: 100%;
-    }
+    }   
 
     &--category{
         width: 100%;
@@ -115,11 +92,17 @@ fetch('http://localhost:3000/prompts')
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(17.5px);
     padding: 5px 10px;
-    border-radius: 14px;
+    border-radius: 24px;
     margin: 0;
     height: 70px;
     overflow: hidden;
 }
+
+.card__container{
+    &:has(> :last-child:nth-child(odd)) > :first-child {
+        width: calc((100%/2.5) - (30px));
+        aspect-ratio: 230/140;
+    }}
 
 
 </style>
