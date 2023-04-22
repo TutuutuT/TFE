@@ -41,7 +41,7 @@ const handleCheckboxChange = () => {
 
 <template>
 
-<div class="w-full flex justify-center px-8" v-if="prompt">
+<div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
 
     <div class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</div>
   
