@@ -16,7 +16,7 @@ const count = ref(0)
                 <h1 class="text__line">PromptPilot</h1>
             </div>
             <div class="mt-[30px] h-[30vh] flex">
-                <div class="w-[calc(65vw-30px)] mr-[15px] midjourneyBck flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                <div class="w-[calc(65vw-30px)] mr-[15px] midjourneyBck flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 hover:scale-[98%] transition-all">
                     
                 </div>
                 <div class="w-[calc(35vw-30px)] ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
@@ -34,7 +34,7 @@ const count = ref(0)
         </div>
         <div class="w-[calc(20vw-35px)] ml-[15px] mr-[30px] mb-[15px] mt-[15px]">
             <div class="h-[calc(90vh+60px)] flex justify-center items-center bg-[#37A952] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
-                <div class="rotate-90 font-secondary font-bold text-3xl">Votre copilot pour Midjourney</div>
+                <div class="rotate-90 font-secondary font-bold text-4xl">Votre&nbsp;copilot&nbsp;Midjourney</div>
             </div>
         </div>
 
@@ -54,7 +54,7 @@ const count = ref(0)
 
 .text__line {
   font-variation-settings: "wght" 100, "ital" 0;
-  font-family: Oddval Variable;
+  font-family: Oddval;
   line-height: 80%;
   color: #ffffff;
   white-space: nowrap;

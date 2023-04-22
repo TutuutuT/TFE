@@ -7,6 +7,10 @@
     @apply bg-white;
   }
 } */
+@font-face {
+  font-family: oddval;
+  src: url(./assets/Fonts/Oddval-Variable-VF.ttf);
+}
 
 @layer utilities {
   .font-secondary{
@@ -30,10 +34,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-@font-face {
-  font-family: oddval;
-  src: url(./assets/Fonts/Oddval\ Variable-VF.ttf);
-}
 
 a {
   font-weight: 500;

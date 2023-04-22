@@ -14,16 +14,14 @@ fetch('http://localhost:3000/prompts')
 
 <template>
 
-    <h2 class="text-center my-20 font-secondary text-white/20">PromptPilot</h2>
+    <h2 class="text-center my-20 font-secondary text-white/20 font-bold">PromptPilot</h2>
     <section class="card__container__section">
 
 
         <div class="card__container card__container--6">
-            <div v-for="prompt in prompts" :key="prompt.id" class="card">
-                <router-link :to="{ name: 'CardDetails', params: { id: prompt.id }}">
+                <router-link v-for="prompt in prompts" :key="prompt.id" class="card" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
                     <p class="card__prompt">{{ prompt.original_prompt }}</p>
                 </router-link>
-            </div>
         </div>
         
         <!-- <div v-if="prompts">
@@ -64,11 +62,11 @@ fetch('http://localhost:3000/prompts')
 
 
 .card{
-    @apply border-2 rounded-3xl border-white/40;
+    @apply border-2 rounded-3xl border-white/40 hover:scale-[98%];
     width: calc((100%/5) - (30px));
     margin: var(--grid-item-margin);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     background-image: url(../assets/image-test.jpg);
     background-position: center;
     background-size: 120%;
@@ -77,11 +75,7 @@ fetch('http://localhost:3000/prompts')
     display: flex;
     align-items: flex-end;
     padding: 10px;
-    line-height: 130%;
-
-    &:hover{
-        background-size: 125%;
-    }   
+    line-height: 130%;   
 
     &--category{
         width: 100%;
@@ -89,12 +83,11 @@ fetch('http://localhost:3000/prompts')
 }
 
 .card__prompt{
-    background: rgba(255, 255, 255, 0.1);
+    @apply flex items-center bg-white/[0.1];
     backdrop-filter: blur(17.5px);
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 24px;
-    margin: 0;
-    height: 70px;
+    height: 90px;
     overflow: hidden;
 }
 

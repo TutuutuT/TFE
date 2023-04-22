@@ -12,7 +12,6 @@
   
   <section class="component__container">
     
-    <HelloWorld/>
     <Card></Card>
     
   </section>
