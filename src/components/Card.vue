@@ -19,8 +19,9 @@ fetch('http://localhost:3000/prompts')
 
 
         <div class="card__container card__container--6">
-                <router-link v-for="prompt in prompts" :key="prompt.id" class="card" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
+                <router-link v-for="prompt in prompts" :key="prompt.id" class="card"  :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
                     <p class="card__prompt">{{ prompt.original_prompt }}</p>
+                    <img>
                 </router-link>
         </div>
         
@@ -67,7 +68,6 @@ fetch('http://localhost:3000/prompts')
     margin: var(--grid-item-margin);
     font-size: 16px;
     font-weight: 500;
-    background-image: url(../assets/image-test.jpg);
     background-position: center;
     background-size: 120%;
     transition-duration: 0.2s;

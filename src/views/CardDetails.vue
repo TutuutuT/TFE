@@ -73,6 +73,17 @@ const handleCheckboxChange = () => {
 </div>
 </div>
 
+<div class="w-full flex justify-center px-8 pt-6">
+  <div class="flex items-center">
+    <div class="rounded-xl flex overflow-hidden border-2 border-white/40 max-w-3xl">
+      <img class="" :src="`${ prompt.imageUrl }`">
+    </div>
+  </div>
+</div>
+
+
+
+
   <dialog ref="dialog" class="bg-white/1 backdrop-blur-sm rounded-xl text-white border-2 border-white/40 p-4">
     <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
       
