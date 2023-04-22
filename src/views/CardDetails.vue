@@ -43,7 +43,7 @@ const handleCheckboxChange = () => {
 
 <div class="w-full flex justify-center px-8" v-if="prompt">
 
-    <div class="p-4 rounded-xl border border-white/40 max-w-3xl font-semibold">{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</div>
+    <div class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</div>
   
     <div class="flex items-center">
     <button class="group rounded-l-none border-l-0 px-3 py-4 !important">
@@ -66,7 +66,7 @@ const handleCheckboxChange = () => {
 </button>
 </div>
 
-  <dialog ref="dialog" class="bg-white/1 backdrop-blur-sm rounded-xl text-white border border-white/40 p-4">
+  <dialog ref="dialog" class="bg-white/1 backdrop-blur-sm rounded-xl text-white border-2 border-white/40 p-4">
     <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
       
       <label class="label__title mr-4 w-28  font-semibold">{{ paramPrompt.titleShort }}</label>
