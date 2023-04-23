@@ -88,7 +88,12 @@ fetch('http://localhost:3000/prompts')
     padding: 10px 10px;
     border-radius: 24px;
     height: 90px;
+    display: -webkit-box;
     overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -max-lines: 3;
 }
 
 .card__container{
