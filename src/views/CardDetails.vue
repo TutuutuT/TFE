@@ -74,9 +74,9 @@ const handleCheckboxChange = () => {
 </div>
 
 <div class="w-full flex justify-center px-8 pt-6">
-  <div class="flex items-center">
-    <div class="rounded-xl flex overflow-hidden border-2 border-white/40 max-w-3xl">
-      <img class="" :src="`${ prompt.imageUrl }`">
+  <div class="flex items-center px-8">
+    <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
+      <img class="relative" :src="`${ prompt.imageUrl }`">
     </div>
   </div>
 </div>
