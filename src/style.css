@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
-  .button-modifier{
-    @apply bg-white;
-  }
-} */
 @font-face {
   font-family: oddval;
   src: url(./assets/Fonts/Oddval-Variable-VF.ttf);

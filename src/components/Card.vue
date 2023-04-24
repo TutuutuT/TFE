@@ -83,9 +83,9 @@ fetch('http://localhost:3000/prompts')
 }
 
 .card__prompt{
-    @apply flex items-center bg-white/[0.1];
+    @apply flex items-center bg-neutral-600/[0.1];
     backdrop-filter: blur(17.5px);
-    padding: 10px 10px;
+    padding: 10px 1vw;
     border-radius: 24px;
     height: 90px;
     overflow: hidden;

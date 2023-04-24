@@ -1,11 +1,36 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import CardDetails from '../views/CardDetails.vue'
 import NotFound from '../views/NotFound.vue'
 
-const routes = [
-    {
+// const routes = [
+//     {
+//         path: '/projets/tfe/bast/',
+//         name: 'Home',
+//         component: Home
+//     },
+//     {
+//         path: '/projets/tfe/bast//About',
+//         name: 'About',
+//         component: About
+//     },
+//     {
+//         path: '/projets/tfe/bast//Card/:id',
+//         name: 'CardDetails',
+//         component: CardDetails,
+//         props: true
+//     },
+//     // 404
+//     {
+//         path: '/projets/tfe/bast//:catchALL(.)',
+//         name: 'NotFound',
+//         component: NotFound
+//     }
+// ]
+//
+const router = createRouter({
+    routes:[{
         path: '/',
         name: 'Home',
         component: Home
@@ -23,15 +48,18 @@ const routes = [
     },
     // 404
     {
-        path: '/:catchALL(.*)',
+        path: '/:catchALL(.)',
         name: 'NotFound',
         component: NotFound
-    }
-]
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes
+    }],
+    history: createWebHashHistory()
 })
+// const router = createRouter({
+//     history: createWebHistory(),
+//     routes
+// })
+
+
+
 
 export default router;
