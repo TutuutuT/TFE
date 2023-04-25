@@ -1,11 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { gsap } from 'gsap';
+import { VueElement, ref } from 'vue'
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
+//anim gsap
+
+const tlPart1 = ref(null)
+
+var tl1 = gsap.timeline();
+  tl1.to(tlPart1, {y: 100})
 </script>
 
 <template>
@@ -13,7 +19,7 @@ const count = ref(0)
     <section class="h-full flex">
         <div class="w-[calc(80vw-55px)] mr-[15px] ml-[30px] mb-[15px] mt-[15px]">
             <div class="h-[30vh] flex justify-center items-center bg-white/5 backdrop-blur-sm rounded-3xl text-[2.2cqi] text-white border-2 border-white/40">
-                <h1 class="text__line">PromptPilot</h1>
+                <h1 class="text__line"><span ref="tlPart1">Prompt</span><span>Pilot</span></h1>
             </div>
             <div class="mt-[30px] h-[30vh] flex">
                 <div class="w-[calc(65vw-30px)] mr-[15px] midjourneyBck flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 hover:scale-[98%] transition-all">
