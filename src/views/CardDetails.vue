@@ -129,8 +129,6 @@ const handleCheckboxChange = () => {
   
 </Transition>
 
-
-
                   <!-- box image -->
 
 <div class="w-full flex justify-center px-8 pt-6">
