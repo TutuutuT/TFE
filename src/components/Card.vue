@@ -18,7 +18,7 @@ fetch('http://localhost:3000/prompts')
     <section class="card__container__section">
 
         <div class="card__container card__container--6">
-                <router-link v-for="prompt in prompts" :key="prompt.id" class="card ring-sky-500 hover:ring-2"  :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
+                <router-link v-for="prompt in prompts" :key="prompt.id" class="card ring-sky-500 hover:ring-2 bg-no-repeat" :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
                     <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
                         <p class="card__prompt">{{ prompt.original_prompt }}</p>
                     </div>
@@ -60,7 +60,7 @@ fetch('http://localhost:3000/prompts')
     font-size: 16px;
     font-weight: 500;
     background-position: center;
-    background-size: 120%;
+    background-size: cover;
     transition-duration: 0.2s;
     aspect-ratio: 230/300;
     display: flex;

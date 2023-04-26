@@ -66,9 +66,9 @@ onMounted(() => {
 <style scoped lang="scss">
 
 .midjourneyBck{
-    background-image: url(../assets/MidjourneyImages/8495955.png);
+    background-image: url(../assets/MidjourneyImages/brume.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 
 .width-change-part1{

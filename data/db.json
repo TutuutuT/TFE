@@ -16,7 +16,7 @@
     "imageUrl": "./src/assets/MidjourneyImages/8495955.png"
   },
 
-  {"id":"2", "original_prompt":"Mocheiae ojat a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD",
+  {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, depth of field, red color, shot on XCD 3,5-4,5/35-75, kodak portra 800 film stock",
     "category":"realistic",
     "style": "realistic",
     "character": "kitten",
@@ -30,7 +30,7 @@
     "renderer": "photography",
     "lighting": "cyberspace squid",
     "parameters": "ultra detailed",
-    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"  
+    "imageUrl": "./src/assets/MidjourneyImages/car.jpg"  
   },
 
   {"id":"3", "original_prompt":"sad Forest fairy is floating in the fluffy voluminous light pink clouds in the blue sky, interesting composition, cinematography, surreal",
@@ -80,7 +80,7 @@
     "parameters": "",
     "imageUrl": "./src/assets/MidjourneyImages/0_1_640_N.webp"},
 
-  {"id":"6", "original_prompt":"galaxy stars colorful saturated bright nebula stars planets",
+  {"id":"6", "original_prompt":"Up - close Macro shot of the fur of a cheetah. Using the Sony a7S III camera with the Sony FE 50mm f/ 1. 4 ZA lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere. --ar 16:9 --q 2 --v 5 ",
     "category":"realistic",
     "style": "realistic",
     "character": "kitten",
@@ -94,7 +94,7 @@
     "renderer": "photography",
     "lighting": "cyberspace squid",
     "parameters": "ultra detailed",
-    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"},
+    "imageUrl": "./src/assets/MidjourneyImages/shita.jpg"},
 
   {"id":"7", "original_prompt":"galaxy stars colorful saturated bright nebula stars planets",
     "category":"realistic",
@@ -110,7 +110,39 @@
     "renderer": "photography",
     "lighting": "cyberspace squid",
     "parameters": "ultra detailed",
-    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"}
+    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"},
+
+  {"id":"8", "original_prompt":"In a surreal scene set in the vastness of space, an astronaut in a futuristic space suit swims through a pool of liquid foil, with the Cybertruck as their floating sanctuary, as you capture the mesmerizing moment up close with the Sony a7S III camera and the Sony FE 50mm f/1.4 ZA lens. The interstellar landscapes provide a stunning contrast to the astronaut's otherworldly swim, while Wes Anderson's whimsical visual style adds a touch of playfulness to the scene. The dark and moody tones, accentuated by deep blacks and a dramatic atmosphere, create an otherworldly ambiance, reminiscent of Christopher Nolan's films",
+    "category":"",
+    "style": "",
+    "character": "",
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": "",
+    "imageUrl": "./src/assets/MidjourneyImages/fuze.jpg"},
+
+  {"id":"9", "original_prompt":"8bit Shiba Inu Eating Ramen in Yatai Stand --niji 5 ",
+    "category":"",
+    "style": "",
+    "character": "",
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": "",
+    "imageUrl": "./src/assets/MidjourneyImages/shiba.jpg"}
 ],
   "AddParameters":[
     {

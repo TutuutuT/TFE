@@ -163,7 +163,7 @@ const copyText = () => {
 
 <Transition name="slide-fade">
   <div v-if="openSend" class="flex justify-center relative">
-    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4">
+    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <div>iekzeioaz</div>
       <div class="w-96 flex justify-center mt-6">
         <button v-on:click="openSend = !openSend">Fermer</button>
@@ -174,8 +174,8 @@ const copyText = () => {
 </Transition>
 
 <Transition name="slide-fade">
-  <div v-if="openSend" class="flex justify-center relative">
-    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4">
+  <div v-if="openMidjourney" class="flex justify-center relative">
+    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <div>iekzeioaz</div>
       <div class="w-96 flex justify-center mt-6">
         <button v-on:click="openMidjourney = !openMidjourney">Fermer</button>
