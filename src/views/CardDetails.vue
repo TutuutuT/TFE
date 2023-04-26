@@ -13,7 +13,6 @@ const selectedParams = ref({})
 let openSettings = ref(false)
 let openSend = ref(false)
 let openMidjourney = ref(false)
-const imageUrl = ref(prompt.imageUrl)
 
 fetch('http://localhost:3000/prompts/' + props.id)
 .then(response => response.json())
@@ -190,7 +189,7 @@ const copyText = () => {
 <div class="w-full flex justify-center px-8 my-6">
   <div class="flex items-center px-8">
     <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
-      <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt.imageUrl }`">
+      <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">
     </div>
   </div>
 </div>
