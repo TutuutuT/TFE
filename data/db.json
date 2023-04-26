@@ -29,7 +29,8 @@
     "resolution": "4K",
     "renderer": "photography",
     "lighting": "cyberspace squid",
-    "parameters": "ultra detailed"
+    "parameters": "ultra detailed",
+    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"  
   },
 
   {"id":"3", "original_prompt":"sad Forest fairy is floating in the fluffy voluminous light pink clouds in the blue sky, interesting composition, cinematography, surreal",
@@ -108,14 +109,8 @@
     "resolution": "4K",
     "renderer": "photography",
     "lighting": "cyberspace squid",
-    "parameters": "ultra detailed"},
-
-  {"id":"8", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"},
-  {"id":"9", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"},
-  {"id":"10", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"},
-  {"id":"11", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"},
-  {"id":"12", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"},
-  {"id":"13", "original_prompt":"ekzaeapzg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD", "category":"realistic", "style": "realistic", "character": "kitten", "object": "helmet", "location": "space", "action": "bar fight", "color": "light pastels", "artist": "James Jean, Jean-Honore Fragonard", "background": "powder pastel", "resolution": "4K", "renderer": "photography", "lighting": "cyberspace squid", "parameters": "ultra detailed"}
+    "parameters": "ultra detailed",
+    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"}
 ],
   "AddParameters":[
     {

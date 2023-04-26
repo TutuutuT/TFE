@@ -71,40 +71,6 @@ onMounted(() => {
     background-position: center;
 }
 
-.text__line {
-  font-variation-settings: "wght" 100, "ital" 0;
-  font-family: Oddval;
-  line-height: 80%;
-  color: #ffffff;
-  white-space: nowrap;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-name: change;
-  transition-timing-function: ease;
-}
-
-@keyframes change {
-  0% {
-    font-variation-settings: "wght" 100, "ital" 0;
-  }
-
-  25% {
-    font-variation-settings: "wght" 900, "ital" 0;
-  }
-
-  50% {
-    font-variation-settings: "wght" 900, "ital" 1;
-  }
-
-  75% {
-    font-variation-settings: "wght" 100, "ital" 1;
-  }
-
-  100% {
-    font-variation-settings: "wght" 100, "ital" 0;
-  }
-}
-
 .width-change-part1{
   animation-duration: 15s;
   animation-iteration-count: infinite;

@@ -1,6 +1,7 @@
 <script setup>
   import Card from '../components/Card.vue'
   import intro from '../components/intro.vue';
+  import Footer from '../components/Footer.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@
   <section class="component__container">
     
     <Card></Card>
+    <Footer/>
     
   </section>
 
