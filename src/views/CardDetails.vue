@@ -9,7 +9,7 @@ const dialog = ref(null);
 const paramPrompt = ref('')
 const paramPromptSwitch = ref('')
 const selectedParams = ref({});
-let openSettings = ref(true)
+let openSettings = ref(false)
 
 fetch('http://localhost:3000/prompts/' + props.id)
 .then(response => response.json())
@@ -151,7 +151,7 @@ const handleCheckboxChange = () => {
         <li>Qualité de rendu :<span class=" font-bold "> --q - .25, .5, 1, or 2</span></li>
         <li>Utiliser lumière alternative :<span class=" font-bold "> --uplight</span></li>
         <li>Style anime :<span class=" font-bold "> --niji</span></li>
-        <li>Rendu hd :<span class=" font-bold "> --ar</span></li>
+        <li>Rendu hd :<span class=" font-bold "> --hd</span></li>
         <li>Images similaires :<span class=" font-bold "> --sameseed</span></li>
         <li>Vidéo de la progression :<span class=" font-bold "> --video</span></li>
       </ul>
