@@ -6,17 +6,17 @@ import { gsap } from 'gsap';
 
 <template>
 
-<footer class="mb-6 mt-48 h-[80vh]">
-    <div class="flex flex-col">
-        <ul class="italic flex w-full justify-center justify-between lg:max-w-4xl max-w-auto px-12 lg:px-0 mx-auto border-b-2 border-white/40">
+<footer class="mb-6 mt-48 mx-44 lg:mx-auto h-[60svh]">
+    <div class="flex flex-col lg:flex-row lg:mx-[16vw] justify-between text-lg">
+        <p class="lg:mx-12">L'éditeur de prompt pour Midjourney</p>
+        <ul class="italic flex flex-col justify-between lg:mx-12 lg:px-0 mx-auto">
             <li>ezaeaze</li>
             <li>Thunus Bastien</li>
             <li>DWT</li>
             <li>©2023</li>
         </ul>
-        <p>L'éditeur de prompt pour Midjourney</p>
     </div>
-    <div class="text__line text-[6.5cqi] text-center mt-12">PromptPilot</div>
+    <div class="flex justify-center items-end text__line text-[9cqi] h-full">PromptPilot</div>
 </footer>
 
 </template>
