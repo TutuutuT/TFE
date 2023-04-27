@@ -60,8 +60,15 @@ const copyText = () => {
 
 <div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
 
-    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">{{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</p>
-  
+    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
+      
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.character" :key="key">{{ value }}</span>
+      
+      {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</p>
+    
+    <!-- <span class="hover:bg-slate-800" v-for="(value, key) in prompt.detailed_prompt" :key="key">{{ value }}</span> -->
+      
     <div class="flex items-center">
     <button class="group rounded-l-none border-l-0 px-3 py-4 !important" @click="copyText">
 
@@ -243,6 +250,10 @@ label{
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   scale: 0;
+}
+
+.PromptHover{
+  @apply hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-sm relative inline-block before:-z-10 z-10 cursor-pointer;
 }
 
 </style>
