@@ -52,7 +52,10 @@ const router = createRouter({
         name: 'NotFound',
         component: NotFound
     }],
-    history: createWebHashHistory()
+    history: createWebHashHistory(),
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0 }
+      },
 })
 // const router = createRouter({
 //     history: createWebHistory(),
