@@ -64,6 +64,15 @@ const copyText = () => {
       
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style" :key="key">{{ value }}</span>
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.character" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.object" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.location" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.action" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.color" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.artist" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.background" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.renderer" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.lighting" :key="key">{{ value }}</span>
+      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.details" :key="key">{{ value }}</span>
       
       {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</p>
     
@@ -253,7 +262,7 @@ label{
 }
 
 .PromptHover{
-  @apply hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-sm relative inline-block before:-z-10 z-10 cursor-pointer;
+  @apply mx-[2.5px] hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-sm relative inline-block before:-z-10 z-10 cursor-pointer;
 }
 
 </style>
