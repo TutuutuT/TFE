@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 <template>
 
 <footer class="mb-6 mt-48 h-[40svh] font-semibold">
-    <p class="w-full mb-20 text-xl lg:mx-20 mx-10">L'éditeur de prompt pour Midjourney</p>
+    <p class="w-full mb-20 text-xl lg:px-20 px-10">L'éditeur de prompt pour Midjourney</p>
     <div class="text-lg">
         <ul class="italic flex flex-col justify-between lg:mx-20 mx-10 leading-10">
             <li>ezaeaze</li>

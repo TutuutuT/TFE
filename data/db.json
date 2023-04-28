@@ -1,21 +1,20 @@
 { "prompts":[
   {"id":"1", "original_prompt":"Beautiful winged valkyrie cyborg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD",
-    "category":"realistic",
-    "style": "realistic",
-    "character": "Beautiful winged valkyrie cyborg fembot",
-    "object": "helmet",
-    "location": "in a bar fight",
-    "action": "bar fight",
-    "color": "light pastels",
-    "artist": "James Jean, Jean-Honore Fragonard",
-    "background": "powder pastel",
-    "resolution": "4K", 
-    "renderer": "photography",
-    "lighting": "cyberspace squid",
-    "parameters": "ultra detailed",
-    "camera": "",
-    "details": "",
-    "imageUrl": "./src/assets/MidjourneyImages/8495955.png"
+  "detailed_prompt": {
+    "category":"",
+    "style": [""],
+    "character": ["winged valkyrie cyborg fembot"],
+    "object": ["wearing a cyberspace squid helmet with a holographic HUD"],
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./src/assets/MidjourneyImages/8495955.png"
   },
 
   {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, depth of field, red color, shot on XCD 3,5-4,5/35-75, kodak portra 800 film stock",
@@ -91,41 +90,46 @@
   },
 
   {"id":"6", "original_prompt":"Up - close Macro shot of the fur of a cheetah. Using the Sony a7S III camera with the Sony FE 50mm f/ 1. 4 ZA lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere. --ar 16:9 --q 2 --v 5 ",
-    "category":"realistic",
-    "style": "realistic",
-    "character": "kitten",
-    "object": "helmet",
-    "location": "space",
-    "action": "bar fight",
-    "color": "light pastels",
-    "artist": "James Jean, Jean-Honore Fragonard",
-    "background": "powder pastel",
-    "resolution": "4K",
-    "renderer": "photography",
-    "lighting": "cyberspace squid",
-    "parameters": "ultra detailed",
-    "imageUrl": "./src/assets/MidjourneyImages/shita.jpg"},
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./src/assets/MidjourneyImages/shita.jpg"
+},
 
   {"id":"7", "original_prompt":"galaxy stars colorful saturated bright nebula stars planets",
-    "category":"realistic",
-    "style": "realistic",
-    "character": "kitten",
-    "object": "helmet",
-    "location": "space",
-    "action": "bar fight",
-    "color": "light pastels",
-    "artist": "James Jean, Jean-Honore Fragonard",
-    "background": "powder pastel",
-    "resolution": "4K",
-    "renderer": "photography",
-    "lighting": "cyberspace squid",
-    "parameters": "ultra detailed",
-    "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"},
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"
+},
 
   {"id":"8", "original_prompt":"In a surreal scene set in the vastness of space, an astronaut in a futuristic space suit swims through a pool of liquid foil, with the Cybertruck as their floating sanctuary, as you capture the mesmerizing moment up close with the Sony a7S III camera and the Sony FE 50mm f/1.4 ZA lens. The interstellar landscapes provide a stunning contrast to the astronaut's otherworldly swim, while Wes Anderson's whimsical visual style adds a touch of playfulness to the scene. The dark and moody tones, accentuated by deep blacks and a dramatic atmosphere, create an otherworldly ambiance, reminiscent of Christopher Nolan's films",
+  "detailed_prompt": {
     "category":"",
-    "style": "",
-    "character": "",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
     "object": "",
     "location": "",
     "action": "",
@@ -135,13 +139,15 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": "",
-    "imageUrl": "./src/assets/MidjourneyImages/fuze.jpg"},
+    "parameters": ""},
+  "imageUrl": "./src/assets/MidjourneyImages/fuze.jpg"
+},
 
   {"id":"9", "original_prompt":"8bit Shiba Inu Eating Ramen in Yatai Stand --niji 5 ",
+  "detailed_prompt": {
     "category":"",
-    "style": "",
-    "character": "",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
     "object": "",
     "location": "",
     "action": "",
@@ -151,9 +157,14 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": "",
-    "imageUrl": "./src/assets/MidjourneyImages/shiba.jpg"}
+    "parameters": ""},
+  "imageUrl": "./src/assets/MidjourneyImages/shiba.jpg"
+}
 ],
+
+
+
+
   "AddParameters":[
     {
       "id":"1",
@@ -186,39 +197,107 @@
             {"paramId":"4", "param":"2"}
           ]}
   ],
+
+
+
+
   "SwitchParameters":[
         {
           "id":"4",
           "title":"Uplight",
-          "titleShort":"--uplight",
-          "params":[
-            
-          ]},
+          "titleShort":"--uplight"
+          },
         {
           "id":"5",
           "title":"Niji",
-          "titleShort":"--niji",
-          "params":[
-            
-          ]},
+          "titleShort":"--niji"
+          },
         {
           "id":"6",
           "title":"HD",
-          "titleShort":"--hd",
-          "params":[
-            
-          ]},
+          "titleShort":"--hd"
+          },
         {
           "id":"7",
           "title":"Sameseed",
-          "titleShort":"--sameseed",
-          "params":[
-            
-          ]},
+          "titleShort":"--sameseed"
+          },
         {
           "id":"8",
           "title":"Video",
           "titleShort":"--video"
           }    
-  ]
+  ],
+
+
+
+
+  "ListChangeable":[
+    {
+      "id":"1",
+      "title":"style",
+      "elements":[
+        "1","2","3","4"
+      ]},
+    {
+      "id":"2",
+      "title":"character",
+      "elements":[
+        "Dog","Cat","Human","snake"
+      ]},
+    {
+      "id":"3",
+      "title":"object",
+      "elements":[
+        
+      ]},
+    {
+      "id":"4",
+      "title":"location",
+      "elements":[
+        
+      ]},
+    {
+      "id":"5",
+      "title":"action",
+      "elements":[
+        
+      ]},
+    {
+      "id":"6",
+      "title":"color",
+      "elements":[
+        
+      ]},
+    {
+      "id":"7",
+      "title":"artist",
+      "elements":[
+        
+      ]},
+    {
+      "id":"8",
+      "title":"background",
+      "elements":[
+        
+      ]},
+    {
+      "id":"9",
+      "title":"renderer",
+      "elements":[
+        
+      ]},
+    {
+      "id":"10",
+      "title":"lighting",
+      "elements":[
+        
+      ]},
+    {
+      "id":"11",
+      "title":"details",
+      "elements":[
+        
+      ]}  
+]
 }

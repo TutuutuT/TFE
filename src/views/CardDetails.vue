@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 import Footer from '../components/Footer.vue';
 
 const props = defineProps(['id'])
-const Addparams = ref(null);
+const Addparams = ref(null)
 const Switchparams = ref(null)
 const prompt = ref(null)
 const dialog = ref(null)
@@ -13,6 +13,7 @@ const selectedParams = ref({})
 let openSettings = ref(false)
 let openSend = ref(false)
 let openMidjourney = ref(false)
+const ListChangeable = ref(null)
 
 fetch('http://localhost:3000/prompts/' + props.id)
 .then(response => response.json())
@@ -26,6 +27,10 @@ fetch('http://localhost:3000/AddParameters/')
 fetch('http://localhost:3000/SwitchParameters/')
 .then(response => response.json())
 .then(data => Switchparams.value = data);
+
+fetch('http://localhost:3000/ListChangeable/')
+.then(response => response.json())
+.then(data => ListChangeable.value = data);
 
 
 function openDialog() {
@@ -52,6 +57,23 @@ const copyText = () => {
     window.getSelection().removeAllRanges()
   }
 
+
+
+
+
+function openStyle() {
+    styleDialog.value = true
+}
+
+const styleDialog = ref(false)
+
+const selectedListItem = ref(null)
+
+function selectItem(value) {
+  selectedListItem.value = value
+  styleDialog.value = false
+}
+
 </script>
 
 <template>
@@ -60,9 +82,17 @@ const copyText = () => {
 
 <div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
 
-    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
+    <div ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
+
+
+      <p class="PromptHover" @click="openStyle">{{ selectedListItem ? selectedListItem : prompt.detailed_prompt.character[0] }}</p>
       
+
+
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style" :key="key">{{ value }}</span>
+
+
+
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.character" :key="key">{{ value }}</span>
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.object" :key="key">{{ value }}</span>
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.location" :key="key">{{ value }}</span>
@@ -74,9 +104,16 @@ const copyText = () => {
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.lighting" :key="key">{{ value }}</span>
       <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.details" :key="key">{{ value }}</span>
       
-      {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}</p>
+      <!-- {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }} -->
     
-    <!-- <span class="hover:bg-slate-800" v-for="(value, key) in prompt.detailed_prompt" :key="key">{{ value }}</span> -->
+    </div>
+
+    <div class="absolute p-4 bg-black z-50" v-if="styleDialog">
+      <ul>
+        <li v-for="(value, key) in ListChangeable[1].elements" :key="key" @click="selectItem(value)">{{ value }}</li>
+      </ul>
+    </div>
+
       
     <div class="flex items-center">
     <button class="group rounded-l-none border-l-0 px-3 py-4 !important" @click="copyText">
@@ -115,14 +152,16 @@ const copyText = () => {
                   <!-- inline box send and link -->
 
 <div class="w-full flex justify-center mt-6 relative gap-8">
-  <button v-on:click="openSend = !openSend" class="group">
+  <a href="https://www.midjourney.com/app/" target="_blank">
+  <button class="group">
     <svg class="w-6 mx-8 fill-white group-hover:fill-black" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.7499 5.9848C12.7499 3.18698 12.7499 1.78808 12.2268 1.21521C11.774 0.719349 11.1025 0.483823 10.4392 0.588153C9.67282 0.708686 8.79892 1.80105 7.05114 3.98579L2.59867 9.55136C1.2672 11.2157 0.60146 12.0479 0.600704 12.7482C0.600047 13.3573 0.876976 13.9335 1.353 14.3135C1.90035 14.7504 2.96605 14.7504 5.09745 14.7504H5.64992C6.20997 14.7504 6.49 14.7504 6.70391 14.8594C6.89207 14.9553 7.04505 15.1082 7.14093 15.2964C7.24992 15.5103 7.24992 15.7903 7.24992 16.3504V18.016C7.24992 20.8138 7.24992 22.2127 7.77306 22.7856C8.22587 23.2814 8.89731 23.517 9.56066 23.4126C10.327 23.2921 11.2009 22.1997 12.9487 20.015L17.4012 14.4494C18.7326 12.7851 19.3984 11.9529 19.3991 11.2525C19.3998 10.6435 19.1229 10.0673 18.6468 9.6873C18.0995 9.25039 17.0338 9.25039 14.9024 9.25039H14.3499C13.7899 9.25039 13.5098 9.25039 13.2959 9.1414C13.1078 9.04552 12.9548 8.89254 12.8589 8.70438C12.7499 8.49047 12.7499 8.21044 12.7499 7.65039V5.9848Z"/>
     </svg>
   </button>
+</a>
 
 
-  <button v-on:click="openMidjourney = !openMidjourney" class="group">
+  <button v-on:click="openSend = !openSend" class="group">
     <svg class="w-6 mx-8 fill-white group-hover:fill-black transition-all" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.88154 11.2192C2.45325 9.90064 0.739098 9.24135 0.307963 8.35607C-0.0649225 7.59041 -0.0223838 6.68758 0.420843 5.96037C0.933307 5.11955 2.70185 4.62436 6.23894 3.63398L16.234 0.835356C18.4734 0.208323 19.5931 -0.105194 20.3615 0.185803C21.0314 0.439517 21.5603 0.968408 21.814 1.63831C22.1049 2.40666 21.7914 3.52637 21.1644 5.76577L18.3657 15.7608C17.3753 19.2979 16.88 21.0664 16.0392 21.5789C15.312 22.0221 14.4092 22.0646 13.6435 21.6917C12.7582 21.2606 12.099 19.5464 10.7804 16.1181L10.0877 14.3167C9.95255 13.9655 9.885 13.7898 9.88126 13.6152C9.87796 13.4609 9.91043 13.3079 9.97613 13.1682C10.0504 13.0102 10.1835 12.8772 10.4496 12.611L12.9999 10.0607C13.2928 9.76784 13.2928 9.29296 12.9999 9.00007V9.00007C12.7071 8.70718 12.2322 8.70718 11.9393 9.00007L9.38911 11.5502C9.12298 11.8164 8.98991 11.9494 8.83189 12.0238C8.69221 12.0895 8.53921 12.1219 8.38489 12.1186C8.2103 12.1149 8.03466 12.0473 7.68338 11.9122L5.88154 11.2192Z"/>
     </svg>
@@ -188,17 +227,6 @@ const copyText = () => {
   
 </Transition>
 
-<Transition name="slide-fade">
-  <div v-if="openMidjourney" class="flex justify-center relative">
-    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
-      <div>iekzeioaz</div>
-      <div class="w-96 flex justify-center mt-6">
-        <button v-on:click="openMidjourney = !openMidjourney">Fermer</button>
-      </div>
-    </div>
-    </div>
-  
-</Transition>
 
                   <!-- box image -->
 
@@ -227,7 +255,9 @@ const copyText = () => {
         <li>Vidéo de la progression :<span class=" font-bold "> --video</span></li>
       </ul>
     </div>
-    <button class="mt-6" @click="closeDialog">Close</button>
+    <div class="w-96 flex justify-center mt-6">
+      <button class="mt-6" @click="closeDialog">Close</button>
+    </div>
   </dialog>
 
   <Footer/>
