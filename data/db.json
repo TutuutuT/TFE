@@ -6,8 +6,12 @@
       {"id":"1","item":"simple"},
       {"id":"2","item":"feur"}
     ],
-    "character": ["winged valkyrie cyborg fembot"],
-    "object": ["wearing a cyberspace squid helmet with a holographic HUD"],
+    "character": [
+      {"id":"1","item":"winged valkyrie cyborg fembot"}
+    ],
+    "object": [
+      {"id":"1","item":"wearing a cyberspace squid helmet with a holographic HUD"}
+    ],
     "location": "",
     "action": "",
     "color": "",

@@ -14,6 +14,7 @@ const Part1 = ref(null)
 const Part2 = ref(null)
 
 onMounted(() => {
+  gsap.fromTo(".appear", {x: 800, opacity: 0}, {x: 0, opacity: 100, duration: 0.5, stagger: 0.3, ease: "power3.inOut"})
   tlPart1.fromTo(Part1.value,  {autoAlpha: 0, y: 200}, {autoAlpha: 1, duration: 0.6, y: 0, ease: "power3.inOut"});
   tlPart1.from(Part1.value, {x: 200, duration: 0.3, ease: "power3.inOut"})
   gsap.from(".Part2", {x: 200, duration: 0.5, delay: 0.6, opacity: 0, ease: "power3.inOut", stagger: 0.08})
@@ -22,9 +23,9 @@ onMounted(() => {
 
 <template>
 
-    <section class="h-full flex">
+    <section class="h-full flex overflow-hidden">
         <div class="w-[calc(80vw-55px)] mr-[15px] ml-[30px] mb-[15px] mt-[15px]">
-            <div class="overflow-hidden h-[30vh] flex justify-center items-center bg-white/5 backdrop-blur-sm rounded-3xl text-[2.2cqi] text-white border-2 border-white/40">
+            <div class="appear overflow-hidden h-[30vh] flex justify-center items-center bg-white/5 backdrop-blur-sm rounded-3xl text-[2.2cqi] text-white border-2 border-white/40">
                 <h1 class="flex">
                   <span ref="Part1" class="text__line">Prompt</span>
                   <span class="text__line Part2">P</span>
@@ -35,24 +36,24 @@ onMounted(() => {
                 </h1>
             </div>
             <div class="mt-[30px] h-[30vh] flex">
-                <div class="w-[calc(65vw-30px)] mr-[15px] midjourneyBck flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 hover:scale-[98%] transition-all">
+                <div class="appear w-[calc(65vw-30px)] mr-[15px] midjourneyBck flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 hover:scale-[98%] transition-all">
                     
                 </div>
-                <div class="w-[calc(35vw-30px)] ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                <div class="appear w-[calc(35vw-30px)] ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     <h2>Votre aide pour rédiger le meilleur prompt</h2>
                 </div>
             </div>
             <div class="mt-[30px] h-[30vh] flex">
-                <div class="width-change-part1 w-[calc(35vw-30px)] mr-[15px] flex justify-center items-center bg-[#428EFF] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                <div class="appear width-change-part1 w-[calc(35vw-30px)] mr-[15px] flex justify-center items-center bg-[#428EFF] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     
                 </div>
-                <div class="width-change-part2 w-[calc(65vw-30px)] ml-[15px]  flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
+                <div class="appear width-change-part2 w-[calc(65vw-30px)] ml-[15px]  flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
                     <h2>Votre aide pour rédiger le meilleur prompt</h2>
                 </div>
             </div>
         </div>
-        <div class="w-[calc(20vw-55px)] ml-[15px] mr-[30px] mb-[15px] mt-[15px]">
-            <div class="h-[calc(90vh+60px)] flex justify-center items-center bg-[#37A952] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+        <div class="w-[calc(20vw-50px)] ml-[15px] mr-[30px] mb-[15px] mt-[15px]">
+            <div class="appear h-[calc(90vh+60px)] flex justify-center items-center bg-[#37A952] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                 <div class="rotate-90 font-secondary font-bold text-4xl">Votre&nbsp;copilot&nbsp;Midjourney</div>
             </div>
         </div>

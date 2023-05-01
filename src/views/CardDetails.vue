@@ -70,12 +70,10 @@ const styleDialog = ref(false)
 
 <div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
 
-    <div ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
+    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
       
-
-
-
-      <div class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style">
+    <span v-for="ListCategory in prompt.detailed_prompt">
+      <span class="PromptHover" v-for="(value, key) in ListCategory">
         <span @click="styleDialog = !styleDialog">{{ value.item }}</span>
       
         <div class="absolute px-6 py-4 bg-black z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
@@ -85,25 +83,12 @@ const styleDialog = ref(false)
           <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
         </div>
       
-      </div>
-
-
-
-
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.character" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.object" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.location" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.action" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.color" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.artist" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.background" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.renderer" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.lighting" :key="key">{{ value }}</span>
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.details" :key="key">{{ value }}</span>
+      </span>
+    </span>
       
       <!-- {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }} -->
     
-    </div>
+  </p>
 
 
       

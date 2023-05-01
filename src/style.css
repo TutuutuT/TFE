@@ -30,8 +30,8 @@
 
 
 a {
+  @apply cursor-pointer;
   font-weight: 500;
-  color: #ffffff;
   text-decoration: inherit;
 }
 
