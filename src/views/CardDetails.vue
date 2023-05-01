@@ -58,38 +58,35 @@ const copyText = () => {
   }
 
 
-
-
-
-function openStyle() {
-    styleDialog.value = true
-}
-
 const styleDialog = ref(false)
-
-const selectedListItem = ref(null)
-
-function selectItem(value) {
-  selectedListItem.value = value
-  styleDialog.value = false
-}
 
 </script>
 
 <template>
+
+<h2 class="absolute w-full text-center mt-9 font-secondary text-white/20 font-bold">PromptPilot</h2>
 
                   <!-- Champt de txt -->
 
 <div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
 
     <div ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
-
-
-      <p class="PromptHover" @click="openStyle">{{ selectedListItem ? selectedListItem : prompt.detailed_prompt.character[0] }}</p>
       
 
 
-      <span class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style" :key="key">{{ value }}</span>
+
+      <div class="PromptHover" v-for="(value, key) in prompt.detailed_prompt.style">
+        <span @click="styleDialog = !styleDialog">{{ value.item }}</span>
+      
+        <div class="absolute px-6 py-4 bg-black z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
+          <ul>
+            <li class="hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="value.item = ChangeElement; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+          </ul>
+          <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
+        </div>
+      
+      </div>
+
 
 
 
@@ -108,11 +105,6 @@ function selectItem(value) {
     
     </div>
 
-    <div class="absolute p-4 bg-black z-50" v-if="styleDialog">
-      <ul>
-        <li v-for="(value, key) in ListChangeable[1].elements" :key="key" @click="selectItem(value)">{{ value }}</li>
-      </ul>
-    </div>
 
       
     <div class="flex items-center">
@@ -153,7 +145,7 @@ function selectItem(value) {
 
 <div class="w-full flex justify-center mt-6 relative gap-8">
   <a href="https://www.midjourney.com/app/" target="_blank">
-  <button class="group">
+  <button class="group ring-blue-500 hover:ring">
     <svg class="w-6 mx-8 fill-white group-hover:fill-black" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.7499 5.9848C12.7499 3.18698 12.7499 1.78808 12.2268 1.21521C11.774 0.719349 11.1025 0.483823 10.4392 0.588153C9.67282 0.708686 8.79892 1.80105 7.05114 3.98579L2.59867 9.55136C1.2672 11.2157 0.60146 12.0479 0.600704 12.7482C0.600047 13.3573 0.876976 13.9335 1.353 14.3135C1.90035 14.7504 2.96605 14.7504 5.09745 14.7504H5.64992C6.20997 14.7504 6.49 14.7504 6.70391 14.8594C6.89207 14.9553 7.04505 15.1082 7.14093 15.2964C7.24992 15.5103 7.24992 15.7903 7.24992 16.3504V18.016C7.24992 20.8138 7.24992 22.2127 7.77306 22.7856C8.22587 23.2814 8.89731 23.517 9.56066 23.4126C10.327 23.2921 11.2009 22.1997 12.9487 20.015L17.4012 14.4494C18.7326 12.7851 19.3984 11.9529 19.3991 11.2525C19.3998 10.6435 19.1229 10.0673 18.6468 9.6873C18.0995 9.25039 17.0338 9.25039 14.9024 9.25039H14.3499C13.7899 9.25039 13.5098 9.25039 13.2959 9.1414C13.1078 9.04552 12.9548 8.89254 12.8589 8.70438C12.7499 8.49047 12.7499 8.21044 12.7499 7.65039V5.9848Z"/>
     </svg>
@@ -256,7 +248,7 @@ function selectItem(value) {
       </ul>
     </div>
     <div class="w-96 flex justify-center mt-6">
-      <button class="mt-6" @click="closeDialog">Close</button>
+      <button @click="closeDialog">Close</button>
     </div>
   </dialog>
 

@@ -2,7 +2,10 @@
   {"id":"1", "original_prompt":"Beautiful winged valkyrie cyborg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD",
   "detailed_prompt": {
     "category":"",
-    "style": [""],
+    "style": [
+      {"id":"1","item":"simple"},
+      {"id":"2","item":"feur"}
+    ],
     "character": ["winged valkyrie cyborg fembot"],
     "object": ["wearing a cyberspace squid helmet with a holographic HUD"],
     "location": "",
