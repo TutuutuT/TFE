@@ -38,7 +38,7 @@ import { gsap } from 'gsap';
                 </ul>
             </li>
             <li class="primaryList">Thunus Bastien</li>
-            <li class="primaryList"><a>DWT</a></li>
+            <li class="primaryList"><a href="https://dwt.heaj.be/" target="_blank">DWT</a></li>
             <li class="primaryList">©2023</li>
         </ul>
     </div>

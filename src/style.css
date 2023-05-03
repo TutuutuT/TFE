@@ -30,7 +30,7 @@
 
 
 a {
-  @apply cursor-pointer;
+  @apply cursor-pointer hover:text-blue-300 transition-all;
   font-weight: 500;
   text-decoration: inherit;
 }

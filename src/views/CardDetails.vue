@@ -2,7 +2,8 @@
 import { ref, computed } from 'vue'
 import Footer from '../components/Footer.vue';
 
-const props = defineProps(['id'])
+const props = defineProps(['id'],['ClickedPrompt'],['ClickedList'],[ClickedListId])
+let ClickedPrompt = ref(null)
 const Addparams = ref(null)
 const Switchparams = ref(null)
 const prompt = ref(null)
@@ -12,7 +13,6 @@ const paramPromptSwitch = ref('')
 const selectedParams = ref({})
 let openSettings = ref(false)
 let openSend = ref(false)
-let openMidjourney = ref(false)
 const ListChangeable = ref(null)
 
 fetch('http://localhost:3000/prompts/' + props.id)
@@ -60,6 +60,8 @@ const copyText = () => {
 
 const styleDialog = ref(false)
 
+
+
 </script>
 
 <template>
@@ -74,22 +76,20 @@ const styleDialog = ref(false)
       
     <span v-for="ListCategory in prompt.detailed_prompt">
       <span class="PromptHover" v-for="(value, key) in ListCategory">
-        <span @click="styleDialog = !styleDialog">{{ value.item }}</span>
-      
-        <div class="absolute px-6 py-4 bg-black z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
-          <ul>
-            <li class="hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="value.item = ChangeElement; styleDialog = !styleDialog">{{ ChangeElement }}</li>
-          </ul>
-          <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
-        </div>
-      
+        <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id">
+          <span v-if=" ClickedPrompt  == value.id">
+            {{ ClickedList }}
+          </span>
+          <span v-else>
+            {{ value.item }}
+          </span>
+        </span>
       </span>
     </span>
       
-      <!-- {{ prompt.original_prompt }} {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }} -->
+      {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
     
   </p>
-
 
       
     <div class="flex items-center">
@@ -102,6 +102,15 @@ const styleDialog = ref(false)
 
     </button>
   </div>
+</div>
+
+<div class="absolute flex justify-center w-full">
+<div class="px-6 py-4 bg-white/1 backdrop-blur-md z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
+  <ul>
+    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="ClickedList = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+  </ul>
+   <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
+</div>
 </div>
 
                   <!-- box open settings -->

@@ -2,10 +2,6 @@
 import { VueElement, ref, onMounted } from 'vue'
 import { gsap } from 'gsap';
 
-defineProps({
-  msg: String,
-})
-
 //anim gsap
 
 let tlPart1 = gsap.timeline()
@@ -14,7 +10,7 @@ const Part1 = ref(null)
 const Part2 = ref(null)
 
 onMounted(() => {
-  gsap.fromTo(".appear", {x: 800, opacity: 0}, {x: 0, opacity: 100, duration: 0.5, stagger: 0.3, ease: "power3.inOut"})
+  gsap.fromTo(".appear", {x: 800, opacity: 0}, {x: 0, opacity: 100, duration: 0.3, stagger: 0.3, ease: "power3.out"})
   tlPart1.fromTo(Part1.value,  {autoAlpha: 0, y: 200}, {autoAlpha: 1, duration: 0.6, y: 0, ease: "power3.inOut"});
   tlPart1.from(Part1.value, {x: 200, duration: 0.3, ease: "power3.inOut"})
   gsap.from(".Part2", {x: 200, duration: 0.5, delay: 0.6, opacity: 0, ease: "power3.inOut", stagger: 0.08})
