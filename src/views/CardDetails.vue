@@ -2,7 +2,8 @@
 import { ref, computed } from 'vue'
 import Footer from '../components/Footer.vue';
 
-const props = defineProps(['id'],['ClickedPrompt'],['ClickedList'],[ClickedListId])
+const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
+const ClickedList = ref({})
 let ClickedPrompt = ref(null)
 const Addparams = ref(null)
 const Switchparams = ref(null)
@@ -75,10 +76,18 @@ const styleDialog = ref(false)
     <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
       
     <span v-for="ListCategory in prompt.detailed_prompt">
-      <span class="PromptHover" v-for="(value, key) in ListCategory">
+      <span class="PromptHover group" v-for="(value, key) in ListCategory">
         <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id">
-          <span v-if=" ClickedPrompt  == value.id">
-            {{ ClickedList }}
+          <!-- <div class="hidden group-hover:flex justify-center -translate-y-10" >
+            <div class="absolute rounded-lg bg-neutral-800 before:block before:absolute before:inset-[8px] before:rounded-sm before:translate-y-[10px] before:bg-neutral-800 before:-z-10 before:rotate-45 z-10 p-1">
+              <svg class="w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="fill-white/10  transition-all" x="2" y="2" width="20" height="20" rx="5"/>
+                <path class="stroke-white transition-all" d="M11 7.99996L7 12M7 12L11 16M7 12H17M10 22H14C16.8003 22 18.2004 22 19.27 21.455C20.2108 20.9757 20.9757 20.2108 21.455 19.27C22 18.2004 22 16.8003 22 14V10C22 7.19974 22 5.79961 21.455 4.73005C20.9757 3.78924 20.2108 3.02433 19.27 2.54497C18.2004 2 16.8003 2 14 2H10C7.19974 2 5.79961 2 4.73005 2.54497C3.78924 3.02433 3.02433 3.78924 2.54497 4.73005C2 5.79961 2 7.19974 2 10V14C2 16.8003 2 18.2004 2.54497 19.27C3.02433 20.2108 3.78924 20.9757 4.73005 21.455C5.79961 22 7.19974 22 10 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div> -->
+          <span v-if=" ClickedList[value.id] != null">
+            {{ ClickedList[value.id] }}
           </span>
           <span v-else>
             {{ value.item }}
@@ -94,20 +103,20 @@ const styleDialog = ref(false)
       
     <div class="flex items-center">
     <button class="group rounded-l-none border-l-0 px-3 py-4 !important" @click="copyText">
-
       <svg class="w-6 fill-white group-hover:fill-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
         <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
       </svg>
-
     </button>
   </div>
 </div>
 
+
+
 <div class="absolute flex justify-center w-full">
-<div class="px-6 py-4 bg-white/1 backdrop-blur-md z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
+<div class="px-6 py-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
   <ul>
-    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="ClickedList = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
   </ul>
    <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
 </div>
