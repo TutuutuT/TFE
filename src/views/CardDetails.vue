@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import Footer from '../components/Footer.vue';
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
+const ClickedPromptCat = ref(null)
 const ClickedList = ref({})
 let ClickedPrompt = ref(null)
 const Addparams = ref(null)
@@ -42,12 +43,14 @@ function closeDialog() {
   dialog.value.close();
 }
 
-const handleCheckboxChange = () => {
+// const handleCheckboxChange = () => {
 
-}
-  //computed pour avoir --ar + valeur si pas null
+// }
+
 
 let PromptCopie = ref(null)
+let ClickOk = ref(false)
+
 
 const copyText = () => {
     const range = document.createRange()
@@ -56,6 +59,10 @@ const copyText = () => {
     window.getSelection().addRange(range)
     document.execCommand("copy")
     window.getSelection().removeAllRanges()
+    ClickOk.value = true
+    setTimeout(() => {
+      ClickOk.value = false
+    }, 2000)
   }
 
 
@@ -77,15 +84,7 @@ const styleDialog = ref(false)
       
     <span v-for="ListCategory in prompt.detailed_prompt">
       <span class="PromptHover group" v-for="(value, key) in ListCategory">
-        <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id">
-          <!-- <div class="hidden group-hover:flex justify-center -translate-y-10" >
-            <div class="absolute rounded-lg bg-neutral-800 before:block before:absolute before:inset-[8px] before:rounded-sm before:translate-y-[10px] before:bg-neutral-800 before:-z-10 before:rotate-45 z-10 p-1">
-              <svg class="w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect class="fill-white/10  transition-all" x="2" y="2" width="20" height="20" rx="5"/>
-                <path class="stroke-white transition-all" d="M11 7.99996L7 12M7 12L11 16M7 12H17M10 22H14C16.8003 22 18.2004 22 19.27 21.455C20.2108 20.9757 20.9757 20.2108 21.455 19.27C22 18.2004 22 16.8003 22 14V10C22 7.19974 22 5.79961 21.455 4.73005C20.9757 3.78924 20.2108 3.02433 19.27 2.54497C18.2004 2 16.8003 2 14 2H10C7.19974 2 5.79961 2 4.73005 2.54497C3.78924 3.02433 3.02433 3.78924 2.54497 4.73005C2 5.79961 2 7.19974 2 10V14C2 16.8003 2 18.2004 2.54497 19.27C3.02433 20.2108 3.78924 20.9757 4.73005 21.455C5.79961 22 7.19974 22 10 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-          </div> -->
+        <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id; ClickedPromptCat = value.cat">
           <span v-if=" ClickedList[value.id] != null">
             {{ ClickedList[value.id] }}
           </span>
@@ -108,7 +107,11 @@ const styleDialog = ref(false)
         <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
       </svg>
     </button>
+    <div v-if="ClickOk" class="flex absolute translate-x-16">
+      <div class="bg-neutral-800  rounded-md before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-translate-x-[10px] before:translate-y-[5px] before:bg-neutral-800 before:-z-10 before:rotate-45">Copié!</div>
+    </div>
   </div>
+  
 </div>
 
 
@@ -116,7 +119,8 @@ const styleDialog = ref(false)
 <div class="absolute flex justify-center w-full">
 <div class="px-6 py-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
   <ul>
-    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[1].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog">Valeur pas défaut</li>
+    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
   </ul>
    <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
 </div>

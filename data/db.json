@@ -3,14 +3,14 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"simple"},
-      {"id":"2","item":"feur"}
+      {"id":"1","item":"simple","cat":"0"},
+      {"id":"2","item":"feur","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"winged valkyrie cyborg fembot"}
+      {"id":"3","item":"winged valkyrie cyborg fembot","cat":"1"}
     ],
     "object": [
-      {"id":"4","item":"wearing a cyberspace squid helmet with a holographic HUD"}
+      {"id":"4","item":"wearing a cyberspace squid helmet with a holographic HUD","cat":"2"}
     ],
     "location": "",
     "action": "",

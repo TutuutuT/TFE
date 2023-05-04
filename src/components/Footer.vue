@@ -37,7 +37,7 @@ import { gsap } from 'gsap';
                     <li class="secondaryList"><a href="https://www.instagram.com/bastien_thunus/" target="_blank">Instagram</a></li>
                 </ul>
             </li>
-            <li class="primaryList">Thunus Bastien</li>
+            <li class="primaryList"><a href="https://bento.me/bastien-thunus" target="_blank">Thunus Bastien</a></li>
             <li class="primaryList"><a href="https://dwt.heaj.be/" target="_blank">DWT</a></li>
             <li class="primaryList">©2023</li>
         </ul>
