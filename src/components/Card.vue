@@ -5,7 +5,7 @@ import { ref } from 'vue'
 const data = ref(null)
 const prompts = ref(null)
 
-fetch('http://localhost:3000/prompts')
+fetch('./data/Prompts.json')
     .then(response => response.json())
     .then(data => prompts.value = data)
     .catch(err => console.log("error fetch"));

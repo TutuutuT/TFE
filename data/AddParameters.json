@@ -1,0 +1,34 @@
+{
+    "AddParameters":[
+        {
+          "id":"1",
+          "title":"Aspect Ratio",
+          "titleShort":"--ar",
+          "params":[
+            {"paramId":"1", "param":"16:9"},
+            {"paramId":"2", "param":"1:1"},
+            {"paramId":"3", "param":"1:3"},
+            {"paramId":"4", "param":"2:3"}
+          ]},
+          {
+            "id":"2",
+            "title":"Version",
+            "titleShort":"--v",
+            "params":[
+              {"paramId":"1", "param":"V1"},
+              {"paramId":"2", "param":"V2"},
+              {"paramId":"3", "param":"V3"},
+              {"paramId":"4", "param":"V4"}
+            ]},
+            {
+              "id":"3",
+              "title":"Quality",
+              "titleShort":"--q",
+              "params":[
+                {"paramId":"1", "param":".25"},
+                {"paramId":"2", "param":".5"},
+                {"paramId":"3", "param":"1"},
+                {"paramId":"4", "param":"2"}
+              ]}
+      ]
+}

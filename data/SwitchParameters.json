@@ -1,0 +1,29 @@
+{
+    "SwitchParameters":[
+        {
+          "id":"4",
+          "title":"Uplight",
+          "titleShort":"--uplight"
+          },
+        {
+          "id":"5",
+          "title":"Niji",
+          "titleShort":"--niji"
+          },
+        {
+          "id":"6",
+          "title":"HD",
+          "titleShort":"--hd"
+          },
+        {
+          "id":"7",
+          "title":"Sameseed",
+          "titleShort":"--sameseed"
+          },
+        {
+          "id":"8",
+          "title":"Video",
+          "titleShort":"--video"
+          }    
+  ]
+}

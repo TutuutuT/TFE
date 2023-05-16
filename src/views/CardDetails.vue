@@ -17,20 +17,22 @@ let openSettings = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
 
-fetch('http://localhost:3000/prompts/' + props.id)
+fetch('./data/Prompts.json' + props.id)
 .then(response => response.json())
 .then(data => prompt.value = data)
 .catch(err => console.log("error fetch details"));
 
-fetch('http://localhost:3000/AddParameters/')
+// QrBXN5lBnh8TGjOXCcSZus1uXgxrBymScicYMatbqVD13cpmwMJTPNizrQkdCPIH
+
+fetch('./data/AddParameters.json')
 .then(response => response.json())
 .then(data => Addparams.value = data);
 
-fetch('http://localhost:3000/SwitchParameters/')
+fetch('./data/SwitchParameters.json')
 .then(response => response.json())
 .then(data => Switchparams.value = data);
 
-fetch('http://localhost:3000/ListChangeable/')
+fetch('./data/ListChangeable.json')
 .then(response => response.json())
 .then(data => ListChangeable.value = data);
 
