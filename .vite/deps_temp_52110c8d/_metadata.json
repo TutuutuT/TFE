@@ -1,0 +1,29 @@
+{
+  "hash": "61f86d04",
+  "browserHash": "63b48630",
+  "optimized": {
+    "gsap": {
+      "src": "../../client/node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "9f3a23bc",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../client/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "7539d31c",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../client/node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "95a07217",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-5LEU27VJ": {
+      "file": "chunk-5LEU27VJ.js"
+    }
+  }
+}
