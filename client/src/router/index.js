@@ -41,7 +41,7 @@ const router = createRouter({
         component: About
     },
     {
-        path: '/Card/:id',
+        path: '/Card',
         name: 'CardDetails',
         component: CardDetails,
         props: true

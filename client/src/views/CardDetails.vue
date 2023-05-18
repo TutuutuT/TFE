@@ -17,22 +17,23 @@ let openSettings = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
 
-// fetch('api/prompts' + props.id)
-// .then(response => response.json())
-// .then(data => prompt.value = data)
-// .catch(err => console.log("error fetch details"));
+fetch('http://localhost:5000/api/prompts')
+.then(response => response.json())
+.then(data => prompt.value = data[0].prompts[0])
+.then(console.log(props.id))
+.catch(err => console.log("error fetch details"))
 
-// fetch('api/prompts')
-// .then(response => response.json())
-// .then(data => Addparams.value = data);
+fetch('http://localhost:5000/api/prompts')
+.then(response => response.json())
+.then(data => Addparams.value = data[0].AddParameters);
 
-// fetch('api/prompts')
-// .then(response => response.json())
-// .then(data => Switchparams.value = data);
+fetch('http://localhost:5000/api/prompts')
+.then(response => response.json())
+.then(data => Switchparams.value = data[0].SwitchParameters);
 
-// fetch('api/prompts')
-// .then(response => response.json())
-// .then(data => ListChangeable.value = data);
+fetch('http://localhost:5000/api/prompts')
+.then(response => response.json())
+.then(data => ListChangeable.value = data[0].ListChangeable);
 
 
 function openDialog() {
