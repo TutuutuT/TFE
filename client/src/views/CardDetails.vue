@@ -17,21 +17,20 @@ let openSettings = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
 
-fetch('http://localhost:5000/api/prompts')
+fetch('api/prompts')
 .then(response => response.json())
-.then(data => prompt.value = data[0].prompts[0])
-.then(console.log(props.id))
+.then(data => prompt.value = data[0].prompts[props.id - 1])
 .catch(err => console.log("error fetch details"))
 
-fetch('http://localhost:5000/api/prompts')
+fetch('api/prompts')
 .then(response => response.json())
 .then(data => Addparams.value = data[0].AddParameters);
 
-fetch('http://localhost:5000/api/prompts')
+fetch('api/prompts')
 .then(response => response.json())
 .then(data => Switchparams.value = data[0].SwitchParameters);
 
-fetch('http://localhost:5000/api/prompts')
+fetch('api/prompts')
 .then(response => response.json())
 .then(data => ListChangeable.value = data[0].ListChangeable);
 

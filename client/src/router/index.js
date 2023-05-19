@@ -4,31 +4,6 @@ import About from '../views/About.vue'
 import CardDetails from '../views/CardDetails.vue'
 import NotFound from '../views/NotFound.vue'
 
-// const routes = [
-//     {
-//         path: '/projets/tfe/bast/',
-//         name: 'Home',
-//         component: Home
-//     },
-//     {
-//         path: '/projets/tfe/bast//About',
-//         name: 'About',
-//         component: About
-//     },
-//     {
-//         path: '/projets/tfe/bast//Card/:id',
-//         name: 'CardDetails',
-//         component: CardDetails,
-//         props: true
-//     },
-//     // 404
-//     {
-//         path: '/projets/tfe/bast//:catchALL(.)',
-//         name: 'NotFound',
-//         component: NotFound
-//     }
-// ]
-//
 const router = createRouter({
     routes:[{
         path: '/',
@@ -41,7 +16,7 @@ const router = createRouter({
         component: About
     },
     {
-        path: '/Card',
+        path: '/Card-:id',
         name: 'CardDetails',
         component: CardDetails,
         props: true
@@ -57,12 +32,6 @@ const router = createRouter({
         return { top: 0 }
       },
 })
-// const router = createRouter({
-//     history: createWebHistory(),
-//     routes
-// })
-
-
 
 
 export default router;
