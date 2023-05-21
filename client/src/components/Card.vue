@@ -3,13 +3,14 @@ import { ref, onMounted } from 'vue';
 
 const prompts = ref([]);
 
+import promptsValue from "../assets/data/db.json"
+
+
 onMounted(async () => {
   try {
-    const response = await fetch('api/prompts');
-    const data = await response.json();
-    prompts.value = data[0].prompts;
+    prompts.value = promptsValue.prompts;
   } catch (error) {
-    console.log("Erreur lors de la récupération des données");
+    console.log(error);
   }
 })
 </script>

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: oddval;
-  src: url(./assets/Fonts/Oddval-Variable-VF.ttf);
+  src: url(./Fonts/Oddval-Variable-VF.ttf);
 }
 
 @layer utilities {
@@ -39,6 +39,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #121212;
 }
 
 h1 {

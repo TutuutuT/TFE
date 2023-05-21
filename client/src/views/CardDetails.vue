@@ -1,6 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue';
+
+import promptsValue from "../assets/data/db.json"
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
 const ClickedPromptCat = ref(null)
@@ -17,23 +19,16 @@ let openSettings = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
 
-fetch('api/prompts')
-.then(response => response.json())
-.then(data => prompt.value = data[0].prompts[props.id - 1])
-.catch(err => console.log("error fetch details"))
-
-fetch('api/prompts')
-.then(response => response.json())
-.then(data => Addparams.value = data[0].AddParameters);
-
-fetch('api/prompts')
-.then(response => response.json())
-.then(data => Switchparams.value = data[0].SwitchParameters);
-
-fetch('api/prompts')
-.then(response => response.json())
-.then(data => ListChangeable.value = data[0].ListChangeable);
-
+onMounted(async () => {
+  try {
+    prompt.value = promptsValue.prompts[props.id - 1];
+    Addparams.value = promptsValue.AddParameters;
+    Switchparams.value = promptsValue.SwitchParameters;
+    ListChangeable.value = promptsValue.ListChangeable
+  } catch (error) {
+    console.log(error);
+  }
+})
 
 function openDialog() {
   dialog.value.showModal();

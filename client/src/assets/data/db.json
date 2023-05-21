@@ -3,16 +3,18 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"simple","cat":"0"},
-      {"id":"2","item":"feur","cat":"0"}
+      {"id":"1","item":"","cat":"0"},
+      {"id":"2","item":"","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"winged valkyrie cyborg fembot","cat":"1"}
+      {"id":"3","item":"Beautiful winged valkyrie cyborg fembot","cat":"1"}
     ],
     "object": [
       {"id":"4","item":"wearing a cyberspace squid helmet with a holographic HUD","cat":"2"}
     ],
-    "location": "",
+    "location": [
+      {"id":"5","item":"is in a bar fight at a gritty cyborg bar","cat":"3"}
+    ],
     "action": "",
     "color": "",
     "artist": "",
@@ -21,16 +23,25 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/8495955.png"
+  "imageUrl": "./assets/MidjourneyImages/8495955.png"
   },
 
   {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, depth of field, red color, shot on XCD 3,5-4,5/35-75, kodak portra 800 film stock",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
+    "style": [
+      {"id":"1","item":"kodak portra 800 film stock","cat":"0"},
+      {"id":"2","item":"low angle shot::3","cat":"0"}
+    ],
+    "character": [
+      {"id":"3","item":"of a ruby ac cobra seen","cat":"1"}
+    ],
+    "object": [
+      {"id":"4","item":"wearing a cyberspace squid helmet with a holographic HUD","cat":"2"}
+    ],
+    "location": [
+      {"id":"5","item":"is in a bar fight at a gritty cyborg bar","cat":"3"}
+    ],
     "action": "",
     "color": "",
     "artist": "",
@@ -38,8 +49,10 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/car.jpg"
+    "parameters": [
+      {"id":"6","item":"seen at ground level","cat":"11"}
+    ]},
+  "imageUrl": "./assets/MidjourneyImages/car.jpg"
 },
 
   {"id":"3", "original_prompt":"sad Forest fairy is floating in the fluffy voluminous light pink clouds in the blue sky, interesting composition, cinematography, surreal",
@@ -57,7 +70,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/0_2_640_N.webp"
+  "imageUrl": "./assets/MidjourneyImages/0_2_640_N.webp"
 },
 
   {"id":"4", "original_prompt":"A living room with a Piet Mondrian-inspired armchair as the centerpiece. The armchair is geometric and colorful, with bold red, blue, and yellow blocks on a white background. The room is minimalist and modern, with clean lines and neutral tones. The light is bright and natural, coming in from a large window on the wall. The overall mood is energetic and playful. blender, 8k, ultra realistic, real materials",
@@ -75,7 +88,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/0_0_640_N.webp"
+  "imageUrl": "./assets/MidjourneyImages/0_0_640_N.webp"
 },
 
   {"id":"5", "original_prompt":"simple planet pattern",
@@ -93,7 +106,7 @@
       "renderer": "",
       "lighting": "",
       "parameters": ""},
-    "imageUrl": "./src/assets/MidjourneyImages/0_1_640_N.webp"
+    "imageUrl": "./assets/MidjourneyImages/0_1_640_N.webp"
   },
 
   {"id":"6", "original_prompt":"Up - close Macro shot of the fur of a cheetah. Using the Sony a7S III camera with the Sony FE 50mm f/ 1. 4 ZA lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere. --ar 16:9 --q 2 --v 5 ",
@@ -111,7 +124,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/shita.jpg"
+  "imageUrl": "./assets/MidjourneyImages/shita.jpg"
 },
 
   {"id":"7", "original_prompt":"galaxy stars colorful saturated bright nebula stars planets",
@@ -129,7 +142,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/0_3_640_N.webp"
+  "imageUrl": "./assets/MidjourneyImages/0_3_640_N.webp"
 },
 
   {"id":"8", "original_prompt":"In a surreal scene set in the vastness of space, an astronaut in a futuristic space suit swims through a pool of liquid foil, with the Cybertruck as their floating sanctuary, as you capture the mesmerizing moment up close with the Sony a7S III camera and the Sony FE 50mm f/1.4 ZA lens. The interstellar landscapes provide a stunning contrast to the astronaut's otherworldly swim, while Wes Anderson's whimsical visual style adds a touch of playfulness to the scene. The dark and moody tones, accentuated by deep blacks and a dramatic atmosphere, create an otherworldly ambiance, reminiscent of Christopher Nolan's films",
@@ -147,7 +160,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/fuze.jpg"
+  "imageUrl": "./assets/MidjourneyImages/fuze.jpg"
 },
 
   {"id":"9", "original_prompt":"8bit Shiba Inu Eating Ramen in Yatai Stand --niji 5 ",
@@ -165,7 +178,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./src/assets/MidjourneyImages/shiba.jpg"
+  "imageUrl": "./assets/MidjourneyImages/shiba.jpg"
 }
 ],
 
@@ -244,13 +257,13 @@
       "id":"1",
       "title":"style",
       "elements":[
-        "1","2","3","4"
+        "realistic","Fantasy Illustration","photorealism","conceptual digital art","Retro-futurism"
       ]},
     {
       "id":"2",
       "title":"character",
       "elements":[
-        "Dog","Cat","Human","snake"
+        "Dog","Cat","Human","snake","unicorn","a man and little child","photo of interior design"
       ]},
     {
       "id":"3",
@@ -262,19 +275,19 @@
       "id":"4",
       "title":"location",
       "elements":[
-        
+        "on earth","in space","in a bar","fashion show","in a battle"
       ]},
     {
       "id":"5",
       "title":"action",
       "elements":[
-        
+        "Dynamic Pose","under a torrent of rain"
       ]},
     {
       "id":"6",
       "title":"color",
       "elements":[
-        
+        "pastel colors","bronze and white","black and white"
       ]},
     {
       "id":"7",
@@ -286,25 +299,25 @@
       "id":"8",
       "title":"background",
       "elements":[
-        
+        "futuristic city on the background","forest in the background","colorful garden"
       ]},
     {
       "id":"9",
       "title":"renderer",
       "elements":[
-        
+        "analog photography","cinematic shot","wide-angle shot","octane render","Unreal Engine 5"
       ]},
     {
       "id":"10",
       "title":"lighting",
       "elements":[
-        
+        "cinematic lighting","warm light","beautiful sunset light"
       ]},
     {
       "id":"11",
       "title":"details",
       "elements":[
-        
+        "ultra details","Sharp Details"
       ]}  
 ]
 }
