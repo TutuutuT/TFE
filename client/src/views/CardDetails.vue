@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue';
-// https://we.tl/t-3Go16yuHEy
 import promptsValue from "../assets/data/db.json"
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
@@ -15,6 +14,7 @@ const dialog = ref(null)
 const paramPrompt = ref('')
 const paramPromptSwitch = ref('')
 const selectedParams = ref({})
+const selectedCameraParams = ref({})
 let openSettings = ref(false)
 let openCamera = ref(false)
 let openSend = ref(false)
@@ -89,6 +89,7 @@ const styleDialog = ref(false)
     </span>
       
       {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
+      {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }} {{ selectedCameraParams[7] }}
     
   </p>
 
@@ -240,14 +241,18 @@ const styleDialog = ref(false)
       </form>
   
       
-      <form class="h-8 my-3 rounded w-96 flex" v-for="paramCamera in CameraParams" :key="paramCamera.id">
+      <form class="h-auto my-6 rounded w-96 flex" v-for="paramCamera in CameraParams" :key="paramCamera.id">
   
         <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ paramCamera.title }}</label>
   
-        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
+        <div class="w-full grid rounded-full gap-2 grid-cols-2">
+
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer py-1 px-2 bg-neutral-800 w-full"> None
+            <input class="sr-only" type="radio" :name="paramCamera.title" :value="null" v-model="selectedCameraParams[paramCamera.id]"/>
+          </label>
   
-          <label class="hover:bg-neutral-500/30 text-center w-full" :key="paramCamera.id"> Ajouter/supprimer
-            <input class="sr-only" type="checkbox" :name="paramCamera.title" :true-value="paramCamera.title" false-value="" v-model="selectedParams[paramCamera.id]"/>
+          <label v-for="camera in paramCamera.params" class="hover:bg-neutral-500/30 text-center w-full py-1 px-2 bg-neutral-800" :key="camera.paramId"> {{ camera.param }}
+            <input class="sr-only" type="radio" :name="paramCamera.title" :value="camera.param" v-model="selectedCameraParams[paramCamera.id]"/>
           </label>
   
         </div>

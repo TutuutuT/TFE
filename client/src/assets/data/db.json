@@ -255,17 +255,17 @@
       "title":"Angle",
       "params":[
         {"paramId":"1", "param":"Low-angle"},
-        {"paramId":"1", "param":"Extreme Low-angle"},
-        {"paramId":"2", "param":"High-angle"},
-        {"paramId":"3", "param":"Extreme High-angle"},
-        {"paramId":"4", "param":"Bird-eye"},
-        {"paramId":"5", "param":"Side-angle"},
-        {"paramId":"6", "param":"Eye-Level"},
-        {"paramId":"7", "param":"Back-angle"}
+        {"paramId":"2", "param":"Extreme Low-angle"},
+        {"paramId":"3", "param":"High-angle"},
+        {"paramId":"4", "param":"Extreme High-angle"},
+        {"paramId":"5", "param":"Bird-eye"},
+        {"paramId":"6", "param":"Side-angle"},
+        {"paramId":"7", "param":"Eye-Level"},
+        {"paramId":"8", "param":"Back-angle"}
       ]},
       {
         "id":"2",
-        "title":"Shot type",
+        "title":"Shot",
         "params":[
           {"paramId":"1", "param":"Closeup"},
           {"paramId":"2", "param":"Extreme Closeup"},
@@ -274,7 +274,7 @@
         ]},
         {
           "id":"3",
-          "title":"Camera type",
+          "title":"Camera",
           "params":[
             {"paramId":"1", "param":"DSLR"},
             {"paramId":"2", "param":"GoPro"},
@@ -325,7 +325,7 @@
             {"paramId":"1", "param":".25"},
             {"paramId":"2", "param":".5"},
             {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2"}
+            {"paramId":"4", "param":"2ekzaiç"}
           ]}
   ],
 
