@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue';
-
+// https://we.tl/t-3Go16yuHEy
 import promptsValue from "../assets/data/db.json"
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
