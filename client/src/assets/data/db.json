@@ -249,6 +249,107 @@
           }    
   ],
 
+  "CameraParameters":[
+    {
+      "id":"1",
+      "title":"Angle",
+      "params":[
+        {"paramId":"1", "param":"Low-angle"},
+        {"paramId":"1", "param":"Extreme Low-angle"},
+        {"paramId":"2", "param":"High-angle"},
+        {"paramId":"3", "param":"Extreme High-angle"},
+        {"paramId":"4", "param":"Bird-eye"},
+        {"paramId":"5", "param":"Side-angle"},
+        {"paramId":"6", "param":"Eye-Level"},
+        {"paramId":"7", "param":"Back-angle"}
+      ]},
+      {
+        "id":"2",
+        "title":"Shot type",
+        "params":[
+          {"paramId":"1", "param":"Closeup"},
+          {"paramId":"2", "param":"Extreme Closeup"},
+          {"paramId":"3", "param":"Medium-full"},
+          {"paramId":"4", "param":"Full-body"}
+        ]},
+        {
+          "id":"3",
+          "title":"Camera type",
+          "params":[
+            {"paramId":"1", "param":"DSLR"},
+            {"paramId":"2", "param":"GoPro"},
+            {"paramId":"3", "param":"Disposable Camera"},
+            {"paramId":"4", "param":"Polaroid"},
+            {"paramId":"5", "param":"Fujifilm Superia"},
+            {"paramId":"6", "param":"Instax"},
+            {"paramId":"7", "param":"Kodak Ektar"},
+            {"paramId":"8", "param":"Kodak Portra"},
+            {"paramId":"9", "param":"Kodak Gold 200"},
+            {"paramId":"10", "param":"Agfa Vista 200"},
+            {"paramId":"11", "param":"Tri-X 400"},
+            {"paramId":"12", "param":"Daguerreotype Plates"},
+            {"paramId":"13", "param":"Konica Infrared 750"},
+            {"paramId":"14", "param":"Fujifilm Pro 400H"}
+          ]},
+        {
+          "id":"4",
+          "title":"ISO",
+          "params":[
+            {"paramId":"1", "param":".25"},
+            {"paramId":"2", "param":".5"},
+            {"paramId":"3", "param":"1"},
+            {"paramId":"4", "param":"2"}
+          ]},
+        {
+          "id":"5",
+          "title":"Shutter",
+          "params":[
+            {"paramId":"1", "param":".25"},
+            {"paramId":"2", "param":".5"  },
+            {"paramId":"3", "param":"1"},
+            {"paramId":"4", "param":"2"}
+          ]},
+        {
+          "id":"6",
+          "title":"f/",
+          "params":[
+            {"paramId":"1", "param":".25"},
+            {"paramId":"2", "param":".5"},
+            {"paramId":"3", "param":"1"},
+            {"paramId":"4", "param":"2"}
+          ]},
+        {
+          "id":"7",
+          "title":"Focal",
+          "params":[
+            {"paramId":"1", "param":".25"},
+            {"paramId":"2", "param":".5"},
+            {"paramId":"3", "param":"1"},
+            {"paramId":"4", "param":"2"}
+          ]}
+  ],
+
+  "Lighting":[
+    {
+      "id":"1",
+      "title":"Météo",
+      "params":[
+        {"paramId":"1", "param":"16:9"},
+        {"paramId":"2", "param":"1:1"},
+        {"paramId":"3", "param":"1:3"},
+        {"paramId":"4", "param":"2:3"}
+      ]},
+      {
+        "id":"2",
+        "title":"Temps",
+        "params":[
+          {"paramId":"1", "param":"V1"},
+          {"paramId":"2", "param":"V2"},
+          {"paramId":"3", "param":"V3"},
+          {"paramId":"4", "param":"V4"}
+        ]}
+  ],
+
 
 
 

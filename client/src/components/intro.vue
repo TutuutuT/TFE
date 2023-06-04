@@ -15,6 +15,7 @@ onMounted(() => {
   tlPart1.from(Part1.value, {x: 200, duration: 0.3, ease: "power3.inOut"})
   gsap.from(".Part2", {x: 200, duration: 0.5, delay: 0.6, opacity: 0, ease: "power3.inOut", stagger: 0.08})
 })
+
 </script>
 
 <template>
@@ -40,7 +41,7 @@ onMounted(() => {
                 </div>
             </div>
             <div class="mt-[30px] h-[30vh] flex">
-                <div class="appear width-change-part1 w-[calc(35vw-30px)] mr-[15px] flex justify-center items-center bg-[#428EFF] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                <div class="appear width-change-part1 w-[calc(35vw-30px)] mr-[15px] flex justify-center items-center bg-[#428EFF] bg-[url('./assets/icon-Wide.jpg')] bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     
                 </div>
                 <div class="appear width-change-part2 w-[calc(65vw-30px)] ml-[15px]  flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">

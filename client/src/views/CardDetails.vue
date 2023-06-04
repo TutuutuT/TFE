@@ -16,15 +16,18 @@ const paramPrompt = ref('')
 const paramPromptSwitch = ref('')
 const selectedParams = ref({})
 let openSettings = ref(false)
+let openCamera = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
+const CameraParams = ref(null)
 
 onMounted(async () => {
   try {
     prompt.value = promptsValue.prompts[props.id - 1];
     Addparams.value = promptsValue.AddParameters;
     Switchparams.value = promptsValue.SwitchParameters;
-    ListChangeable.value = promptsValue.ListChangeable
+    ListChangeable.value = promptsValue.ListChangeable;
+    CameraParams.value = promptsValue.CameraParameters
   } catch (error) {
     console.log(error);
   }
@@ -37,11 +40,6 @@ function openDialog() {
 function closeDialog() {
   dialog.value.close();
 }
-
-// const handleCheckboxChange = () => {
-
-// }
-
 
 let PromptCopie = ref(null)
 let ClickOk = ref(false)
@@ -114,8 +112,8 @@ const styleDialog = ref(false)
 <div class="absolute flex justify-center w-full">
 <div class="px-6 py-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
   <ul>
-    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog">Valeur pas défaut</li>
-    <li class="cursor-pointer hover:bg-zinc-500/30 transition-all" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog">Valeur pas défaut</li>
+    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
   </ul>
    <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
 </div>
@@ -123,24 +121,32 @@ const styleDialog = ref(false)
 
                   <!-- box open settings -->
 
-<div class="w-full flex justify-center my-6 relative">
+<div class="w-full flex justify-center my-6 relative gap-8">
+  <button v-on:click="openCamera = !openCamera" class="group">
+      <svg class="w-7 mx-7 fill-white group-hover:fill-black transition-all duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.32" fill-rule="evenodd" clip-rule="evenodd" d="M5.02315 4.63052C5.99968 4.43521 6.85862 3.85998 7.41103 3.03137L7.44282 2.98368C8.1649 1.90057 9.3805 1.25 10.6822 1.25L13.3178 1.25C14.6195 1.25 15.8351 1.90057 16.5572 2.98368L16.589 3.03137C17.1414 3.85998 18.0003 4.43521 18.9768 4.63052V4.63052C21.1708 5.0693 22.75 6.99565 22.75 9.23302V14.75C22.75 17.5503 22.75 18.9504 22.205 20.02C21.7257 20.9608 20.9608 21.7257 20.02 22.205C18.9504 22.75 17.5503 22.75 14.75 22.75H9.25C6.44974 22.75 5.04961 22.75 3.98005 22.205C3.03924 21.7257 2.27433 20.9608 1.79497 20.02C1.25 18.9504 1.25 17.5503 1.25 14.75L1.25 9.23302C1.25 6.99565 2.82922 5.0693 5.02315 4.63052V4.63052Z"/>
+        <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/>
+      </svg>
+  </button>
+
   <button v-on:click="openSettings = !openSettings" class="group">
     <svg class="w-7 mx-7 fill-white group-hover:fill-black group-hover:rotate-90 transition-all duration-200 " viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path opacity="0.32" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 9C2.25 8.58579 2.58579 8.25 3 8.25H12C12.4142 8.25 12.75 8.58579 12.75 9C12.75 9.41421 12.4142 9.75 12 9.75H3C2.58579 9.75 2.25 9.41421 2.25 9ZM27.75 9C27.75 8.58579 28.0858 8.25 28.5 8.25H33C33.4142 8.25 33.75 8.58579 33.75 9C33.75 9.41421 33.4142 9.75 33 9.75H28.5C28.0858 9.75 27.75 9.41421 27.75 9ZM2.25 27C2.25 26.5858 2.58579 26.25 3 26.25H7.5C7.91421 26.25 8.25 26.5858 8.25 27C8.25 27.4142 7.91421 27.75 7.5 27.75H3C2.58579 27.75 2.25 27.4142 2.25 27ZM23.25 27C23.25 26.5858 23.5858 26.25 24 26.25L33 26.25C33.4142 26.25 33.75 26.5858 33.75 27C33.75 27.4142 33.4142 27.75 33 27.75L24 27.75C23.5858 27.75 23.25 27.4142 23.25 27Z"/>
       <path d="M20.55 2.25C18.8698 2.25 18.0298 2.25 17.388 2.57698C16.8235 2.8646 16.3646 3.32354 16.077 3.88803C15.75 4.52976 15.75 5.36984 15.75 7.05V10.95C15.75 12.6302 15.75 13.4702 16.077 14.112C16.3646 14.6765 16.8235 15.1354 17.388 15.423C18.0298 15.75 18.8698 15.75 20.55 15.75H24.45C26.1302 15.75 26.9702 15.75 27.612 15.423C28.1765 15.1354 28.6354 14.6765 28.923 14.112C29.25 13.4702 29.25 12.6302 29.25 10.95V7.05C29.25 5.36984 29.25 4.52976 28.923 3.88803C28.6354 3.32354 28.1765 2.8646 27.612 2.57698C26.9702 2.25 26.1302 2.25 24.45 2.25H20.55Z"/>
       <path d="M11.55 20.25C9.86984 20.25 9.02976 20.25 8.38803 20.577C7.82354 20.8646 7.3646 21.3235 7.07698 21.888C6.75 22.5298 6.75 23.3698 6.75 25.05V28.95C6.75 30.6302 6.75 31.4702 7.07698 32.112C7.3646 32.6765 7.82354 33.1354 8.38803 33.423C9.02976 33.75 9.86984 33.75 11.55 33.75H15.45C17.1302 33.75 17.9702 33.75 18.612 33.423C19.1765 33.1354 19.6354 32.6765 19.923 32.112C20.25 31.4702 20.25 30.6302 20.25 28.95V25.05C20.25 23.3698 20.25 22.5298 19.923 21.888C19.6354 21.3235 19.1765 20.8646 18.612 20.577C17.9702 20.25 17.1302 20.25 15.45 20.25H11.55Z"/>
     </svg>
-</button>
-<div class="absolute translate-x-24 translate-y-[10px]" @click="openDialog">
+  </button>
 
-  <svg class="group w-7 fill-white transition-all cursor-pointer" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path opacity="0.10" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12Z"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 7.55228 12.5523 8 12 8C11.4477 8 11 7.55228 11 7C11 6.44772 11.4477 6 12 6C12.5523 6 13 6.44772 13 7Z"/>
-    <path d="M12 11L12 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle fill="none" cx="12" cy="12" r="10.25" stroke="white" stroke-width="1.5"/>
-  </svg>
+  <div class="absolute translate-x-40 translate-y-[10px]" @click="openDialog">
 
-</div>
+    <svg class="group w-7 fill-white transition-all cursor-pointer" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.10" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12Z"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 7.55228 12.5523 8 12 8C11.4477 8 11 7.55228 11 7C11 6.44772 11.4477 6 12 6C12.5523 6 13 6.44772 13 7Z"/>
+      <path d="M12 11L12 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle fill="none" cx="12" cy="12" r="10.25" stroke="white" stroke-width="1.5"/>
+    </svg>
+
+  </div>
 </div>
 
                   <!-- inline box send and link -->
@@ -171,14 +177,14 @@ const styleDialog = ref(false)
         
         <label class="label__title mr-4 w-28  font-semibold">{{ paramPrompt.titleShort }}</label>
   
-        <div class="flex justify-between w-full bg-zinc-800 rounded-full">
+        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
   
-          <label class="hover:bg-zinc-500/30 text-center cursor-pointer"> None
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer"> None
             <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
           </label>
   
     
-          <label class="hover:bg-zinc-500/30 text-center cursor-pointer" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
             <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
           </label>
   
@@ -191,9 +197,9 @@ const styleDialog = ref(false)
   
         <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ paramPromptSwitch.titleShort }}</label>
   
-        <div class="flex justify-between w-full bg-zinc-800 rounded-full">
+        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
   
-          <label class="hover:bg-zinc-500/30 text-center w-full" :key="paramPromptSwitch.id"> Ajouter/supprimer
+          <label class="hover:bg-neutral-500/30 text-center w-full" :key="paramPromptSwitch.id"> Ajouter/supprimer
             <input class="sr-only" type="checkbox" :name="paramPromptSwitch.titleShort" :true-value="paramPromptSwitch.titleShort" false-value="" v-model="selectedParams[paramPromptSwitch.id]"/>
           </label>
   
@@ -209,10 +215,64 @@ const styleDialog = ref(false)
   
 </Transition>
 
+                  <!-- box camera -->
+
+<Transition name="slide-fade">
+  <div v-if="openCamera" class="flex justify-center relative">
+    <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
+      <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
+        
+        <label class="label__title mr-4 w-28  font-semibold">{{ paramPrompt.titleShort }}</label>
+  
+        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
+  
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer"> None
+            <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
+          </label>
+  
+    
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
+            <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
+          </label>
+  
+        </div>
+        
+      </form>
+  
+      
+      <form class="h-8 my-3 rounded w-96 flex" v-for="paramCamera in CameraParams" :key="paramCamera.id">
+  
+        <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ paramCamera.title }}</label>
+  
+        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
+  
+          <label class="hover:bg-neutral-500/30 text-center w-full" :key="paramCamera.id"> Ajouter/supprimer
+            <input class="sr-only" type="checkbox" :name="paramCamera.title" :true-value="paramCamera.title" false-value="" v-model="selectedParams[paramCamera.id]"/>
+          </label>
+  
+        </div>
+  
+  
+      </form>
+      <div class="w-96 flex justify-center mt-6">
+        <button v-on:click="openCamera = !openCamera">Fermer</button>
+      </div>
+    </div>
+    </div>
+  
+</Transition>
+
+
 <Transition name="slide-fade">
   <div v-if="openSend" class="flex justify-center relative">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
-      <div>iekzeioaz</div>
+      <ul>
+        <li class="bg-neutral-500/30 rounded-full hover:bg-neutral-500"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Copier le lien</p></a></li>
+        <li>Reddit</li>
+        <li>Twitter</li>
+        <li>Whatsapp</li>
+        <li>VK</li>
+      </ul>
       <div class="w-96 flex justify-center mt-6">
         <button v-on:click="openSend = !openSend">Fermer</button>
       </div>
@@ -236,7 +296,7 @@ const styleDialog = ref(false)
 
                     <!-- dialog aide -->
 
-  <dialog ref="dialog" class="bg-white/1 backdrop-blur-sm rounded-xl text-white border-2 border-white/40 p-4">
+  <dialog ref="dialog" class="bg-white/10 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4">
     <div>
       <ul class=" list-disc px-8 pt-3">
         <li>Ratio de l’image :<span class=" font-bold "> --ar</span></li>
@@ -258,14 +318,16 @@ const styleDialog = ref(false)
 
 </template>
 
+
+
 <style lang="scss">
 
 label:has(input[type="radio"]:checked) {
-  @apply bg-zinc-500;
+  @apply bg-neutral-500;
 }
 
 label:has(input[type="checkbox"]:checked) {
-  @apply bg-zinc-500;
+  @apply bg-neutral-500;
 }
 
 label{

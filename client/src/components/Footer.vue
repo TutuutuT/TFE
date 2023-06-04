@@ -15,7 +15,7 @@ import { gsap } from 'gsap';
                     <h3 class="-mb-4 w-fit px-4 bg-white/5 backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">Année</h3>
                     <p class="text-[10vw]">2023</p>
                 </div>
-                <div class="w-[60vw]">
+                <div class="w-[60vw] -z-10">
                     <h3 class="-mb-4 w-fit px-4 bg-white/5 backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">Lieu</h3>
                     <p class="text-[10vw]">Belgique</p>
                 </div>
