@@ -19,7 +19,9 @@ let openSettings = ref(false)
 let openCamera = ref(false)
 let openSend = ref(false)
 const ListChangeable = ref(null)
-const CameraParams = ref(null)
+const CameraParams = ref('')
+const ListOpen = ref(null)
+let SelectList = ref(0)
 
 onMounted(async () => {
   try {
@@ -89,7 +91,7 @@ const styleDialog = ref(false)
     </span>
       
       {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
-      {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }} {{ selectedCameraParams[7] }}
+      {{ selectedCameraParams[0] }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
     
   </p>
 
@@ -221,38 +223,30 @@ const styleDialog = ref(false)
 <Transition name="slide-fade">
   <div v-if="openCamera" class="flex justify-center relative">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
-      <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
-        
-        <label class="label__title mr-4 w-28  font-semibold">{{ paramPrompt.titleShort }}</label>
-  
-        <div class="flex justify-between w-full bg-neutral-800 rounded-full">
-  
-          <label class="hover:bg-neutral-500/30 text-center cursor-pointer"> None
-            <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="null" v-model="selectedParams[paramPrompt.id]"/>
-          </label>
-  
-    
-          <label class="hover:bg-neutral-500/30 text-center cursor-pointer" v-for="param in paramPrompt.params" :key="param.id"> {{ param.param }}
-            <input class="sr-only" type="radio" :name="paramPrompt.titleShort" :value="param.param" v-model="selectedParams[paramPrompt.id]"/>
-          </label>
-  
-        </div>
-        
-      </form>
-  
+
+      <button @click="ListOpen = !ListOpen" class="flex items-center group mx-auto">
+        Parametres de caméra
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ml-1 h-5 w-5 fill-current text-white group-hover:text-black">
+          <path d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path>
+        </svg>
+      </button>
       
-      <form class="h-auto my-6 rounded w-96 flex" v-for="paramCamera in CameraParams" :key="paramCamera.id">
+      <ul v-if="ListOpen" class="bg-neutral-800 border-2 border-white/40 rounded-2xl mt-3 absolute w-[calc(100%-30px)] z-30">
+        <li class="cursor-pointer text-center py-2 hover:bg-neutral-500/30 rounded-full" v-for="paramCamera in CameraParams" :key="paramCamera.id" @click="SelectList = paramCamera.id - 1; ListOpen = !ListOpen">{{ paramCamera.title }}</li>
+      </ul>
+      
+      <form class="h-auto my-6 first:mt-3 rounded w-96 flex">
   
-        <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ paramCamera.title }}</label>
+        <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ CameraParams[SelectList].title }}</label>
   
         <div class="w-full grid rounded-full gap-2 grid-cols-2">
 
           <label class="hover:bg-neutral-500/30 text-center cursor-pointer py-1 px-2 bg-neutral-800 w-full"> None
-            <input class="sr-only" type="radio" :name="paramCamera.title" :value="null" v-model="selectedCameraParams[paramCamera.id]"/>
+            <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="null" v-model="selectedCameraParams[SelectList]"/>
           </label>
   
-          <label v-for="camera in paramCamera.params" class="hover:bg-neutral-500/30 text-center w-full py-1 px-2 bg-neutral-800" :key="camera.paramId"> {{ camera.param }}
-            <input class="sr-only" type="radio" :name="paramCamera.title" :value="camera.param" v-model="selectedCameraParams[paramCamera.id]"/>
+          <label v-for="camera in CameraParams[SelectList].params" class="hover:bg-neutral-500/30 text-center w-full py-1 px-2 bg-neutral-800 cursor-pointer" :key="camera.paramId"> {{ camera.param }}
+            <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="camera.param" v-model="selectedCameraParams[SelectList]"/>
           </label>
   
         </div>
@@ -315,7 +309,7 @@ const styleDialog = ref(false)
       </ul>
     </div>
     <div class="w-96 flex justify-center mt-6">
-      <button @click="closeDialog">Close</button>
+      <button @click="closeDialog">Fermer</button>
     </div>
   </dialog>
 
@@ -339,17 +333,15 @@ label{
   @apply w-14 py-[3px] h-8 text-sm leading-6 text-white rounded-full shadow transition-all;
 }
 
-.slide-fade-enter-active {
-  transition: all 0.2s ease-out;
-}
-
+.slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  scale: 0;
+  transform: translateY(-10px);
+  opacity: 0;
 }
 
 .PromptHover{
