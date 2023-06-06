@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue';
+import CameraDraggable from '../components/CameraDraggable.vue';
 import promptsValue from "../assets/data/db.json"
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
@@ -22,6 +23,9 @@ const ListChangeable = ref(null)
 const CameraParams = ref('')
 const ListOpen = ref(null)
 let SelectList = ref(0)
+const styleDialog = ref(false)
+let PromptCopie = ref(null)
+let ClickOk = ref(false)
 
 onMounted(async () => {
   try {
@@ -43,9 +47,6 @@ function closeDialog() {
   dialog.value.close();
 }
 
-let PromptCopie = ref(null)
-let ClickOk = ref(false)
-
 
 const copyText = () => {
     const range = document.createRange()
@@ -59,9 +60,6 @@ const copyText = () => {
       ClickOk.value = false
     }, 2000)
   }
-
-
-const styleDialog = ref(false)
 
 
 
@@ -235,11 +233,11 @@ const styleDialog = ref(false)
         <li class="cursor-pointer text-center py-2 hover:bg-neutral-500/30 rounded-full" v-for="paramCamera in CameraParams" :key="paramCamera.id" @click="SelectList = paramCamera.id - 1; ListOpen = !ListOpen">{{ paramCamera.title }}</li>
       </ul>
       
-      <form class="h-auto my-6 first:mt-3 rounded w-96 flex">
+      <form class="h-auto my-4 rounded w-96">
   
-        <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ CameraParams[SelectList].title }}</label>
+        <label class="label__title mr-4 font-semibold shadow-none text-2xl">{{ CameraParams[SelectList].title }}</label>
   
-        <div class="w-full grid rounded-full gap-2 grid-cols-2">
+        <div class="w-full grid rounded-full gap-2 grid-cols-2 mt-4" v-if="SelectList != 0">
 
           <label class="hover:bg-neutral-500/30 text-center cursor-pointer py-1 px-2 bg-neutral-800 w-full"> None
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="null" v-model="selectedCameraParams[SelectList]"/>
@@ -248,8 +246,11 @@ const styleDialog = ref(false)
           <label v-for="camera in CameraParams[SelectList].params" class="hover:bg-neutral-500/30 text-center w-full py-1 px-2 bg-neutral-800 cursor-pointer" :key="camera.paramId"> {{ camera.param }}
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="camera.param" v-model="selectedCameraParams[SelectList]"/>
           </label>
-  
+
+          
         </div>
+        <CameraDraggable v-else class="mt-4">
+        </CameraDraggable>
   
   
       </form>
