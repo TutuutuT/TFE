@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import Footer from '../components/Footer.vue';
-import CameraDraggable from '../components/CameraDraggable.vue';
+import Footer from '../components/Footer.vue'
+import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
@@ -26,6 +26,7 @@ let SelectList = ref(0)
 const styleDialog = ref(false)
 let PromptCopie = ref(null)
 let ClickOk = ref(false)
+
 
 onMounted(async () => {
   try {
