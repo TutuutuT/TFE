@@ -7,26 +7,27 @@ gsap.registerPlugin(Draggable);
 
 const containerRef = ref(null);
 const knobRef = ref(null);
-const percentRef = ref('X = 0% , Y = 0%');
+const percentRef = ref('');
 
-let W, H, X, Y, D, BB, Xpercent = 0, Ypercent = 0, snapRatio = 6;
+let W, H, X, Y, D, BB, Xpercent = 0, Ypercent = 0, snapRatio = 4;
 
 function drag() {
   if (!containerRef.value) return;
 
   BB = containerRef.value.getBoundingClientRect();
-  W = BB.width;
-  H = BB.height;
+  W = BB.width - 30;
+  H = BB.height - 30;
   calcXY(Xpercent, Ypercent);
   gsap.set(knobRef.value, { x: X, y: Y });
-  D[0].applyBounds({ minX: 0, minY: 0, maxX: W-23, maxY: H-20 });
+  D[0].applyBounds({ minX: 0, minY: 0, maxX: W, maxY: H });
   calcXY(Xpercent, Ypercent);
 }
 
 function Percent(x, y) {
   Xpercent = Math.round((x / W) * 100);
   Ypercent = Math.round((y / H) * 100);
-  percentRef.value = `X = ${Xpercent}% , Y = ${Ypercent}%`;
+  const setting = convertToSetting(Xpercent, Ypercent);
+  percentRef.value = `${setting}`;
   calcXY(Xpercent, Ypercent);
 }
 
@@ -59,6 +60,32 @@ onMounted(() => {
   drag();
 });
 
+const settingsCamera = [
+  { name: 'Extreme Low-angle', xRange: [48, 52], yRange: [98, 100] },
+  { name: 'Low-angle', xRange: [48, 52], yRange: [73, 77] },
+  { name: 'Eye-Level', xRange: [48, 52], yRange: [48, 52] },
+  { name: 'High-angle', xRange: [48, 52], yRange: [23, 27] },
+  { name: 'Extreme High-angle', xRange: [48, 52], yRange: [0, 2] },
+  { name: 'Bird-eye', xRange: [98, 100], yRange: [0, 2] },
+  { name: 'Side-angle', xRange: [98, 100], yRange: [48, 52] },
+  { name: 'Back-angle', xRange: [0, 2], yRange: [48, 52] }
+  ]
+
+  function convertToSetting(Xpercent, Ypercent) {
+  for (const option of settingsCamera) {
+    const { xRange, yRange, name } = option;
+    if (
+      Xpercent >= xRange[0] &&
+      Xpercent <= xRange[1] &&
+      Ypercent >= yRange[0] &&
+      Ypercent <= yRange[1]
+    ) {
+      return name;
+    }
+  }
+  return ''; // Réglage par défaut si aucune correspondance n'est trouvée
+}
+
 // onUnmounted(() => {
 //   window.removeEventListener('resize', drag);
 //   D[0].kill();
@@ -81,8 +108,8 @@ onMounted(() => {
 .knob {
     background-image: url(../assets/CameraIcon.png);
     background-size: cover;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin:0px;
 }
 
