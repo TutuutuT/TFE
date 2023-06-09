@@ -45,7 +45,7 @@ onMounted(() => {
                     
                 </div>
                 <div class="appear width-change-part2 w-[calc(65vw-30px)] ml-[15px]  flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
-                    <h2>Votre aide pour rédiger le meilleur prompt</h2>
+                    <h2>Éveillez votre créativité avec Midjourney</h2>
                 </div>
             </div>
         </div>

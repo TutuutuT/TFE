@@ -4,6 +4,7 @@ import Footer from '../components/Footer.vue'
 import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
 
+
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
 const ClickedPromptCat = ref(null)
 const ClickedList = ref({})
@@ -26,6 +27,44 @@ let SelectList = ref(0)
 const styleDialog = ref(false)
 let PromptCopie = ref(null)
 let ClickOk = ref(false)
+
+const message = ref(null);
+
+const share = (network) => {
+  message.value = PromptCopie.value.innerText;
+  const shareUrl = getShareUrl(network, message.value);
+  window.open(shareUrl, '_blank');
+  console.log(message.value);
+  // Faites quelque chose avec l'URL de partage, par exemple, ouvrez une nouvelle fenêtre avec l'URL
+};
+
+const getShareUrl = (network, message) => {
+  let url = '';
+
+  switch (network) {
+    case 'Facebook':
+      // URL de partage pour Facebook
+      url = `//www.nytimes.com/interactive/2015/04/15/travel/europe-favorite-streets.html`;
+      break;
+    case 'Twitter':
+      // URL de partage pour Twitter
+      url = `https://twitter.com/intent/tweet?text=Essaye mon prompt '${encodeURIComponent(message)}' sur Midjourney !`;
+      break;
+    case 'Reddit':
+      // URL de partage pour Twitter
+      url = `http://www.reddit.com/submit?text=Essaye mon prompt '${encodeURIComponent(message)}' sur Midjourney !`;
+      break;
+    case 'Whatsapp':
+      // URL de partage pour Twitter
+      url = `https://api.whatsapp.com/send?text=Essaye mon prompt '${encodeURIComponent(message)}' sur Midjourney !`;
+      break;
+    default:
+      // Cas par défaut si le réseau social n'est pas pris en charge
+      console.error(`Réseau social non pris en charge : ${network}`);
+  }
+
+  return url;
+};
 
 
 onMounted(async () => {
@@ -62,9 +101,14 @@ const copyText = () => {
     }, 2000)
   }
 
+  const handleButtonClique = (percentRef) => {
+  cameraAngle.value = percentRef;
+}
 
+const cameraAngle = ref('');
 
 </script>
+
 
 <template>
 
@@ -90,7 +134,7 @@ const copyText = () => {
     </span>
       
       {{ selectedParams[1] }} {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
-      {{ selectedCameraParams[0] }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
+      {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
     
   </p>
 
@@ -112,12 +156,13 @@ const copyText = () => {
 
 
 <div class="absolute flex justify-center w-full">
-<div class="px-6 py-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
-  <ul>
-    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog">Valeur pas défaut</li>
-    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog">{{ ChangeElement }}</li>
+<div class=" pb-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
+  <div class="text-center font-extrabold py-3 mb-3 text-black bg-white rounded-t-3xl rounded-b-sm border-2 border-white/40">{{ ListChangeable[ClickedPromptCat].title }}</div>
+  <ul class="px-6 grid grid-cols-2 gap-x-4 gap-y-4 overflow-y-scroll max-h-80">
+    <li class="cursor-pointer hover:bg-neutral-500/30 transition-al rounded-md w-full bg-white text-black flex justify-center items-center" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog"><div>Valeur pas défaut</div></li>
+    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all rounded-md w-full h-24 rounded-b-md overflow-hidden" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement.name ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog"><div class="bg-white text-black text-center rounded-t-md rounded-b-sm">{{ ChangeElement.name }}</div><img class="w-[150px]" :src="`${ ChangeElement ? ChangeElement.imageUrl: '' }`"></li>
   </ul>
-   <button class="mt-4" @click="styleDialog = !styleDialog">Fermer</button>
+   <button class="mt-4 mx-6" @click="styleDialog = !styleDialog">Fermer</button>
 </div>
 </div>
 
@@ -240,7 +285,7 @@ const copyText = () => {
   
         <div class="w-full grid rounded-full gap-2 grid-cols-2 mt-4" v-if="SelectList != 0">
 
-          <label class="hover:bg-neutral-500/30 text-center cursor-pointer py-1 px-2 bg-neutral-800 w-full"> None
+          <label class="hover:bg-neutral-500/30 text-center cursor-pointer py-1 px-2 bg-neutral-800 w-full"> Aucun
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="null" v-model="selectedCameraParams[SelectList]"/>
           </label>
   
@@ -250,7 +295,7 @@ const copyText = () => {
 
           
         </div>
-        <CameraDraggable v-else class="mt-4">
+        <CameraDraggable v-else class="mt-4" @button-click="handleButtonClique">
         </CameraDraggable>
   
   
@@ -267,12 +312,11 @@ const copyText = () => {
 <Transition name="slide-fade">
   <div v-if="openSend" class="flex justify-center relative">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
-      <ul>
-        <li class="bg-neutral-500/30 rounded-full hover:bg-neutral-500"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Copier le lien</p></a></li>
-        <li>Reddit</li>
-        <li>Twitter</li>
-        <li>Whatsapp</li>
-        <li>VK</li>
+      <ul class=" flex flex-col gap-3">
+        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="copyText"><p class="flex justify-center items-center h-8 w-full">Copier le prompt</p></li>
+        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Reddit')"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Reddit</p></a></li>
+        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Twitter')"><p class="flex justify-center items-center h-8 w-full">Twitter</p></li>
+        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Whatsapp')"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Whatsapp</p></a></li>
       </ul>
       <div class="w-96 flex justify-center mt-6">
         <button v-on:click="openSend = !openSend">Fermer</button>

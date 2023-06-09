@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, defineEmits } from 'vue';
 import { gsap } from 'gsap';
 import { Draggable } from 'gsap/all';
 
@@ -9,7 +9,7 @@ const containerRef = ref(null);
 const knobRef = ref(null);
 const percentRef = ref('');
 
-let W, H, X, Y, D, BB, Xpercent = 0, Ypercent = 0, snapRatio = 4;
+let W, H, X, Y, D, BB, Xpercent = 50, Ypercent = 50, snapRatio = 4;
 
 function drag() {
   if (!containerRef.value) return;
@@ -91,19 +91,38 @@ const settingsCamera = [
 //   D[0].kill();
 // });
 
+const emits = defineEmits(['button-click']);
+
+const handleClick = () => {
+  emits('button-click', percentRef);
+}
+
 </script>
 
 
 <template>
-    <div id='container' ref='containerRef'>
-      <div class="origin" id='origin'></div>
-      <div class="knob" ref='knobRef'></div>
-      <div class="text" id="percent">{{ percentRef }}</div>
+  <div>
+    <div class="text-xs text-white/80 absolute w-[calc(100%-31px)] h-[calc(100%-206px)] -z-30 mt-4 grid grid-cols-3 grid-rows-5 cursor-none items-center">
+      <div class="text-center col-start-2 col-span-1 p-2">Extreme High-angle</div>
+      <div class="text-right col-start-3 col-span-1 p-2">Bird-eye</div>
+      <div class="text-center col-start-2 col-span-1 p-2">High-angle</div>
+      <div class="text-left col-start-1 col-span-1 p-2">Back-angle</div>
+      <div class="text-center col-start-2 col-span-1 p-2">Eye-level</div>
+      <div class="text-right col-start-3 col-span-1 p-2">Side-angle</div>
+      <div class="text-center col-start-2 col-span-1 p-2">Low-angle</div>
+      <div class="text-center col-start-2 col-span-1 p-2">Extreme Low-angle</div>
     </div>
+
+    <div id='container' ref='containerRef' class="mt-4 z-30">
+      <div class="origin" id='origin'></div>
+      <div class="knob z-50" ref='knobRef' @mouseover="handleClick"></div>
+    </div>
+  </div>
+    
   </template>
 
 
-<style scoped lang="scss">
+<style lang="scss">
 
 .knob {
     background-image: url(../assets/CameraIcon.png);
@@ -116,7 +135,7 @@ const settingsCamera = [
 #container {
     @apply rounded-xl border-white/40 border-2 bg-neutral-900/10;
     width:100%;
-    height:250px;
+    height:350px;
 }
 
 .text {

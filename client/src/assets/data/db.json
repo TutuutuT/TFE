@@ -295,37 +295,54 @@
           "id":"4",
           "title":"ISO",
           "params":[
-            {"paramId":"1", "param":".25"},
-            {"paramId":"2", "param":".5"},
-            {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2"}
+            {"paramId":"1", "param":"200 isos"},
+            {"paramId":"2", "param":"400 isos"},
+            {"paramId":"3", "param":"800 isos"},
+            {"paramId":"4", "param":"1600 isos"},
+            {"paramId":"5", "param":"3200 isos"},
+            {"paramId":"6", "param":"6400 isos"}
           ]},
         {
           "id":"5",
           "title":"Shutter",
           "params":[
-            {"paramId":"1", "param":".25"},
-            {"paramId":"2", "param":".5"  },
-            {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2"}
+            {"paramId":"1", "param":"1/30"},
+            {"paramId":"2", "param":"1/60"},
+            {"paramId":"3", "param":"1/125"},
+            {"paramId":"4", "param":"1/250"},
+            {"paramId":"5", "param":"1/500"},
+            {"paramId":"6", "param":"1/1000"},
+            {"paramId":"7", "param":"1/2000"},
+            {"paramId":"8", "param":"1/4000"},
+            {"paramId":"9", "param":"1/8000"}
           ]},
         {
           "id":"6",
           "title":"f/",
           "params":[
-            {"paramId":"1", "param":".25"},
-            {"paramId":"2", "param":".5"},
-            {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2"}
+            {"paramId":"1", "param":"f/1.4"},
+            {"paramId":"2", "param":"f/2"},
+            {"paramId":"4", "param":"f/2.8"},
+            {"paramId":"5", "param":"f/4"},
+            {"paramId":"6", "param":"f/5.6"},
+            {"paramId":"7", "param":"f/8"},
+            {"paramId":"8", "param":"f/11"},
+            {"paramId":"9", "param":"f/16"},
+            {"paramId":"10", "param":"f/22"},
+            {"paramId":"11", "param":"f/32"}
           ]},
         {
           "id":"7",
           "title":"Focal",
           "params":[
-            {"paramId":"1", "param":".25"},
-            {"paramId":"2", "param":".5"},
-            {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2ekzaiç"}
+            {"paramId":"1", "param":"17mm"},
+            {"paramId":"2", "param":"24mm"},
+            {"paramId":"3", "param":"35mm"},
+            {"paramId":"4", "param":"50mm"},
+            {"paramId":"5", "param":"70mm"},
+            {"paramId":"6", "param":"100mm"},
+            {"paramId":"7", "param":"200mm"},
+            {"paramId":"8", "param":"300mm"}
           ]}
   ],
 
@@ -358,13 +375,40 @@
       "id":"1",
       "title":"style",
       "elements":[
-        "realistic","Fantasy Illustration","photorealism","conceptual digital art","Retro-futurism"
+        {"name":"realistic", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Isometric anime", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"analytic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"infographic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"diagrammatic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"isometric illustration", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"futuristic style", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"double exposure", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"dark fantasy", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"patchwork collage", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"pop art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"Japanese ink", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"pastel drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"stained glass portrait", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"graffiti portrait", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"typography art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"one-line drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"pop art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"pixel art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"photorealism", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"conceptual digital art", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Retro-futurism", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"2",
       "title":"character",
       "elements":[
-        "Dog","Cat","Human","snake","unicorn","a man and little child","photo of interior design"
+        {"name":"Dog", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Cat", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Human", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Snake", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"unicorn", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"a man and little child", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"photo of interior design", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"3",
@@ -376,19 +420,26 @@
       "id":"4",
       "title":"location",
       "elements":[
-        "on earth","in space","in a bar","fashion show","in a battle"
+        {"name":"on earth", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in space", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in a bar", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"fashion show", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in a battle", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"5",
       "title":"action",
       "elements":[
-        "Dynamic Pose","under a torrent of rain"
+        {"name":"Dynamic Pose", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"under a torrent of rain", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"6",
       "title":"color",
       "elements":[
-        "pastel colors","bronze and white","black and white"
+        {"name":"pastel colors", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"bronze and white", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"black and white", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"7",
@@ -400,25 +451,32 @@
       "id":"8",
       "title":"background",
       "elements":[
-        "futuristic city on the background","forest in the background","colorful garden"
+        {"name":"futuristic city on the background", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"forest in the background", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"colorful garden", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"9",
       "title":"renderer",
       "elements":[
-        "analog photography","cinematic shot","wide-angle shot","octane render","Unreal Engine 5"
+        {"name":"analog photography", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"octane render", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Unreal Engine 5", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"10",
       "title":"lighting",
       "elements":[
-        "cinematic lighting","warm light","beautiful sunset light"
+        {"name":"cinematic lighting", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"warm light", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"beautiful sunset light", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"11",
       "title":"details",
       "elements":[
-        "ultra details","Sharp Details"
+        {"name":"ultra details", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Sharp Details", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]}  
 ]
 }
