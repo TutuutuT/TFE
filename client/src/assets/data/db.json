@@ -267,54 +267,47 @@
         "id":"2",
         "title":"Shot",
         "params":[
-          {"paramId":"1", "param":"Closeup"},
-          {"paramId":"2", "param":"Extreme Closeup"},
-          {"paramId":"3", "param":"Medium-full"},
-          {"paramId":"4", "param":"Full-body"}
+          {"paramId":"1", "param":"Extreme Closeup", "imageUrl":"./assets/categoriesImages/extremeCloseup.webp"},
+          {"paramId":"2", "param":"Closeup", "imageUrl":"./assets/categoriesImages/closeup.webp"},
+          {"paramId":"3", "param":"Medium-full", "imageUrl":"./assets/categoriesImages/medium.webp"},
+          {"paramId":"4", "param":"Full-body", "imageUrl":"./assets/categoriesImages/Full.webp"}
         ]},
         {
           "id":"3",
           "title":"Camera",
           "params":[
-            {"paramId":"1", "param":"DSLR"},
-            {"paramId":"2", "param":"GoPro"},
-            {"paramId":"3", "param":"Disposable Camera"},
-            {"paramId":"4", "param":"Polaroid"},
-            {"paramId":"5", "param":"Fujifilm Superia"},
-            {"paramId":"6", "param":"Instax"},
-            {"paramId":"7", "param":"Kodak Ektar"},
-            {"paramId":"8", "param":"Kodak Portra"},
-            {"paramId":"9", "param":"Kodak Gold 200"},
-            {"paramId":"10", "param":"Agfa Vista 200"},
-            {"paramId":"11", "param":"Tri-X 400"},
-            {"paramId":"12", "param":"Daguerreotype Plates"},
-            {"paramId":"13", "param":"Konica Infrared 750"},
-            {"paramId":"14", "param":"Fujifilm Pro 400H"}
+            {"paramId":"1", "param":"DSLR", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
+            {"paramId":"2", "param":"GoPro", "imageUrl":"./assets/categoriesImages/go.jpg"},
+            {"paramId":"3", "param":"Disposable Camera", "imageUrl":"./assets/categoriesImages/dispo.jpg"},
+            {"paramId":"4", "param":"Polaroid", "imageUrl":"./assets/categoriesImages/pola.jpg"},
+            {"paramId":"5", "param":"Fujifilm Superia", "imageUrl":"./assets/categoriesImages/fujiSu.jpg"},
+            {"paramId":"6", "param":"Instax", "imageUrl":"./assets/categoriesImages/insta.jpg"},
+            {"paramId":"7", "param":"Kodak Ektar", "imageUrl":"./assets/categoriesImages/Ektar.jpg"},
+            {"paramId":"8", "param":"Kodak Portra", "imageUrl":"./assets/categoriesImages/portra.jpg"},
+            {"paramId":"9", "param":"Kodak Gold 200", "imageUrl":"./assets/categoriesImages/gold.jpg"},
+            {"paramId":"10", "param":"Tintype", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
           ]},
         {
           "id":"4",
           "title":"ISO",
           "params":[
-            {"paramId":"1", "param":"200 isos"},
-            {"paramId":"2", "param":"400 isos"},
-            {"paramId":"3", "param":"800 isos"},
-            {"paramId":"4", "param":"1600 isos"},
-            {"paramId":"5", "param":"3200 isos"},
-            {"paramId":"6", "param":"6400 isos"}
+            {"paramId":"1", "param":"200 iso"},
+            {"paramId":"2", "param":"400 iso"},
+            {"paramId":"3", "param":"800 iso"},
+            {"paramId":"4", "param":"1600 iso"},
+            {"paramId":"5", "param":"3200 iso"},
+            {"paramId":"6", "param":"6400 iso"}
           ]},
         {
           "id":"5",
           "title":"Shutter",
           "params":[
-            {"paramId":"1", "param":"1/30"},
-            {"paramId":"2", "param":"1/60"},
-            {"paramId":"3", "param":"1/125"},
-            {"paramId":"4", "param":"1/250"},
-            {"paramId":"5", "param":"1/500"},
-            {"paramId":"6", "param":"1/1000"},
-            {"paramId":"7", "param":"1/2000"},
-            {"paramId":"8", "param":"1/4000"},
-            {"paramId":"9", "param":"1/8000"}
+            {"paramId":"1", "param":"1/8", "imageUrl":"./assets/categoriesImages/18.jpg"},
+            {"paramId":"2", "param":"1/30", "imageUrl":"./assets/categoriesImages/130.jpg"},
+            {"paramId":"3", "param":"1/125", "imageUrl":"./assets/categoriesImages/1125.jpg"},
+            {"paramId":"4", "param":"1/250", "imageUrl":"./assets/categoriesImages/1250.jpg"},
+            {"paramId":"5", "param":"1/500", "imageUrl":"./assets/categoriesImages/1500.jpg"},
+            {"paramId":"6", "param":"1/1000", "imageUrl":"./assets/categoriesImages/11000.jpg"}
           ]},
         {
           "id":"6",
@@ -377,26 +370,21 @@
       "elements":[
         {"name":"realistic", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
         {"name":"Isometric anime", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"analytic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"infographic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"diagrammatic drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"isometric illustration", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"futuristic style", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"double exposure", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"dark fantasy", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"patchwork collage", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"pop art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"Japanese ink", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"pastel drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"stained glass portrait", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"graffiti portrait", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"typography art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"one-line drawing", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"pop art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"pixel art", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"photorealism", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"conceptual digital art", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Retro-futurism", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"infographic drawing", "imageUrl": "./assets/categoriesImages/info.webp"},
+        {"name":"isometric illustration", "imageUrl": "./assets/categoriesImages/iso.webp"},
+        {"name":"futuristic style", "imageUrl": "./assets/categoriesImages/futur.jpg"},
+        {"name":"double exposure", "imageUrl": "./assets/categoriesImages/double.webp"},
+        {"name":"dark fantasy", "imageUrl": "./assets/categoriesImages/dark.webp"},
+        {"name":"patchwork collage", "imageUrl": "./assets/categoriesImages/collage.webp"},
+        {"name":"Japanese ink", "imageUrl": "./assets/categoriesImages/japan.webp"},
+        {"name":"pastel drawing", "imageUrl": "./assets/categoriesImages/pastel.webp"},
+        {"name":"stained glass portrait", "imageUrl": "./assets/categoriesImages/glass.webp"},
+        {"name":"graffiti portrait", "imageUrl": "./assets/categoriesImages/grafitti.webp"},
+        {"name":"typography art", "imageUrl": "./assets/categoriesImages/typo.webp"},
+        {"name":"one-line drawing", "imageUrl": "./assets/categoriesImages/line.webp"},
+        {"name":"op art", "imageUrl": "./assets/categoriesImages/op.webp"},
+        {"name":"pixel art", "imageUrl": "./assets/categoriesImages/pixel.webp"},
+        {"name":"Retro-futurism", "imageUrl": "./assets/categoriesImages/retro.webp"}
       ]},
     {
       "id":"2",
@@ -437,9 +425,9 @@
       "id":"6",
       "title":"color",
       "elements":[
-        {"name":"pastel colors", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"bronze and white", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"black and white", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"pastel colors", "imageUrl": "./assets/categoriesImages/pastelCO.webp"},
+        {"name":"bronze and white", "imageUrl": "./assets/categoriesImages/bronze.webp"},
+        {"name":"black and white", "imageUrl": "./assets/categoriesImages/BW.webp"}
       ]},
     {
       "id":"7",
@@ -459,20 +447,11 @@
       "id":"9",
       "title":"renderer",
       "elements":[
-        {"name":"analog photography", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
         {"name":"octane render", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
         {"name":"Unreal Engine 5", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"10",
-      "title":"lighting",
-      "elements":[
-        {"name":"cinematic lighting", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"warm light", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"beautiful sunset light", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
-      ]},
-    {
-      "id":"11",
       "title":"details",
       "elements":[
         {"name":"ultra details", "imageUrl": "./assets/categoriesImages/realistic.jpg"},

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, defineEmits } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 import { Draggable } from 'gsap/all';
 
@@ -102,12 +102,14 @@ const handleClick = () => {
 
 <template>
   <div>
-    <div class="text-xs text-white/80 absolute w-[calc(100%-31px)] h-[calc(100%-206px)] -z-30 mt-4 grid grid-cols-3 grid-rows-5 cursor-none items-center">
+    <div class="text-xs text-white/80 absolute w-[calc(100%-31px)] h-[calc(100%-206px)] -z-30 grid grid-cols-3 grid-rows-5 cursor-none items-center">
+      <span class="h-[50%] w-[calc(100%-1px)] absolute top-0 border-b-2 opacity-10"></span>
+      <span class="h-full w-[50%] absolute top-0 border-r-2 opacity-10"></span>
       <div class="text-center col-start-2 col-span-1 p-2">Extreme High-angle</div>
       <div class="text-right col-start-3 col-span-1 p-2">Bird-eye</div>
       <div class="text-center col-start-2 col-span-1 p-2">High-angle</div>
       <div class="text-left col-start-1 col-span-1 p-2">Back-angle</div>
-      <div class="text-center col-start-2 col-span-1 p-2">Eye-level</div>
+      <div class="text-center col-start-2 col-span-1 p-2 ">Eye-level</div>
       <div class="text-right col-start-3 col-span-1 p-2">Side-angle</div>
       <div class="text-center col-start-2 col-span-1 p-2">Low-angle</div>
       <div class="text-center col-start-2 col-span-1 p-2">Extreme Low-angle</div>
@@ -115,7 +117,7 @@ const handleClick = () => {
 
     <div id='container' ref='containerRef' class="mt-4 z-30">
       <div class="origin" id='origin'></div>
-      <div class="knob z-50" ref='knobRef' @mouseover="handleClick"></div>
+      <div class="knob" ref='knobRef' @mouseover="handleClick"></div>
     </div>
   </div>
     
