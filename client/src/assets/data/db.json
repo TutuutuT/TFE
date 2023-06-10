@@ -193,7 +193,7 @@
   "imageUrl": "./assets/MidjourneyImages/shiba.jpg"
 },
 
-  {"id":"9", "original_prompt":"camping scene, only scenery and cloudy sky, hill, mountains, sunset, trees, path, mountain, waterfall, skyline, nature,environment, wilderness, forest, 4K",
+  {"id":"10", "original_prompt":"camping scene, only scenery and cloudy sky, hill, mountains, sunset, trees, path, mountain, waterfall, skyline, nature,environment, wilderness, forest, 4K",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -211,7 +211,7 @@
   "imageUrl": "./assets/MidjourneyImages/camp.webp"
 },
 
-  {"id":"9", "original_prompt":"The universe in her eyes. In the style of Peter Henry Emerson, Victor Enrich, Anna Dittmann, Carlos Cruz - Diez, beeple, outerspace settings, abstract surrealism, strange",
+  {"id":"11", "original_prompt":"The universe in her eyes. In the style of Peter Henry Emerson, Victor Enrich, Anna Dittmann, Carlos Cruz - Diez, beeple, outerspace settings, abstract surrealism, strange",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -229,7 +229,7 @@
   "imageUrl": "./assets/MidjourneyImages/uni.webp"
 },
 
-  {"id":"9", "original_prompt":"a sailing ship in an ocean with dramatic clouds, in the style of jon foster, 2d game art, realistic hyper-detail, meindert hobbema, dusty piles, light navy and red, dmitry vishnevsky",
+  {"id":"12", "original_prompt":"a sailing ship in an ocean with dramatic clouds, in the style of jon foster, 2d game art, realistic hyper-detail, meindert hobbema, dusty piles, light navy and red, dmitry vishnevsky",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -247,7 +247,7 @@
   "imageUrl": "./assets/MidjourneyImages/boat.webp"
 },
 
-  {"id":"9", "original_prompt":"a cute fluffy chubby marmot sunbathing on a pile of rocks, snow mountains background, turquoise glacier lake afar, clear blue sky, highly detailed, golden hour, natural light, octane render, unreal engine",
+  {"id":"13", "original_prompt":"a cute fluffy chubby marmot sunbathing on a pile of rocks, snow mountains background, turquoise glacier lake afar, clear blue sky, highly detailed, golden hour, natural light, octane render, unreal engine",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -265,7 +265,7 @@
   "imageUrl": "./assets/MidjourneyImages/animal.webp"
 },
 
-  {"id":"9", "original_prompt":"Impressionist Cartoon of a cute boar on a mountain, alpine landscape, in the style of Andy Kehoe and Skottie Young, Keith Haring, Stylized, detailed, Layered 2d art, black and white, monochrome",
+  {"id":"14", "original_prompt":"Impressionist Cartoon of a cute boar on a mountain, alpine landscape, in the style of Andy Kehoe and Skottie Young, Keith Haring, Stylized, detailed, Layered 2d art, black and white, monochrome",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -281,6 +281,114 @@
     "lighting": "",
     "parameters": ""},
   "imageUrl": "./assets/MidjourneyImages/groin.webp"
+},
+
+  {"id":"15", "original_prompt":"a layered paper coelacanth in a coral grotto, vintage manuscript, colorful, detailed, high resolution, style of James Jean and Studio Ghibli, paper quilling, book carving, 3D",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/groin.webp"
+},
+
+  {"id":"16", "original_prompt":"National Geographic featured photo of a colorful and ornate bower bird, elaborate details, richly decorated feathers, beautiful, dynamic composition and dramatic lighting, blue, red, turquoise, orange",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/bird.webp"
+},
+
+  {"id":"17", "original_prompt":"a girl with face looks up, in the style of horror-inspired, dark gray and blue, 32k uhd, hyper-realistic water, gothcore, zombiecore, shiny eyes",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/child.webp"
+},
+
+  {"id":"18", "original_prompt":"a fashion illustration of a young female, in the style of alejandro burdisio, colorful pixel-art, fenghua zhong, himalayan art, michael malm, dark cyan and yellow, vibrant neo-traditional",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/yellow.webp"
+},
+
+  {"id":"19", "original_prompt":"an illustration of a night scene with the clock tower near by, in the style of sam spratt, aerial view, xbox 360 graphics, victorian, detailed cityscapes, detailed sketches, impressive panoramas",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/london.webp"
+},
+
+  {"id":"20", "original_prompt":"three different images with trees floating in water, in the style of epic fantasy scenes, double exposure, mountainous vistas, balanced symmetry, raw versus finished, surrealistic narratives, dark brown and gray",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/double.webp"
 }
 ],
 
