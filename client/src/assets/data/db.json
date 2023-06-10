@@ -3,20 +3,24 @@
   "detailed_prompt": {
     "category":"",
     "style": [
+      {"id":"1","item":"National Geographic featured photo","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"Beautiful winged valkyrie cyborg fembot","cat":"1"}
+      {"id":"2","item":"of a gorge","cat":"1"}
     ],
     "object": [
-      {"id":"4","item":"wearing a cyberspace squid helmet with a holographic HUD","cat":"2"}
+      {"id":"3","item":"of a gorge","cat":"2"}
     ],
     "location": [
-      {"id":"5","item":"is in a bar fight at a gritty cyborg bar","cat":"3"}
+      {"id":"4","item":"in a forest","cat":"3"},
+      {"id":"5","item":"with a fast flowing stream","cat":"3"}
     ],
     "action": "",
     "color": "",
     "artist": "",
-    "background": "",
+    "background": [
+      {"id":"6","item":"fallen trees and dense vegetation","cat":"7"}
+    ],
     "resolution": "",
     "renderer": "",
     "lighting": "",
@@ -24,7 +28,7 @@
   "imageUrl": "./assets/MidjourneyImages/foret.webp"
   },
 
-  {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, kodak portra 800 film stock",
+  {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections",
   "detailed_prompt": {
     "category":"",
     "style": [
@@ -60,27 +64,32 @@
     "category":"",
     "style": [
       {"id":"1","item":"dark and mysterious,","cat":"0"},
-      {"id":"2","item":"low angle shot::3","cat":"0"}
+      {"id":"2","item":"ancient egyptian,","cat":"0"}
     ],
     "character": [
       {"id":"3","item":"anubis,","cat":"1"},
       {"id":"4","item":"god of the underworld,","cat":"1"}
     ],
     "object": [
-      {"id":"5","item":"with red neon sign lighting","cat":"2"}
+      {"id":"5","item":"protector of graves by gerald brom,","cat":"2"}
     ],
     "location": [
-      
+      {"id":"6","item":"funerary rites,","cat":"3"}
     ],
     "action": "",
     "color": "",
     "artist": "",
     "background": "",
     "resolution": "",
-    "renderer": "",
+    "renderer": [
+      {"id":"7","item":"32k uhd,","cat":"7"}
+    ],
     "lighting": "",
     "details": [
-      {"id":"5","item":"hyper-detailed","cat":"9"}
+      {"id":"8","item":"hyper-detailed,","cat":"9"},
+      {"id":"9","item":"digital art,","cat":"9"},
+      {"id":"10","item":"mechanical realism","cat":"9"}
+      
     ]},
   "imageUrl": "./assets/MidjourneyImages/anubis.webp"
 },
@@ -88,34 +97,58 @@
   {"id":"4", "original_prompt":"model in dune inspired photoshoot, styled by balenciaga and dior 2023, dark color palette, photographed by Alireza Sahebi, leica q2, stunning photography, cinematic lighting",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
+    "style": [
+      
+    ],
+    "character": [
+      {"id":"1","item":"model","cat":"1"}
+    ],
+    "location":[
+      {"id":"2","item":"in dune inspired photoshoot,","cat":"3"}
+    ],
+    "object": [
+      {"id":"3","item":"styled by balenciaga and dior 2023","cat":"2"}
+    ],
     "action": "",
     "color": "",
     "artist": "",
     "background": "",
     "resolution": "",
     "renderer": "",
-    "lighting": "",
-    "parameters": ""},
+    "lighting": [
+      {"id":"4","item":"cinematic lighting,","cat":"8"}
+    ],
+    "parameters": [
+      {"id":"5","item":"stunning photography","cat":"9"}
+    ]},
   "imageUrl": "./assets/MidjourneyImages/dune.webp"
 },
 
   {"id":"5", "original_prompt":"a vantablack tarot card with Tony Stark, gothic black and white, mixed media, photobashing, sculpted, gentle expressions, colorful moebius, luminous portraits, wrapped, stanley artgerm chip zdarsky",
     "detailed_prompt": {
       "category":"",
-      "style": ["simple"],
-      "character": ["planet" , "patern"],
+      "character": [
+        {"id":"5","item":"a vantablack tarot card with Tony Stark,","cat":"2"},
+        {"id":"6","item":"gentle expressions,","cat":"2"}
+      ],
+      "style": [
+        {"id":"1","item":"gothic black and white","cat":"1"},
+        {"id":"2","item":"mixed media,","cat":"1"},
+        {"id":"3","item":"sculpted,","cat":"1"},
+        {"id":"4","item":"photobashing,","cat":"1"}
+      ],
       "object": "",
       "location": "",
       "action": "",
-      "color": "",
+      "color": [
+        {"id":"7","item":"colorful moebius,","cat":"6"}
+      ],
       "artist": "",
       "background": "",
       "resolution": "",
-      "renderer": "",
+      "renderer": [
+        {"id":"8","item":"luminous portraits","cat":"10"}
+      ],
       "lighting": "",
       "parameters": ""},
     "imageUrl": "./assets/MidjourneyImages/tony.webp"
