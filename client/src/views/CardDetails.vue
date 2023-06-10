@@ -285,7 +285,7 @@ const cameraAngle = ref('');
   
         <div class="w-full grid rounded-full gap-4 grid-cols-2 mt-4" v-if="SelectList != 0">
 
-          <label class="text-center cursor-pointer py-1 px-2 w-full"> Aucun
+          <label class="text-center cursor-pointer py-1 px-2 w-full bg-white text-black rounded-md"> Aucun
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="null" v-model="selectedCameraParams[SelectList]"/>
           </label>
   
