@@ -41,7 +41,7 @@ const scrollToTop = () => {
     <Footer/>
     
   </section>
-  <div @click="scrollToTop" class="icon-appear fixed bottom-3 right-3 h-12 w-12 bg-[url('./assets/icon.jpg')] hover:bg-[url('./assets/PromptPilot-up.jpg')] bg-cover border-2 border-white/40 rounded-xl cursor-pointer transition-all"></div>
+  <div @click="scrollToTop" class="icon-appear fixed bottom-3 right-3 h-12 w-12 bg-[url('./assets/images/icon.jpg')] hover:bg-[url('./assets/images/PromptPilot-up.jpg')] bg-cover border-2 border-white/40 rounded-xl cursor-pointer transition-all"></div>
 
 </template>
 

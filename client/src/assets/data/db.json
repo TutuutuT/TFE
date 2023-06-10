@@ -20,12 +20,11 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": "",
-    "cameraAngle":[
-      {"id": "6","item":"Low-angle"}
-    ]
-  },
-  "imageUrl": "./assets/MidjourneyImages/8495955.png"
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/8495955.png",
+  "cameraSettings":[
+    {"id":"1", "item":"Low-angle"}
+  ]
   },
 
   {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, kodak portra 800 film stock",
@@ -59,7 +58,37 @@
   "imageUrl": "./assets/MidjourneyImages/car.jpg"
 },
 
-  {"id":"3", "original_prompt":"sad Forest fairy is floating in the fluffy voluminous light pink clouds in the blue sky, interesting composition, cinematography, surreal",
+  {"id":"3", "original_prompt":"anubis, god of the underworld, funerary rites, protector of graves by gerald brom, occult, ancient egyptian, dark and mysterious, wide-angle, ultra hd, digital art, 32k uhd, oriental, chiaroscuro portraitures, mechanical realism, hyper-detailed",
+  "detailed_prompt": {
+    "category":"",
+    "style": [
+      {"id":"1","item":"dark and mysterious,","cat":"0"},
+      {"id":"2","item":"low angle shot::3","cat":"0"}
+    ],
+    "character": [
+      {"id":"3","item":"anubis,","cat":"1"},
+      {"id":"4","item":"god of the underworld,","cat":"1"}
+    ],
+    "object": [
+      {"id":"5","item":"with red neon sign lighting","cat":"2"}
+    ],
+    "location": [
+      
+    ],
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "details": [
+      {"id":"5","item":"hyper-detailed","cat":"9"}
+    ]},
+  "imageUrl": "./assets/MidjourneyImages/anubis.webp"
+},
+
+  {"id":"4", "original_prompt":"model in dune inspired photoshoot, styled by balenciaga and dior 2023, dark color palette, photographed by Alireza Sahebi, leica q2, stunning photography, cinematic lighting",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -74,28 +103,10 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/0_2_640_N.webp"
+  "imageUrl": "./assets/MidjourneyImages/dune.webp"
 },
 
-  {"id":"4", "original_prompt":"A living room with a Piet Mondrian-inspired armchair as the centerpiece. The armchair is geometric and colorful, with bold red, blue, and yellow blocks on a white background. The room is minimalist and modern, with clean lines and neutral tones. The light is bright and natural, coming in from a large window on the wall. The overall mood is energetic and playful. blender, 8k, ultra realistic, real materials",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/0_0_640_N.webp"
-},
-
-  {"id":"5", "original_prompt":"simple planet pattern",
+  {"id":"5", "original_prompt":"a vantablack tarot card with Tony Stark, gothic black and white, mixed media, photobashing, sculpted, gentle expressions, colorful moebius, luminous portraits, wrapped, stanley artgerm chip zdarsky",
     "detailed_prompt": {
       "category":"",
       "style": ["simple"],
@@ -110,7 +121,7 @@
       "renderer": "",
       "lighting": "",
       "parameters": ""},
-    "imageUrl": "./assets/MidjourneyImages/0_1_640_N.webp"
+    "imageUrl": "./assets/MidjourneyImages/tony.webp"
   },
 
   {"id":"6", "original_prompt":"Up - close Macro shot of the fur of a cheetah. Using the Sony a7S III camera with the Sony FE 50mm f/ 1. 4 ZA lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere. --ar 16:9 --q 2 --v 5 ",
@@ -131,7 +142,7 @@
   "imageUrl": "./assets/MidjourneyImages/shita.jpg"
 },
 
-  {"id":"7", "original_prompt":"galaxy stars colorful saturated bright nebula stars planets",
+  {"id":"7", "original_prompt":"Yakuza Ghost Craft Beer, sticker design in the style of minimalist Japanese street art stickers, Japanese street art, ghettopunk, harmonious balance, hall of mirrors, mcdonaldpunk, cutecore, vector graphics, sticker format,",
   "detailed_prompt": {
     "category":"",
     "style": ["simple"],
@@ -146,7 +157,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/0_3_640_N.webp"
+  "imageUrl": "./assets/MidjourneyImages/can.webp"
 },
 
   {"id":"8", "original_prompt":"In a surreal scene set in the vastness of space, an astronaut in a futuristic space suit swims through a pool of liquid foil, with the Cybertruck as their floating sanctuary, as you capture the mesmerizing moment up close with the Sony a7S III camera and the Sony FE 50mm f/1.4 ZA lens. The interstellar landscapes provide a stunning contrast to the astronaut's otherworldly swim, while Wes Anderson's whimsical visual style adds a touch of playfulness to the scene. The dark and moody tones, accentuated by deep blacks and a dramatic atmosphere, create an otherworldly ambiance, reminiscent of Christopher Nolan's films",
@@ -183,6 +194,96 @@
     "lighting": "",
     "parameters": ""},
   "imageUrl": "./assets/MidjourneyImages/shiba.jpg"
+},
+
+  {"id":"9", "original_prompt":"camping scene, only scenery and cloudy sky, hill, mountains, sunset, trees, path, mountain, waterfall, skyline, nature,environment, wilderness, forest, 4K",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/camp.webp"
+},
+
+  {"id":"9", "original_prompt":"The universe in her eyes. In the style of Peter Henry Emerson, Victor Enrich, Anna Dittmann, Carlos Cruz - Diez, beeple, outerspace settings, abstract surrealism, strange",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/uni.webp"
+},
+
+  {"id":"9", "original_prompt":"a sailing ship in an ocean with dramatic clouds, in the style of jon foster, 2d game art, realistic hyper-detail, meindert hobbema, dusty piles, light navy and red, dmitry vishnevsky",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/boat.webp"
+},
+
+  {"id":"9", "original_prompt":"a cute fluffy chubby marmot sunbathing on a pile of rocks, snow mountains background, turquoise glacier lake afar, clear blue sky, highly detailed, golden hour, natural light, octane render, unreal engine",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/animal.webp"
+},
+
+  {"id":"9", "original_prompt":"Impressionist Cartoon of a cute boar on a mountain, alpine landscape, in the style of Andy Kehoe and Skottie Young, Keith Haring, Stylized, detailed, Layered 2d art, black and white, monochrome",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/groin.webp"
 }
 ],
 
@@ -317,29 +418,15 @@
           "id":"6",
           "title":"f/",
           "params":[
-            {"paramId":"1", "param":"f/1.4"},
-            {"paramId":"2", "param":"f/2"},
-            {"paramId":"4", "param":"f/2.8"},
-            {"paramId":"5", "param":"f/4"},
-            {"paramId":"6", "param":"f/5.6"},
-            {"paramId":"7", "param":"f/8"},
-            {"paramId":"8", "param":"f/11"},
-            {"paramId":"9", "param":"f/16"},
-            {"paramId":"10", "param":"f/22"},
-            {"paramId":"11", "param":"f/32"}
-          ]},
-        {
-          "id":"7",
-          "title":"Focal",
-          "params":[
-            {"paramId":"1", "param":"17mm"},
-            {"paramId":"2", "param":"24mm"},
-            {"paramId":"3", "param":"35mm"},
-            {"paramId":"4", "param":"50mm"},
-            {"paramId":"5", "param":"70mm"},
-            {"paramId":"6", "param":"100mm"},
-            {"paramId":"7", "param":"200mm"},
-            {"paramId":"8", "param":"300mm"}
+            {"paramId":"1", "param":"f/1.4", "imageUrl":"./assets/categoriesImages/114.jpg"},
+            {"paramId":"2", "param":"f/2", "imageUrl":"./assets/categoriesImages/12.jpg"},
+            {"paramId":"4", "param":"f/2.8", "imageUrl":"./assets/categoriesImages/128.jpg"},
+            {"paramId":"5", "param":"f/4", "imageUrl":"./assets/categoriesImages/14.jpg"},
+            {"paramId":"6", "param":"f/5.6", "imageUrl":"./assets/categoriesImages/156.jpg"},
+            {"paramId":"7", "param":"f/8", "imageUrl":"./assets/categoriesImages/1F8.jpg"},
+            {"paramId":"8", "param":"f/11", "imageUrl":"./assets/categoriesImages/111.jpg"},
+            {"paramId":"9", "param":"f/16", "imageUrl":"./assets/categoriesImages/116.jpg"},
+            {"paramId":"10", "param":"f/22", "imageUrl":"./assets/categoriesImages/122.jpg"}
           ]}
   ],
 
