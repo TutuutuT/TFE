@@ -49,6 +49,5 @@ const scrollToTop = () => {
 
 .component__container{
   width: 100%;
-  // max-width: 1280px;
 }
 </style>

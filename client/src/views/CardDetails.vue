@@ -158,9 +158,9 @@ const cameraAngle = ref('');
 <div class="absolute flex justify-center w-full">
 <div class=" pb-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
   <div class="text-center font-extrabold py-3 mb-3 text-black bg-white rounded-t-3xl rounded-b-sm border-2 border-white/40">{{ ListChangeable[ClickedPromptCat].title }}</div>
-  <ul class="px-6 grid grid-cols-2 gap-x-4 gap-y-4 overflow-y-scroll max-h-80">
-    <li class="cursor-pointer hover:bg-neutral-500/30 transition-al rounded-md w-full bg-white text-black flex justify-center items-center" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog"><div>Valeur par défaut</div></li>
-    <li class="cursor-pointer hover:bg-neutral-500/30 transition-all rounded-md w-full h-24 rounded-b-md overflow-hidden" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement.name ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog"><div class="bg-white text-black text-center rounded-t-md rounded-b-sm">{{ ChangeElement.name }}</div><img class="w-[150px]" :src="`${ ChangeElement ? ChangeElement.imageUrl: '' }`"></li>
+  <ul class="px-6 w-full grid grid-cols-2 gap-x-4 gap-y-4 overflow-y-scroll max-h-80">
+    <li class="cursor-pointer hover:opacity-80 transition-all rounded-md w-full bg-white text-black flex justify-center items-center" @click="ClickedList[ClickedPromptTemporary] = null; styleDialog = !styleDialog"><div>Valeur par défaut</div></li>
+    <li class="cursor-pointer hover:opacity-80 transition-all rounded-md w-full h-24 rounded-b-md overflow-hidden" v-for="ChangeElement in ListChangeable[ClickedPromptCat].elements" @click="ClickedList[ClickedPromptTemporary] = ChangeElement.name ; ClickedPrompt = ClickedPromptTemporary; styleDialog = !styleDialog"><div class="bg-white text-black text-center rounded-t-md rounded-b-sm">{{ ChangeElement.name }}</div><img class="w-[165px]" :src="`${ ChangeElement ? ChangeElement.imageUrl: '' }`"></li>
   </ul>
    <button class="mt-4 mx-6" @click="styleDialog = !styleDialog">Fermer</button>
 </div>
@@ -289,7 +289,7 @@ const cameraAngle = ref('');
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="null" v-model="selectedCameraParams[SelectList]"/>
           </label>
   
-          <label v-for="camera in CameraParams[SelectList].params" class="text-center w-full cursor-pointer h-auto overflow-hidden" :key="camera.paramId"><div class="bg-white text-black text-center rounded-t-md"> {{ camera.param }}</div><img class="border-b-sm" onerror="this.onerror=null;this.src='./assets/categoriesImages/no.jpg';" :src="`${ camera ? camera.imageUrl: '' }`">
+          <label v-for="camera in CameraParams[SelectList].params" class="text-center w-full cursor-pointer h-auto overflow-hidden hover:opacity-80" :key="camera.paramId"><div class="bg-white text-black text-center rounded-t-md"> {{ camera.param }}</div><img class="border-b-sm" onerror="this.onerror=null;this.src='./assets/categoriesImages/no.jpg';" :src="`${ camera ? camera.imageUrl: '' }`">
             <input class="sr-only" type="radio" :name="CameraParams[SelectList].title" :value="camera.param" v-model="selectedCameraParams[SelectList]"/>
           </label>
 
@@ -366,14 +366,6 @@ const cameraAngle = ref('');
 
 
 <style lang="scss">
-
-// label:has(input[type="radio"]:checked) {
-//   @apply bg-neutral-500;
-// }
-
-// label:has(input[type="checkbox"]:checked) {
-//   @apply bg-neutral-500;
-// }
 
 label{
   @apply text-sm leading-6 text-white transition-all;

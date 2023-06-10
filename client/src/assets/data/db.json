@@ -20,7 +20,11 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": ""},
+    "parameters": "",
+    "cameraAngle":[
+      {"id": "6","item":"Low-angle"}
+    ]
+  },
   "imageUrl": "./assets/MidjourneyImages/8495955.png"
   },
 
