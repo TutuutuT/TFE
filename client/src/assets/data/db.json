@@ -1,5 +1,5 @@
 { "prompts":[
-  {"id":"1", "original_prompt":"Beautiful winged valkyrie cyborg fembot is in a bar fight at a gritty cyborg bar wearing a cyberspace squid helmet with a holographic HUD",
+  {"id":"1", "original_prompt":"National Geographic featured photo of Landscape photography of a gorge in a forest with a fast flowing stream, large boulders, fallen trees and dense vegetation, wide angle shot",
   "detailed_prompt": {
     "category":"",
     "style": [
@@ -21,10 +21,7 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/8495955.png",
-  "cameraSettings":[
-    {"id":"1", "item":"Low-angle"}
-  ]
+  "imageUrl": "./assets/MidjourneyImages/foret.webp"
   },
 
   {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections, kodak portra 800 film stock",
