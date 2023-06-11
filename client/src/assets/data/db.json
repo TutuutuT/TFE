@@ -128,37 +128,46 @@
     "detailed_prompt": {
       "category":"",
       "character": [
-        {"id":"5","item":"a vantablack tarot card with Tony Stark,","cat":"2"},
-        {"id":"6","item":"gentle expressions,","cat":"2"}
+        {"id":"5","item":"a vantablack tarot card with Tony Stark,","cat":"1"},
+        {"id":"6","item":"gentle expressions,","cat":"1"}
       ],
       "style": [
-        {"id":"1","item":"gothic black and white","cat":"1"},
-        {"id":"2","item":"mixed media,","cat":"1"},
-        {"id":"3","item":"sculpted,","cat":"1"},
-        {"id":"4","item":"photobashing,","cat":"1"}
+        {"id":"1","item":"gothic black and white","cat":"0"},
+        {"id":"2","item":"mixed media,","cat":"0"},
+        {"id":"3","item":"sculpted,","cat":"0"},
+        {"id":"4","item":"photobashing,","cat":"0"}
       ],
       "object": "",
       "location": "",
       "action": "",
       "color": [
-        {"id":"7","item":"colorful moebius,","cat":"6"}
+        {"id":"7","item":"colorful moebius,","cat":"5"}
       ],
       "artist": "",
       "background": "",
       "resolution": "",
       "renderer": [
-        {"id":"8","item":"luminous portraits","cat":"10"}
+        {"id":"8","item":"luminous portraits,","cat":"9"},
+        {"id":"9","item":"stanley artgerm chip zdarsky","cat":"9"}
       ],
       "lighting": "",
       "parameters": ""},
     "imageUrl": "./assets/MidjourneyImages/tony.webp"
   },
 
-  {"id":"6", "original_prompt":"Up - close Macro shot of the fur of a cheetah. Using the Sony a7S III camera with the Sony FE 50mm f/ 1. 4 ZA lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere. --ar 16:9 --q 2 --v 5 ",
+  {"id":"6", "original_prompt":"Macro shot of the fur of a cheetah. The scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere.",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style": [
+      {"id":"1","item":"Macro shot of the fur of","cat":"0"}
+    ],
+    "character": [
+      {"id":"2","item":"a cheetah.","cat":"1"}
+    ],
+    "style2": [
+      {"id":"3","item":"The scene is captured in dark and moody tones,","cat":"0"},
+      {"id":"4","item":"with deep blacks and a dramatic atmosphere.","cat":"0"}
+    ],
     "object": "",
     "location": "",
     "action": "",
@@ -175,28 +184,55 @@
   {"id":"7", "original_prompt":"Yakuza Ghost Craft Beer, sticker design in the style of minimalist Japanese street art stickers, Japanese street art, ghettopunk, harmonious balance, hall of mirrors, mcdonaldpunk, cutecore, vector graphics, sticker format,",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "character": [
+      {"id":"2","item":"Yakuza Ghost Craft Beer,","cat":"1"},
+      {"id":"3","item":"sticker design","cat":"1"}
+    ],
+    "style": [
+      {"id":"1","item":"in the style of minimalist Japanese street art stickers,","cat":"0"},
+      {"id":"4","item":"Japanese street art,","cat":"0"},
+      {"id":"5","item":"ghettopunk,","cat":"0"},
+      {"id":"6","item":"harmonious balance,","cat":"0"},
+      {"id":"7","item":"mcdonaldpunk,","cat":"0"},
+      {"id":"8","item":"vector graphics,","cat":"0"},
+      {"id":"9","item":"ghettopunk,","cat":"0"}
+    ],
     "object": "",
     "location": "",
     "action": "",
     "color": "",
     "artist": "",
-    "background": "",
+    "background": [
+      {"id":"10","item":"hall of mirrors,","cat":"7"}
+    ],
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": ""},
+    "parameters": [
+      {"id":"11","item":"sticker format","cat":"9"}
+    ]
+  },
   "imageUrl": "./assets/MidjourneyImages/can.webp"
 },
 
   {"id":"8", "original_prompt":"In a surreal scene set in the vastness of space, an astronaut in a futuristic space suit swims through a pool of liquid foil, with the Cybertruck as their floating sanctuary, as you capture the mesmerizing moment up close with the Sony a7S III camera and the Sony FE 50mm f/1.4 ZA lens. The interstellar landscapes provide a stunning contrast to the astronaut's otherworldly swim, while Wes Anderson's whimsical visual style adds a touch of playfulness to the scene. The dark and moody tones, accentuated by deep blacks and a dramatic atmosphere, create an otherworldly ambiance, reminiscent of Christopher Nolan's films",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
+    "location": [
+      {"id":"2","item":"In a surreal scene set in the vastness of space,","cat":"3"}
+    ],
+    "character": [
+      {"id":"1","item":"an astronaut","cat":"1"}
+    ],
+    "style": [
+      
+    ],
+    "object": [
+      {"id":"3","item":"in a futuristic space suit","cat":"2"}
+    ],
+    "location2": [
+      {"id":"4","item":"swims through a pool of liquid foil,","cat":"3"}
+    ],
     "action": "",
     "color": "",
     "artist": "",
@@ -204,18 +240,28 @@
     "resolution": "",
     "renderer": "",
     "lighting": "",
-    "parameters": ""},
+    "parameters":  [
+      {"id":"5","item":"reminiscent of Christopher Nolan's films","cat":"9"}
+    ]},
   "imageUrl": "./assets/MidjourneyImages/fuze.jpg"
 },
 
   {"id":"9", "original_prompt":"8bit Shiba Inu Eating Ramen in Yatai Stand --niji 5 ",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style": [
+      {"id":"1","item":"8bit","cat":"0"}
+    ],
+    "character": [
+      {"id":"2","item":"Shiba","cat":"1"}
+    ],
     "object": "",
-    "location": "",
-    "action": "",
+    "action": [
+      {"id":"3","item":"Eating Ramen","cat":"4"}
+    ],
+    "location": [
+      {"id":"4","item":"in Yatai Stand","cat":"3"}
+    ],
     "color": "",
     "artist": "",
     "background": "",
@@ -229,8 +275,23 @@
   {"id":"10", "original_prompt":"camping scene, only scenery and cloudy sky, hill, mountains, sunset, trees, path, mountain, waterfall, skyline, nature,environment, wilderness, forest, 4K",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style": [
+      
+    ],
+    "character": [
+      {"id":"1","item":"camping scene,","cat":"2"},
+      {"id":"2","item":"hill,","cat":"2"},
+      {"id":"3","item":"mountains,","cat":"2"},
+      {"id":"4","item":"sunset,","cat":"2"},
+      {"id":"5","item":"trees,","cat":"2"},
+      {"id":"6","item":"path,","cat":"2"},
+      {"id":"7","item":"waterfall,","cat":"2"},
+      {"id":"8","item":"skyline,","cat":"2"},
+      {"id":"9","item":"nature,","cat":"2"},
+      {"id":"10","item":"environment,","cat":"2"},
+      {"id":"11","item":"forest,","cat":"2"},
+      {"id":"12","item":"mountain,","cat":"2"}
+    ],
     "object": "",
     "location": "",
     "action": "",
@@ -247,8 +308,16 @@
   {"id":"11", "original_prompt":"The universe in her eyes. In the style of Peter Henry Emerson, Victor Enrich, Anna Dittmann, Carlos Cruz - Diez, beeple, outerspace settings, abstract surrealism, strange",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "character": [
+      {"id":"3","item":"The universe in her eyes.","cat":"1"}
+    ],
+    "style": [
+      {"id":"3","item":"In the style of Peter Henry Emerson,","cat":"0"},
+      {"id":"3","item":"Victor Enrich,","cat":"0"},
+      {"id":"3","item":"Anna Dittmann,","cat":"0"},
+      {"id":"3","item":"Carlos Cruz","cat":"0"},
+      {"id":"3","item":"abstract surrealism","cat":"0"}
+    ],
     "object": "",
     "location": "",
     "action": "",
@@ -332,96 +401,6 @@
     "lighting": "",
     "parameters": ""},
   "imageUrl": "./assets/MidjourneyImages/groin.webp"
-},
-
-  {"id":"16", "original_prompt":"National Geographic featured photo of a colorful and ornate bower bird, elaborate details, richly decorated feathers, beautiful, dynamic composition and dramatic lighting, blue, red, turquoise, orange",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/bird.webp"
-},
-
-  {"id":"17", "original_prompt":"a girl with face looks up, in the style of horror-inspired, dark gray and blue, 32k uhd, hyper-realistic water, gothcore, zombiecore, shiny eyes",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/child.webp"
-},
-
-  {"id":"18", "original_prompt":"a fashion illustration of a young female, in the style of alejandro burdisio, colorful pixel-art, fenghua zhong, himalayan art, michael malm, dark cyan and yellow, vibrant neo-traditional",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/yellow.webp"
-},
-
-  {"id":"19", "original_prompt":"an illustration of a night scene with the clock tower near by, in the style of sam spratt, aerial view, xbox 360 graphics, victorian, detailed cityscapes, detailed sketches, impressive panoramas",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/london.webp"
-},
-
-  {"id":"20", "original_prompt":"three different images with trees floating in water, in the style of epic fantasy scenes, double exposure, mountainous vistas, balanced symmetry, raw versus finished, surrealistic narratives, dark brown and gray",
-  "detailed_prompt": {
-    "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
-    "object": "",
-    "location": "",
-    "action": "",
-    "color": "",
-    "artist": "",
-    "background": "",
-    "resolution": "",
-    "renderer": "",
-    "lighting": "",
-    "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/double.webp"
 }
 ],
 
