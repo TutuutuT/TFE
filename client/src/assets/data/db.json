@@ -334,35 +334,67 @@
   {"id":"12", "original_prompt":"a sailing ship in an ocean with dramatic clouds, in the style of jon foster, 2d game art, realistic hyper-detail, meindert hobbema, dusty piles, light navy and red, dmitry vishnevsky",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "character": [
+      {"id":"1","item":"a sailing ship","cat":"1"}
+    ],
     "object": "",
-    "location": "",
+    "location": [
+      {"id":"2","item":"in an ocean","cat":"3"}
+    ],
+    "style": [
+      {"id":"3","item":"in the style of jon foster,","cat":"0"},
+      {"id":"4","item":"2d game art,","cat":"0"}
+    ],
     "action": "",
     "color": "",
-    "artist": "",
-    "background": "",
+    "background": [
+      {"id":"5","item":"with dramatic clouds,","cat":"7"}
+    ],
     "resolution": "",
     "renderer": "",
-    "lighting": "",
-    "parameters": ""},
+    "lighting": [
+      {"id":"6","item":"light navy and red,","cat":"9"}
+    ],
+    "parameters": [
+      {"id":"7","item":"realistic","cat":"9"},
+      {"id":"8","item":"hyper-detail,","cat":"9"}
+    ],
+    "artist":[
+      {"id":"9","item":"dmitry vishnevsky","cat":"6"}
+    ]
+  },
   "imageUrl": "./assets/MidjourneyImages/boat.webp"
 },
 
   {"id":"13", "original_prompt":"a cute fluffy chubby marmot sunbathing on a pile of rocks, snow mountains background, turquoise glacier lake afar, clear blue sky, highly detailed, golden hour, natural light, octane render, unreal engine",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style": [
+      {"id":"1","item":"a cute fluffy chubby marmot","cat":"0"}
+    ],
+    "character": [
+      {"id":"2","item":"a cute fluffy chubby marmot","cat":"1"}
+    ],
     "object": "",
-    "location": "",
-    "action": "",
+    "action": [
+      {"id":"3","item":"sunbathing","cat":"4"}
+    ],
+    "location": [
+      {"id":"4","item":"on a pile of rocks,","cat":"3"}
+    ],
     "color": "",
     "artist": "",
-    "background": "",
+    "background": [
+      {"id":"5","item":"snow mountains background,","cat":"7"},
+      {"id":"6","item":"turquoise glacier lake afar,","cat":"7"},
+      {"id":"7","item":"clear blue sky,","cat":"7"}
+    ],
     "resolution": "",
     "renderer": "",
-    "lighting": "",
+    "temps": [
+      {"id":"8","item":"golden hour","cat":"10"}
+    ],
+    "meteo": "",
     "parameters": ""},
   "imageUrl": "./assets/MidjourneyImages/animal.webp"
 },
@@ -370,14 +402,31 @@
   {"id":"14", "original_prompt":"Impressionist Cartoon of a cute boar on a mountain, alpine landscape, in the style of Andy Kehoe and Skottie Young, Keith Haring, Stylized, detailed, Layered 2d art, black and white, monochrome",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style": [
+      {"id":"1","item":"Impressionist","cat":"0"},
+      {"id":"2","item":"Cartoon","cat":"0"}
+    ],
+    "character": [
+      {"id":"3","item":"of a cute boar","cat":"1"}
+    ],
     "object": "",
-    "location": "",
+    "location": [
+      {"id":"4","item":"on a mountain,","cat":"3"}
+    ],
     "action": "",
-    "color": "",
     "artist": "",
-    "background": "",
+    "background": [
+      {"id":"5","item":"alpine landscape,","cat":"7"}
+    ],
+    "style2": [
+      {"id":"6","item":"in the style of Andy Kehoe and Skottie Young,","cat":"0"},
+      {"id":"7","item":"Keith Haring,","cat":"0"},
+      {"id":"8","item":"Stylized,","cat":"0"},
+      {"id":"9","item":"Layered 2d art,","cat":"0"}
+    ],
+    "color": [
+      {"id":"10","item":"black and white","cat":"5"}
+    ],
     "resolution": "",
     "renderer": "",
     "lighting": "",
@@ -388,6 +437,114 @@
   {"id":"15", "original_prompt":"a layered paper coelacanth in a coral grotto, vintage manuscript, colorful, detailed, high resolution, style of James Jean and Studio Ghibli, paper quilling, book carving, 3D",
   "detailed_prompt": {
     "category":"",
+    "style": [
+      {"id":"1","item":"a layered paper","cat":"0"}
+    ],
+    "character": [
+      {"id":"2","item":"coelacanth","cat":"1"}
+    ],
+    "object": "",
+    "location": [
+      {"id":"3","item":"in a coral grotto,","cat":"3"}
+    ],
+    "style2": [
+      {"id":"4","item":"vintage manuscript,","cat":"0"}
+    ],
+    "action": "",
+    "color": [
+      {"id":"5","item":"colorful,","cat":"5"}
+    ],
+    "style3": [
+      {"id":"6","item":"style of James Jean","cat":"0"},
+      {"id":"7","item":"and Studio Ghibli,","cat":"0"},
+      {"id":"8","item":"paper quilling,","cat":"0"}
+    ],
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": [
+      {"id":"9","item":"detailed,","cat":"9"},
+      {"id":"10","item":"high resolution,","cat":"9"},
+      {"id":"11","item":"3D","cat":"9"}
+    ]},
+  "imageUrl": "./assets/MidjourneyImages/fish.webp"
+},
+
+{"id":"16", "original_prompt":"National Geographic featured photo of a colorful and ornate bower bird, elaborate details, richly decorated feathers, beautiful, dynamic composition and dramatic lighting, blue, red, turquoise, orange",
+  "detailed_prompt": {
+    "category":"",
+    "style": [
+      {"id":"1","item":"National Geographic featured photo of","cat":"0"},
+      {"id":"2","item":"a colorful","cat":"0"},
+      {"id":"3","item":"and ornate","cat":"0"}
+    ],
+    "character":[
+      {"id":"3","item":"bower bird,","cat":"1"}
+    ],
+    "object": [
+      {"id":"4","item":"richly decorated feathers,","cat":"2"}
+    ],
+    "location": "",
+    "action": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": [
+      {"id":"5","item":"elaborate details,","cat":"9"},
+      {"id":"6","item":"beautiful,","cat":"9"},
+      {"id":"7","item":"dynamic composition","cat":"9"},
+      {"id":"8","item":"and dramatic lighting,","cat":"9"}
+    ],
+    "color": [
+      {"id":"9","item":"blue,","cat":"5"},
+      {"id":"10","item":"red,","cat":"5"},
+      {"id":"11","item":"turquoise,","cat":"5"},
+      {"id":"12","item":"orange","cat":"5"}
+    ]
+  },
+  "imageUrl": "./assets/MidjourneyImages/bird.webp"
+},
+
+{"id":"17", "original_prompt":"a girl with face looks up, in the style of horror-inspired, dark gray and blue, 32k uhd, hyper-realistic water, gothcore, zombiecore, shiny eyes",
+  "detailed_prompt": {
+    "category":"",
+    "character":[
+      {"id":"1","item":"a girl","cat":"1"}
+    ],
+    "object": "",
+    "location": "",
+    "action": [
+      {"id":"2","item":"with face looks up,","cat":"4"}
+    ],
+    "style": [
+      {"id":"3","item":"in the style of horror-inspired,","cat":"0"}
+    ],
+    "color": [
+      {"id":"4","item":"dark gray and blue,","cat":"5"}
+    ],
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": [
+      {"id":"5","item":"32k uhd,","cat":"9"},
+      {"id":"6","item":"hyper-realistic water,","cat":"9"},
+      {"id":"7","item":"gothcore,","cat":"9"},
+      {"id":"8","item":"zombiecore,","cat":"9"},
+      {"id":"9","item":"shiny eyes","cat":"9"}
+    ]
+  },
+  "imageUrl": "./assets/MidjourneyImages/child.webp"
+},
+
+  {"id":"18", "original_prompt":"a fashion illustration of a young female, in the style of alejandro burdisio, colorful pixel-art, fenghua zhong, himalayan art, michael malm, dark cyan and yellow, vibrant neo-traditional",
+  "detailed_prompt": {
+    "category":"",
     "style": ["simple"],
     "character": ["planet" , "patern"],
     "object": "",
@@ -400,8 +557,27 @@
     "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/groin.webp"
+  "imageUrl": "./assets/MidjourneyImages/yellow.webp"
+},
+
+  {"id":"19", "original_prompt":"an illustration of a night scene with the clock tower near by, in the style of sam spratt, aerial view, xbox 360 graphics, victorian, detailed cityscapes, detailed sketches, impressive panoramas",
+  "detailed_prompt": {
+    "category":"",
+    "style": ["simple"],
+    "character": ["planet" , "patern"],
+    "object": "",
+    "location": "",
+    "action": "",
+    "color": "",
+    "artist": "",
+    "background": "",
+    "resolution": "",
+    "renderer": "",
+    "lighting": "",
+    "parameters": ""},
+  "imageUrl": "./assets/MidjourneyImages/london.webp"
 }
+
 ],
 
 
@@ -598,13 +774,14 @@
       "id":"2",
       "title":"character",
       "elements":[
-        {"name":"Dog", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Cat", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Human", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Snake", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"unicorn", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"a man and little child", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"photo of interior design", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"Dog", "imageUrl": "./assets/categoriesImages/dog.jpg"},
+        {"name":"Cat", "imageUrl": "./assets/categoriesImages/cat.jpg"},
+        {"name":"Human", "imageUrl": "./assets/categoriesImages/human.jpg"},
+        {"name":"Snake", "imageUrl": "./assets/categoriesImages/snake.jpg"},
+        {"name":"unicorn", "imageUrl": "./assets/categoriesImages/unicorn.jpg"},
+        {"name":"a man and little child", "imageUrl": "./assets/categoriesImages/man.jpg"},
+        {"name":"a robot", "imageUrl": "./assets/categoriesImages/robot.jpg"},
+        {"name":"photo of interior design", "imageUrl": "./assets/categoriesImages/interior.jpg"}
       ]},
     {
       "id":"3",
@@ -647,23 +824,43 @@
       "id":"8",
       "title":"background",
       "elements":[
-        {"name":"futuristic city on the background", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"forest in the background", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"colorful garden", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"futuristic city on the background", "imageUrl": "./assets/categoriesImages/city.jpg"},
+        {"name":"forest in the background", "imageUrl": "./assets/categoriesImages/forest.jpg"},
+        {"name":"colorful garden", "imageUrl": "./assets/categoriesImages/garden.jpg"},
+        {"name":"blue sky", "imageUrl": "./assets/categoriesImages/sky.jpg"}
       ]},
     {
       "id":"9",
       "title":"renderer",
       "elements":[
-        {"name":"octane render", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Unreal Engine 5", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"octane render", "imageUrl": "./assets/categoriesImages/octane.jpg"},
+        {"name":"Unreal Engine 5", "imageUrl": "./assets/categoriesImages/unreal.jpg"}
       ]},
     {
       "id":"10",
       "title":"details",
       "elements":[
-        {"name":"ultra details", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Sharp Details", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
-      ]}  
+        {"name":"ultra details", "imageUrl": "./assets/categoriesImages/ultra.jpg"},
+        {"name":"Sharp Details", "imageUrl": "./assets/categoriesImages/sharp.jpg"}
+      ]},
+     {
+      "id":"11",
+      "title":"Temps",
+      "elements":[
+        {"name":"Sunrise", "imageUrl": "./assets/categoriesImages/sunrise.jpg"},
+        {"name":"Afternoon", "imageUrl": "./assets/categoriesImages/after.jpg"},
+        {"name":"Golden hour", "imageUrl": "./assets/categoriesImages/golden.jpg"},
+        {"name":"Midnight", "imageUrl": "./assets/categoriesImages/midnight.jpg"}
+      ]},
+      {
+       "id":"12",
+       "title":"Météo",
+       "elements":[
+         {"name":"Sunny", "imageUrl": "./assets/categoriesImages/sunny.jpg"},
+         {"name":"Partly cloudy", "imageUrl": "./assets/categoriesImages/cloudy.jpg"},
+         {"name":"Raining", "imageUrl": "./assets/categoriesImages/raining.jpg"},
+         {"name":"Snow", "imageUrl": "./assets/categoriesImages/snow.jpg"},
+         {"name":"Foggy", "imageUrl": "./assets/categoriesImages/foggy.jpg"}
+       ]}
 ]
 }
