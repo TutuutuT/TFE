@@ -176,6 +176,7 @@ const cameraAngle = ref('');
         <path opacity="0.32" fill-rule="evenodd" clip-rule="evenodd" d="M5.02315 4.63052C5.99968 4.43521 6.85862 3.85998 7.41103 3.03137L7.44282 2.98368C8.1649 1.90057 9.3805 1.25 10.6822 1.25L13.3178 1.25C14.6195 1.25 15.8351 1.90057 16.5572 2.98368L16.589 3.03137C17.1414 3.85998 18.0003 4.43521 18.9768 4.63052V4.63052C21.1708 5.0693 22.75 6.99565 22.75 9.23302V14.75C22.75 17.5503 22.75 18.9504 22.205 20.02C21.7257 20.9608 20.9608 21.7257 20.02 22.205C18.9504 22.75 17.5503 22.75 14.75 22.75H9.25C6.44974 22.75 5.04961 22.75 3.98005 22.205C3.03924 21.7257 2.27433 20.9608 1.79497 20.02C1.25 18.9504 1.25 17.5503 1.25 14.75L1.25 9.23302C1.25 6.99565 2.82922 5.0693 5.02315 4.63052V4.63052Z"/>
         <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/>
       </svg>
+      <span class="hidden transition-all duration-200 group-hover:block group-hover:text-white absolute text-xs font-thin px-2 py-2 bg-neutral-800 rounded-md -left-36 top-2 before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Parametre de caméra</span>
   </button>
 
   <button v-on:click="openSettings = !openSettings" class="group">

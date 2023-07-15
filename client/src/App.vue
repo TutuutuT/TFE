@@ -5,12 +5,12 @@
       redirect() {
         this.$router.push({ name: 'Home' })
       },
-      back() {
-        this.$router.go(-1)
-      },
-      forward() {
-        this.$router.go(1)
-      },
+      // back() {
+      //   this.$router.go(-1)
+      // },
+      // forward() {
+      //   this.$router.go(1)
+      // },
       homePage() {
         if(this.$route.path == "/" || this.$route.path == "/home" ) {
           return true
@@ -34,19 +34,19 @@
         </svg>
       </li>
   
-      <li class="inline-block cursor-pointer" @click="back">
+      <!-- <li class="inline-block cursor-pointer" @click="back">
         <svg class="w-8 group" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect class="fill-white/10 group-hover:fill-white transition-all" x="2" y="2" width="20" height="20" rx="5"/>
           <path class="stroke-white group-hover:stroke-black transition-all" d="M11 7.99996L7 12M7 12L11 16M7 12H17M10 22H14C16.8003 22 18.2004 22 19.27 21.455C20.2108 20.9757 20.9757 20.2108 21.455 19.27C22 18.2004 22 16.8003 22 14V10C22 7.19974 22 5.79961 21.455 4.73005C20.9757 3.78924 20.2108 3.02433 19.27 2.54497C18.2004 2 16.8003 2 14 2H10C7.19974 2 5.79961 2 4.73005 2.54497C3.78924 3.02433 3.02433 3.78924 2.54497 4.73005C2 5.79961 2 7.19974 2 10V14C2 16.8003 2 18.2004 2.54497 19.27C3.02433 20.2108 3.78924 20.9757 4.73005 21.455C5.79961 22 7.19974 22 10 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </li>
+      </li> -->
   
-      <li class="inline-block cursor-pointer" @click="forward">
+      <!-- <li class="inline-block cursor-pointer" @click="forward">
         <svg class="w-8 group" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect class="fill-white/10 group-hover:fill-white transition-all" x="2" y="2" width="20" height="20" rx="5"/>
           <path class="stroke-white group-hover:stroke-black transition-all" d="M13 8L17 12.0001M17 12.0001L13 16.0001M17 12.0001H7M10 22H14C16.8003 22 18.2004 22 19.27 21.455C20.2108 20.9757 20.9757 20.2108 21.455 19.27C22 18.2004 22 16.8003 22 14V10C22 7.19974 22 5.79961 21.455 4.73005C20.9757 3.78924 20.2108 3.02433 19.27 2.54497C18.2004 2 16.8003 2 14 2H10C7.19974 2 5.79961 2 4.73005 2.54497C3.78924 3.02433 3.02433 3.78924 2.54497 4.73005C2 5.79961 2 7.19974 2 10V14C2 16.8003 2 18.2004 2.54497 19.27C3.02433 20.2108 3.78924 20.9757 4.73005 21.455C5.79961 22 7.19974 22 10 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </li>
+      </li> -->
       
       
     </ul>
