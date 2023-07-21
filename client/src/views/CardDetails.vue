@@ -112,14 +112,15 @@ const cameraAngle = ref('');
 
 
 <template>
+  <div class=" min-h-screen bg-[#121212]">
 
 <h2 class="absolute w-full text-center mt-9 font-secondary text-white/20 font-bold">PromptPilot</h2>
 
                   <!-- Champt de txt -->
 
-<div class="w-full flex justify-center px-8 pt-32" v-if="prompt">
+<div class="w-full flex justify-center px-8 pt-32 bg-[#121212]" v-if="prompt">
 
-    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-xl border-2 border-white/40 max-w-3xl font-semibold">
+    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold">
       
     <span v-for="ListCategory in prompt.detailed_prompt">
       <span class="PromptHover group" v-for="(value, key) in ListCategory">
@@ -156,7 +157,7 @@ const cameraAngle = ref('');
 
 
 
-<div class="absolute flex justify-center w-full">
+<div class="absolute flex justify-center w-full bg-[#121212]">
 <div class=" pb-4 bg-white/1 backdrop-blur-xl z-50 border-2 border-white/40 rounded-3xl" v-if="styleDialog">
   <div class="text-center font-extrabold py-3 mb-3 text-black bg-white rounded-t-3xl rounded-b-sm border-2 border-white/40">{{ ListChangeable[ClickedPromptCat].title }}</div>
   <ul class="px-6 grid grid-cols-2 gap-x-4 gap-y-4 overflow-y-scroll max-h-80">
@@ -170,13 +171,17 @@ const cameraAngle = ref('');
 
                   <!-- box open settings -->
 
-<div class="w-full flex justify-center my-6 relative gap-8">
+<div class="w-full flex justify-center my-6 relative gap-8 bg-[#121212]">
   <button v-on:click="openCamera = !openCamera" class="group">
-      <svg class="w-7 mx-7 fill-white group-hover:fill-black transition-all duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.32" fill-rule="evenodd" clip-rule="evenodd" d="M5.02315 4.63052C5.99968 4.43521 6.85862 3.85998 7.41103 3.03137L7.44282 2.98368C8.1649 1.90057 9.3805 1.25 10.6822 1.25L13.3178 1.25C14.6195 1.25 15.8351 1.90057 16.5572 2.98368L16.589 3.03137C17.1414 3.85998 18.0003 4.43521 18.9768 4.63052V4.63052C21.1708 5.0693 22.75 6.99565 22.75 9.23302V14.75C22.75 17.5503 22.75 18.9504 22.205 20.02C21.7257 20.9608 20.9608 21.7257 20.02 22.205C18.9504 22.75 17.5503 22.75 14.75 22.75H9.25C6.44974 22.75 5.04961 22.75 3.98005 22.205C3.03924 21.7257 2.27433 20.9608 1.79497 20.02C1.25 18.9504 1.25 17.5503 1.25 14.75L1.25 9.23302C1.25 6.99565 2.82922 5.0693 5.02315 4.63052V4.63052Z"/>
-        <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/>
-      </svg>
-      <span class="hidden transition-all duration-200 group-hover:block group-hover:text-white absolute text-xs font-thin px-2 py-2 bg-neutral-800 rounded-md -left-36 top-2 before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Parametre de caméra</span>
+    
+
+    <svg class="w-7 mx-7 fill-white group-hover:fill-black transition-all duration-200" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.32" fill-rule="evenodd" clip-rule="evenodd" d="M7.53485 6.94578C8.18684 6.81538 8.51284 6.75018 8.81372 6.63773C9.39697 6.41976 9.92127 6.06863 10.3449 5.61231C10.5634 5.37691 10.7478 5.10029 11.1167 4.54706L11.1644 4.47552C11.6964 3.67747 11.9624 3.27844 12.2925 2.96674C12.81 2.47803 13.4486 2.13628 14.1423 1.97675C14.5848 1.875 15.0643 1.875 16.0235 1.875L19.9768 1.875C20.9359 1.875 21.4155 1.875 21.8579 1.97675C22.5516 2.13628 23.1902 2.47803 23.7077 2.96674C24.0378 3.27845 24.3039 3.67747 24.8359 4.47552L24.8836 4.54705C25.2524 5.10029 25.4368 5.37691 25.6554 5.61231C26.079 6.06863 26.6033 6.41976 27.1865 6.63773C27.4874 6.75018 27.8134 6.81538 28.4654 6.94578V6.94578C30.02 7.25669 30.7972 7.41214 31.4235 7.73632C32.6436 8.36784 33.5501 9.47357 33.9301 10.7938C34.1251 11.4715 34.1251 12.2642 34.1251 13.8495L34.1251 26.125C34.1251 28.9253 34.1251 30.3254 33.5802 31.3949C33.1008 32.3358 32.3359 33.1007 31.3951 33.58C30.3255 34.125 28.9254 34.125 26.1251 34.125L9.87512 34.125C7.07486 34.125 5.67473 34.125 4.60517 33.58C3.66436 33.1007 2.89946 32.3358 2.42009 31.3949C1.87512 30.3254 1.87512 28.9253 1.87512 26.125L1.87512 13.8495C1.87512 12.2642 1.87512 11.4715 2.07018 10.7938C2.45016 9.47357 3.35664 8.36784 4.57673 7.73632C5.20302 7.41214 5.9803 7.25669 7.53485 6.94578V6.94578Z"/>
+      <path class=" origin-center group-hover:rotate-90 transition-all" fill-rule="evenodd" clip-rule="evenodd" d="M15.1725 10.5563C14.4146 10.015 14.0356 9.74431 13.6313 9.65714C13.2441 9.57367 12.8408 9.60704 12.4727 9.75302C12.0881 9.90549 11.7588 10.2348 11.1003 10.8933L10.8935 11.1001C10.2348 11.7587 9.90551 12.0881 9.75304 12.4727C9.6071 12.8408 9.57374 13.244 9.65716 13.6311C9.74433 14.0355 10.015 14.4145 10.5565 15.1725V15.1725C10.834 15.5611 10.9728 15.7554 11.0519 15.9271C11.1533 16.147 11.1717 16.2077 11.2101 16.4468C11.2401 16.6334 11.2288 17.0216 11.2061 17.7979C11.2041 17.8649 11.2032 17.9322 11.2032 17.9997C11.2032 18.0673 11.2041 18.1347 11.2061 18.2018C11.2288 18.9782 11.2402 19.3664 11.2102 19.5531C11.1718 19.7922 11.1533 19.8528 11.052 20.0727C10.9729 20.2445 10.8341 20.4388 10.5565 20.8274V20.8274C10.015 21.5855 9.74428 21.9645 9.65712 22.369C9.57371 22.756 9.60707 23.1592 9.75298 23.5272C9.90545 23.9119 10.2348 24.2413 10.8935 24.9L11.0998 25.1063C11.7588 25.7652 12.0882 26.0947 12.473 26.2471C12.841 26.3929 13.2439 26.4263 13.6308 26.343C14.0354 26.2558 14.4146 25.985 15.1729 25.4434V25.4434C15.5616 25.1657 15.7559 25.0269 15.9277 24.9478C16.1475 24.8465 16.2081 24.8281 16.447 24.7897C16.6337 24.7596 17.022 24.771 17.7985 24.7936C17.8654 24.7956 17.9326 24.7966 18 24.7966C18.0675 24.7966 18.1347 24.7956 18.2017 24.7936C18.9782 24.7709 19.3664 24.7596 19.5531 24.7896C19.7921 24.828 19.8527 24.8465 20.0726 24.9478C20.2443 25.0269 20.4386 25.1657 20.8273 25.4433V25.4433C21.5854 25.9848 21.9645 26.2556 22.3691 26.3428C22.7561 26.4261 23.1591 26.3928 23.5271 26.2469C23.9118 26.0944 24.2412 25.765 24.9 25.1062L25.1065 24.8997C25.7652 24.2411 26.0945 23.9117 26.247 23.5271C26.3929 23.159 26.4263 22.7558 26.3429 22.3687C26.2557 21.9643 25.985 21.5853 25.4436 20.8273V20.8273C25.166 20.4387 25.0272 20.2444 24.9481 20.0727C24.8468 19.8527 24.8283 19.7921 24.7899 19.553C24.7599 19.3663 24.7712 18.9781 24.7939 18.2018C24.7959 18.1347 24.7969 18.0673 24.7969 17.9997C24.7969 17.9322 24.7959 17.8649 24.794 17.7979C24.7713 17.0217 24.7599 16.6335 24.7899 16.4469C24.8283 16.2078 24.8468 16.1471 24.9482 15.9272C25.0273 15.7555 25.166 15.5612 25.4436 15.1726V15.1726C25.985 14.4147 26.2557 14.0357 26.3428 13.6313C26.4263 13.2442 26.3929 12.841 26.2469 12.4728C26.0945 12.0882 25.7652 11.7589 25.1065 11.1003L24.8996 10.8934C24.2412 10.2349 23.9119 9.90572 23.5275 9.75325C23.1592 9.60721 22.7559 9.57382 22.3686 9.65734C21.9643 9.74452 21.5854 10.0151 20.8277 10.5564V10.5564C20.4392 10.8339 20.2449 10.9726 20.0732 11.0517C19.8532 11.1531 19.7925 11.1716 19.5533 11.21C19.3666 11.24 18.9786 11.2286 18.2024 11.2059C18.1352 11.2039 18.0677 11.2029 18 11.2029C17.9324 11.2029 17.865 11.2039 17.7978 11.2059C17.0216 11.2286 16.6335 11.2399 16.4468 11.21C16.2077 11.1716 16.147 11.1531 15.927 11.0517C15.7553 10.9726 15.561 10.8339 15.1725 10.5563V10.5563Z"/>
+      <path class="fill-black group-hover:fill-white transition-all" fill-rule="evenodd" clip-rule="evenodd" d="M20.4058 17.9175C20.4058 19.2375 19.3357 20.3076 18.0156 20.3076C16.6956 20.3076 15.6255 19.2375 15.6255 17.9175C15.6255 16.5974 16.6956 15.5273 18.0156 15.5273C19.3357 15.5273 20.4058 16.5974 20.4058 17.9175Z"/>
+    </svg>
+
+      <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[9.8rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres de caméra</span>
   </button>
 
   <button v-on:click="openSettings = !openSettings" class="group">
@@ -185,6 +190,7 @@ const cameraAngle = ref('');
       <path d="M20.55 2.25C18.8698 2.25 18.0298 2.25 17.388 2.57698C16.8235 2.8646 16.3646 3.32354 16.077 3.88803C15.75 4.52976 15.75 5.36984 15.75 7.05V10.95C15.75 12.6302 15.75 13.4702 16.077 14.112C16.3646 14.6765 16.8235 15.1354 17.388 15.423C18.0298 15.75 18.8698 15.75 20.55 15.75H24.45C26.1302 15.75 26.9702 15.75 27.612 15.423C28.1765 15.1354 28.6354 14.6765 28.923 14.112C29.25 13.4702 29.25 12.6302 29.25 10.95V7.05C29.25 5.36984 29.25 4.52976 28.923 3.88803C28.6354 3.32354 28.1765 2.8646 27.612 2.57698C26.9702 2.25 26.1302 2.25 24.45 2.25H20.55Z"/>
       <path d="M11.55 20.25C9.86984 20.25 9.02976 20.25 8.38803 20.577C7.82354 20.8646 7.3646 21.3235 7.07698 21.888C6.75 22.5298 6.75 23.3698 6.75 25.05V28.95C6.75 30.6302 6.75 31.4702 7.07698 32.112C7.3646 32.6765 7.82354 33.1354 8.38803 33.423C9.02976 33.75 9.86984 33.75 11.55 33.75H15.45C17.1302 33.75 17.9702 33.75 18.612 33.423C19.1765 33.1354 19.6354 32.6765 19.923 32.112C20.25 31.4702 20.25 30.6302 20.25 28.95V25.05C20.25 23.3698 20.25 22.5298 19.923 21.888C19.6354 21.3235 19.1765 20.8646 18.612 20.577C17.9702 20.25 17.1302 20.25 15.45 20.25H11.55Z"/>
     </svg>
+    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[12rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres Midjourney</span>
   </button>
 
   <div class="absolute translate-x-40 translate-y-[10px]" @click="openDialog">
@@ -201,12 +207,13 @@ const cameraAngle = ref('');
 
                   <!-- inline box send and link -->
 
-<div class="w-full flex justify-center mt-6 relative gap-8">
+<div class="w-full flex justify-center mt-6 relative gap-8 bg-[#121212]">
   <a href="https://www.midjourney.com/app/" target="_blank">
   <button class="group ring-blue-500 hover:ring">
     <svg class="w-6 mx-8 fill-white group-hover:fill-black" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.7499 5.9848C12.7499 3.18698 12.7499 1.78808 12.2268 1.21521C11.774 0.719349 11.1025 0.483823 10.4392 0.588153C9.67282 0.708686 8.79892 1.80105 7.05114 3.98579L2.59867 9.55136C1.2672 11.2157 0.60146 12.0479 0.600704 12.7482C0.600047 13.3573 0.876976 13.9335 1.353 14.3135C1.90035 14.7504 2.96605 14.7504 5.09745 14.7504H5.64992C6.20997 14.7504 6.49 14.7504 6.70391 14.8594C6.89207 14.9553 7.04505 15.1082 7.14093 15.2964C7.24992 15.5103 7.24992 15.7903 7.24992 16.3504V18.016C7.24992 20.8138 7.24992 22.2127 7.77306 22.7856C8.22587 23.2814 8.89731 23.517 9.56066 23.4126C10.327 23.2921 11.2009 22.1997 12.9487 20.015L17.4012 14.4494C18.7326 12.7851 19.3984 11.9529 19.3991 11.2525C19.3998 10.6435 19.1229 10.0673 18.6468 9.6873C18.0995 9.25039 17.0338 9.25039 14.9024 9.25039H14.3499C13.7899 9.25039 13.5098 9.25039 13.2959 9.1414C13.1078 9.04552 12.9548 8.89254 12.8589 8.70438C12.7499 8.49047 12.7499 8.21044 12.7499 7.65039V5.9848Z"/>
     </svg>
+    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Ouvrir Midjourney</span>
   </button>
 </a>
 
@@ -215,13 +222,14 @@ const cameraAngle = ref('');
     <svg class="w-6 mx-8 fill-white group-hover:fill-black transition-all" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.88154 11.2192C2.45325 9.90064 0.739098 9.24135 0.307963 8.35607C-0.0649225 7.59041 -0.0223838 6.68758 0.420843 5.96037C0.933307 5.11955 2.70185 4.62436 6.23894 3.63398L16.234 0.835356C18.4734 0.208323 19.5931 -0.105194 20.3615 0.185803C21.0314 0.439517 21.5603 0.968408 21.814 1.63831C22.1049 2.40666 21.7914 3.52637 21.1644 5.76577L18.3657 15.7608C17.3753 19.2979 16.88 21.0664 16.0392 21.5789C15.312 22.0221 14.4092 22.0646 13.6435 21.6917C12.7582 21.2606 12.099 19.5464 10.7804 16.1181L10.0877 14.3167C9.95255 13.9655 9.885 13.7898 9.88126 13.6152C9.87796 13.4609 9.91043 13.3079 9.97613 13.1682C10.0504 13.0102 10.1835 12.8772 10.4496 12.611L12.9999 10.0607C13.2928 9.76784 13.2928 9.29296 12.9999 9.00007V9.00007C12.7071 8.70718 12.2322 8.70718 11.9393 9.00007L9.38911 11.5502C9.12298 11.8164 8.98991 11.9494 8.83189 12.0238C8.69221 12.0895 8.53921 12.1219 8.38489 12.1186C8.2103 12.1149 8.03466 12.0473 7.68338 11.9122L5.88154 11.2192Z"/>
     </svg>
+    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Envoyer le prompt</span>
   </button>
 </div>
 
                   <!-- box settings -->
 
 <Transition name="slide-fade">
-  <div v-if="openSettings" class="flex justify-center relative">
+  <div v-if="openSettings" class="flex justify-center relative  bg-[#121212]">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
         
@@ -268,7 +276,7 @@ const cameraAngle = ref('');
                   <!-- box camera -->
 
 <Transition name="slide-fade">
-  <div v-if="openCamera" class="flex justify-center relative">
+  <div v-if="openCamera" class="flex justify-center relative bg-[#121212] z-50">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
 
       <button @click="ListOpen = !ListOpen" class="flex items-center group mx-auto">
@@ -313,13 +321,26 @@ const cameraAngle = ref('');
 
 
 <Transition name="slide-fade">
-  <div v-if="openSend" class="flex justify-center relative">
+  <div v-if="openSend" class="flex justify-center relative bg-[#121212] z-50">
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <ul class=" flex flex-col gap-3">
-        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="copyText"><p class="flex justify-center items-center h-8 w-full">Copier le prompt</p></li>
-        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Reddit')"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Reddit</p></a></li>
-        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Twitter')"><p class="flex justify-center items-center h-8 w-full">Twitter</p></li>
-        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Whatsapp')"><a class="hover:text-white" href="#"><p class="flex justify-center items-center h-8 w-full">Whatsapp</p></a></li>
+
+        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="copyText">
+          <p class="cursor-pointer flex justify-center items-center h-8 w-full">Copier le prompt</p>
+        </li>
+
+        <li class="hover:ring-2 ring-orange-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Reddit')">
+          <p class="cursor-pointer flex justify-center items-center h-8 w-full">Reddit</p>
+        </li>
+
+        <li class="hover:ring-2 ring-blue-400 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Twitter')">
+          <p class="cursor-pointer flex justify-center items-center h-8 w-full">Twitter</p>
+        </li>
+
+        <li class="hover:ring-2 ring-green-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Whatsapp')">
+          <p class="cursor-pointer flex justify-center items-center h-8 w-full">Whatsapp</p>
+        </li>
+        
       </ul>
       <div class="w-96 flex justify-center mt-6">
         <button v-on:click="openSend = !openSend">Fermer</button>
@@ -332,7 +353,7 @@ const cameraAngle = ref('');
 
                   <!-- box image -->
 
-<div class="w-full flex justify-center px-8 my-6">
+<div class="w-full flex justify-center px-8 py-6 bg-[#121212]">
   <div class="flex items-center px-8">
     <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
       <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">
@@ -344,7 +365,7 @@ const cameraAngle = ref('');
 
                     <!-- dialog aide -->
 
-  <dialog ref="dialog" class="bg-white/10 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4">
+  <dialog ref="dialog" class="bg-white/10 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 bg-[#121212]">
     <div>
       <ul class=" list-disc px-8 pt-3">
         <li>Ratio de l’image :<span class=" font-bold "> --ar</span></li>
@@ -361,6 +382,7 @@ const cameraAngle = ref('');
       <button @click="closeDialog">Fermer</button>
     </div>
   </dialog>
+  </div>
 
   <Footer/>
 

@@ -16,8 +16,8 @@ onMounted(async () => {
 </script>
 
 <template>
-    <h2 class="text-center my-20 font-secondary text-white/20 font-bold">PromptPilot</h2>
-    <section class="card__container__section">
+    <h2 class="text-center py-20 font-secondary text-white/20 font-bold bg-[#121212]">PromptPilot</h2>
+    <section class="card__container__section bg-[#121212]">
 
         <div v-if="prompts" class="card__container card__container--6">
                 <router-link v-for="prompt in prompts" :key="prompt.id" class="card ring-white hover:ring-2 bg-no-repeat" :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">

@@ -5,9 +5,9 @@ import { gsap } from 'gsap';
 </script>
 
 <template>
-<h2 class="text-center my-20 font-secondary text-white/20 font-bold">PromptPilot</h2>
-<footer class="mb-6 mt-24 h-[30svh] font-semibold">
-    <div class="flex justify-center">
+<h2 class="text-center mb-52 py-20 font-secondary text-white/20 font-bold bg-[#121212] rounded-b-[50px] relative">PromptPilot</h2>
+<footer class="h-[30svh] font-semibold bg-white pt-32 fixed bottom-0 w-full -z-50">
+    <!-- <div class="flex justify-center">
         <div class="w-[calc(100vw-76px)] bg-white/5 rounded-3xl lg:py-8 py-6 border-2 border-white/40">
             <p class="w-full mb-12 text-lg text-white/40 font-normal lg:px-8 px-6">L'éditeur de prompt pour Midjourney</p>
             <div class="flex px-8 gap-12">
@@ -21,10 +21,10 @@ import { gsap } from 'gsap';
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="text-lg">
-        <ul class="italic flex justify-between lg:mx-20 mx-10 leading-8 mt-24">
+        <ul class="italic flex justify-between lg:mx-20 mx-10 leading-8">
             <li class="primaryList">Contact
                 <ul>
                     <li class="secondaryList"><a href="mailto:bastienthunus@gmail.com">bastienthunus@gmail.com</a></li>
@@ -42,7 +42,7 @@ import { gsap } from 'gsap';
             <li class="primaryList">©2023</li>
         </ul>
     </div>
-    <div class="flex justify-center items-end text__line text-[9cqi] h-full">PromptPilot</div>
+    <!-- <div class="flex justify-center items-end text__line text-[2cqi] h-full text-black">PromptPilot</div> -->
 </footer>
 
 </template>
@@ -50,11 +50,11 @@ import { gsap } from 'gsap';
 <style lang="scss">
 
 .primaryList{
-    @apply text-white/40 font-normal;
+    @apply text-black/40 font-normal;
 }
 
 .secondaryList{
-    @apply font-normal text-white/100 not-italic;
+    @apply font-normal text-black/100 not-italic;
 }
 
 </style>
