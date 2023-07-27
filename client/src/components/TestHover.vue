@@ -19,9 +19,9 @@ onMounted(() => {
 
 
 <template>
-			<div class="grid overflow-hidden rounded-3xl">
+			<div class="grid_h overflow-hidden rounded-3xl">
 				<div class="grid__item">
-					<a class="grid__item-img rounded-xl">
+					<a class="grid__item-img rounded-3xl overflow-hidden">
 						<div class="grid__item-img-deco"></div>
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <rect width="100" height="100" fill="url(#pattern0)"/>
@@ -42,7 +42,6 @@ onMounted(() => {
 
 <style lang="scss">
 :root {
-	font-size: 15px;
 	--color-text: #a6a6ab;
 	--color-bg: #121212;
 	--color-link: rgb(142, 100, 255);
@@ -71,7 +70,7 @@ a:focus-visible {
 	background: transparent;
 }
 
-.grid {
+.grid_h {
 	display: flex;
     justify-content: center;
 	background: #2a2b3a;

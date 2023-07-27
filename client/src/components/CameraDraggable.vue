@@ -117,7 +117,7 @@ const handleClick = () => {
 
     <div id='container' ref='containerRef' class="mt-4 z-30">
       <div class="origin" id='origin'></div>
-      <div class="knob" ref='knobRef' @mouseover="handleClick"></div>
+      <div class="knob transition-all duration-100" ref='knobRef' @mouseover="handleClick"></div>
     </div>
   </div>
     

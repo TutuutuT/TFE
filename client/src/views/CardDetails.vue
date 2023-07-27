@@ -107,7 +107,7 @@ const copyText = () => {
 
 const cameraAngle = ref('');
 
-
+const hoveredItemId = ref(null)
 </script>
 
 
@@ -123,7 +123,8 @@ const cameraAngle = ref('');
     <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold">
       
     <span v-for="ListCategory in prompt.detailed_prompt">
-      <span class="PromptHover group" v-for="(value, key) in ListCategory">
+      <span class="PromptHover group transition-all duration-200" v-for="(value, key) in ListCategory" :class="[{ 'opacity-50': hoveredItemId !== null && hoveredItemId !== value.id }]" @mouseover="hoveredItemId = value.id" @mouseout="hoveredItemId = null">
+        <span class="group-hover:block hidden pointer-events-none absolute transition-all duration-200 group-hover:text-white text-sm px-2 py-2 bg-neutral-800 rounded-md bottom-[2.2rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:left-5 before:-bottom-1.5 before:bg-neutral-800 before:-z-10 before:rotate-45">{{ ListChangeable[value.cat].title }}</span>
         <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id; ClickedPromptCat = value.cat">
           <span v-if=" ClickedList[value.id] != null">
             {{ ClickedList[value.id] }}
@@ -143,7 +144,7 @@ const cameraAngle = ref('');
       
     <div class="flex items-center">
     <button class="group rounded-l-none border-l-0 px-3 py-4 !important" @click="copyText">
-      <svg class="w-6 fill-white group-hover:fill-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-6 fill-white group-hover:fill-black duration-200 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
         <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
       </svg>
@@ -233,7 +234,8 @@ const cameraAngle = ref('');
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <form class="h-8 my-3 rounded w-96 flex" v-for="paramPrompt in Addparams" :key="paramPrompt.id">
         
-        <label class="label__title mr-4 w-28  font-semibold">{{ paramPrompt.titleShort }}</label>
+        <label class="label__title mr-4 w-28 peer font-semibold">{{ paramPrompt.titleShort }}</label>
+        <span class="block w-[7.6rem] text-center opacity-0 transition-all duration-200 peer-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md right-[26.3rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45 pointer-events-none">{{ paramPrompt.descri }}</span>
   
         <div class="flex justify-between w-full bg-neutral-800 rounded-full">
   
@@ -253,7 +255,8 @@ const cameraAngle = ref('');
       
       <form class="h-8 my-3 rounded w-96 flex" v-for="paramPromptSwitch in Switchparams" :key="paramPromptSwitch.id">
   
-        <label class="label__title mr-4 w-28  font-semibold shadow-none">{{ paramPromptSwitch.titleShort }}</label>
+        <label class="peer label__title mr-4 w-28  font-semibold shadow-none">{{ paramPromptSwitch.titleShort }}</label>
+        <span class="block w-[7.6rem] text-center opacity-0 transition-all duration-200 peer-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md right-[26.3rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45 pointer-events-none">{{ paramPromptSwitch.descri }}</span>
   
         <div class="flex justify-between w-full bg-neutral-800 rounded-full">
   
@@ -325,19 +328,40 @@ const cameraAngle = ref('');
     <div class="absolute lg:max-w-4xl max-w-auto bg-white/1 backdrop-blur-xl rounded-xl text-white border-2 border-white/40 p-4 mt-6">
       <ul class=" flex flex-col gap-3">
 
-        <li class="bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="copyText">
+        <li class="flex items-center h-12 group ring-white hover:ring-2 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="copyText">
+          <svg class="absolute w-8 mx-3 fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
+            <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
+          </svg>
           <p class="cursor-pointer flex justify-center items-center h-8 w-full">Copier le prompt</p>
         </li>
 
-        <li class="hover:ring-2 ring-orange-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Reddit')">
+        <li class="flex items-center h-12 group hover:ring-2 ring-orange-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Reddit')">
+          <svg class="absolute w-8 mx-3" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <g class="fill-white group-hover:fill-orange-600 duration-200 transition-all">
+                  <path d="M228.21 124.67A51.6 51.6 0 0 1 232 144c0 39.76-46.56 72-104 72S24 183.76 24 144a51.6 51.6 0 0 1 3.79-19.33a24 24 0 1 1 31.62-34.79C77.72 78.75 101.72 72 128 72s50.28 6.75 68.59 17.88a24 24 0 1 1 31.62 34.79Z" opacity=".2"/>
+                  <path d="M248 104a32 32 0 0 0-52.94-24.19c-16.75-8.9-36.76-14.28-57.66-15.53l5.19-31.17l17.72 2.72a24 24 0 1 0 2.87-15.74l-26-4a8 8 0 0 0-9.11 6.59l-6.87 41.48c-21.84.94-42.82 6.38-60.26 15.65a32 32 0 0 0-42.59 47.74A59 59 0 0 0 16 144c0 21.93 12 42.35 33.91 57.49C70.88 216 98.61 224 128 224s57.12-8 78.09-22.51C228 186.35 240 165.93 240 144a59 59 0 0 0-2.35-16.45A32.16 32.16 0 0 0 248 104Zm-64-80a8 8 0 1 1-8 8a8 8 0 0 1 8-8Zm40.13 93.78a8 8 0 0 0-3.29 10A43.62 43.62 0 0 1 224 144c0 16.53-9.59 32.27-27 44.33C178.67 201 154.17 208 128 208s-50.67-7-69-19.67c-17.41-12.06-27-27.8-27-44.33a43.75 43.75 0 0 1 3.14-16.17a8 8 0 0 0-3.27-10a16 16 0 1 1 21.07-23.24a8 8 0 0 0 10.63 2.12l.18-.11C81.45 85.9 104.25 80 128 80c23.73 0 46.53 5.9 64.23 16.6l.18.11a8 8 0 0 0 10.63-2.12a16 16 0 1 1 21.07 23.19ZM88 144a16 16 0 1 1 16-16a16 16 0 0 1-16 16Zm96-16a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm-16.93 44.25a8 8 0 0 1-3.32 10.82a76.18 76.18 0 0 1-71.5 0a8 8 0 1 1 7.5-14.14a60.18 60.18 0 0 0 56.5 0a8 8 0 0 1 10.82 3.32Z"/>
+              </g>
+          </svg>
           <p class="cursor-pointer flex justify-center items-center h-8 w-full">Reddit</p>
         </li>
 
-        <li class="hover:ring-2 ring-blue-400 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Twitter')">
-          <p class="cursor-pointer flex justify-center items-center h-8 w-full">Twitter</p>
+        <li class="flex items-center group h-12 hover:ring-2 ring-blue-400 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Twitter')">
+          <svg class="absolute w-7 mx-3" viewBox="0 0 24 24" aria-hidden="true">
+            <g class="fill-white group-hover:fill-blue-400 duration-200 transition-all">
+              <path d="M14.258 10.152L23.176 0h-2.113l-7.747 8.813L7.133 0H0l9.352 13.328L0 23.973h2.113l8.176-9.309 6.531 9.309h7.133zm-2.895 3.293l-.949-1.328L2.875 1.56h3.246l6.086 8.523.945 1.328 7.91 11.078h-3.246zm0 0"></path>
+            </g>
+          </svg>
+          <p class="cursor-pointer flex justify-center items-center h-8 w-full">TwitterX</p>
         </li>
 
-        <li class="hover:ring-2 ring-green-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Whatsapp')">
+        <li class="flex items-center group h-12 hover:ring-2 ring-green-600 bg-neutral-800 rounded-full hover:bg-neutral-500/30 transition-all" @click="share('Whatsapp')">
+          <svg class="absolute w-8 mx-3" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <g class="fill-white group-hover:fill-green-600  duration-200 transition-all">
+                <path d="M128 32a96 96 0 0 0-83.11 144.07l-12.47 37.39a8 8 0 0 0 10.12 10.12l37.39-12.47A96 96 0 1 0 128 32Zm24 152a80 80 0 0 1-80-80a32 32 0 0 1 32-32l16 32l-12.32 18.47a48.19 48.19 0 0 0 25.85 25.85L152 136l32 16a32 32 0 0 1-32 32Z" opacity=".2"/>
+                <path d="m187.58 144.84l-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40a88.1 88.1 0 0 0 88 88a40 40 0 0 0 40-40a8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72a24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51a56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.62-9.74l23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81a8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/>
+            </g>
+        </svg>
           <p class="cursor-pointer flex justify-center items-center h-8 w-full">Whatsapp</p>
         </li>
         
@@ -416,7 +440,7 @@ label{
 }
 
 .PromptHover{
-  @apply mx-[2.5px] hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-sm relative inline-block before:-z-10 z-10 cursor-pointer;
+  @apply mx-[0.5px] px-[2px] hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-lg relative inline-block before:-z-10 z-10 cursor-pointer;
 }
 
 </style>

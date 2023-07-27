@@ -588,6 +588,7 @@
       "id":"1",
       "title":"Aspect Ratio",
       "titleShort":"--ar",
+      "descri":"Ratio de l’image",
       "params":[
         {"paramId":"1", "param":"16:9"},
         {"paramId":"2", "param":"1:1"},
@@ -598,6 +599,7 @@
         "id":"2",
         "title":"Version",
         "titleShort":"--v",
+        "descri":"Version de Midjourney",
         "params":[
           {"paramId":"1", "param":"V1"},
           {"paramId":"2", "param":"V2"},
@@ -608,6 +610,7 @@
           "id":"3",
           "title":"Quality",
           "titleShort":"--q",
+          "descri":"Qualité de rendu",
           "params":[
             {"paramId":"1", "param":".25"},
             {"paramId":"2", "param":".5"},
@@ -623,27 +626,32 @@
         {
           "id":"4",
           "title":"Uplight",
-          "titleShort":"--uplight"
+          "titleShort":"--uplight",
+          "descri":"Lumière alternative"
           },
         {
           "id":"5",
           "title":"Niji",
-          "titleShort":"--niji"
+          "titleShort":"--niji",
+          "descri":"Style anime"
           },
         {
           "id":"6",
           "title":"HD",
-          "titleShort":"--hd"
+          "titleShort":"--hd",
+          "descri":"Rendu hd"
           },
         {
           "id":"7",
           "title":"Sameseed",
-          "titleShort":"--sameseed"
+          "titleShort":"--sameseed",
+          "descri":"Images similaires"
           },
         {
           "id":"8",
           "title":"Video",
-          "titleShort":"--video"
+          "titleShort":"--video",
+          "descri":"Vidéo de la progression"
           }    
   ],
 
