@@ -63,18 +63,18 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"dark and mysterious,","cat":"0"},
-      {"id":"2","item":"ancient egyptian,","cat":"0"}
+      {"id":"1","item":"dark and mysterious, ","cat":"0"},
+      {"id":"2","item":"ancient egyptian, ","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"anubis,","cat":"1"},
-      {"id":"4","item":"god of the underworld,","cat":"1"}
+      {"id":"3","item":"anubis, ","cat":"1"},
+      {"id":"4","item":"god of the underworld, ","cat":"1"}
     ],
     "object": [
-      {"id":"5","item":"protector of graves by gerald brom,","cat":"2"}
+      {"id":"5","item":"protector of graves by gerald brom, ","cat":"2"}
     ],
     "location": [
-      {"id":"6","item":"funerary rites,","cat":"3"}
+      {"id":"6","item":"funerary rites, ","cat":"3"}
     ],
     "action": "",
     "color": "",
@@ -82,13 +82,13 @@
     "background": "",
     "resolution": "",
     "renderer": [
-      {"id":"7","item":"32k uhd,","cat":"7"}
+      {"id":"7","item":"32k uhd, ","cat":"7"}
     ],
     "lighting": "",
     "details": [
-      {"id":"8","item":"hyper-detailed,","cat":"9"},
-      {"id":"9","item":"digital art,","cat":"9"},
-      {"id":"10","item":"mechanical realism","cat":"9"}
+      {"id":"8","item":"hyper-detailed, ","cat":"9"},
+      {"id":"9","item":"digital art, ","cat":"9"},
+      {"id":"10","item":"mechanical realism ","cat":"9"}
       
     ]},
   "imageUrl": "./assets/MidjourneyImages/anubis.webp"
@@ -101,13 +101,13 @@
       
     ],
     "character": [
-      {"id":"1","item":"model","cat":"1"}
+      {"id":"1","item":"model ","cat":"1"}
     ],
     "location":[
-      {"id":"2","item":"in dune inspired photoshoot,","cat":"3"}
+      {"id":"2","item":"in dune inspired photoshoot, ","cat":"3"}
     ],
     "object": [
-      {"id":"3","item":"styled by balenciaga and dior 2023","cat":"2"}
+      {"id":"3","item":"styled by balenciaga and dior 2023, ","cat":"2"}
     ],
     "action": "",
     "color": "",
@@ -116,7 +116,7 @@
     "resolution": "",
     "renderer": "",
     "lighting": [
-      {"id":"4","item":"cinematic lighting,","cat":"8"}
+      {"id":"4","item":"cinematic lighting, ","cat":"8"}
     ],
     "parameters": [
       {"id":"5","item":"stunning photography","cat":"9"}
@@ -128,26 +128,26 @@
     "detailed_prompt": {
       "category":"",
       "character": [
-        {"id":"5","item":"a vantablack tarot card with Tony Stark,","cat":"1"},
-        {"id":"6","item":"gentle expressions,","cat":"1"}
+        {"id":"5","item":"a vantablack tarot card with Tony Stark, ","cat":"1"},
+        {"id":"6","item":"gentle expressions, ","cat":"1"}
       ],
       "style": [
-        {"id":"1","item":"gothic black and white","cat":"0"},
-        {"id":"2","item":"mixed media,","cat":"0"},
-        {"id":"3","item":"sculpted,","cat":"0"},
-        {"id":"4","item":"photobashing,","cat":"0"}
+        {"id":"1","item":"gothic black and white, ","cat":"0"},
+        {"id":"2","item":"mixed media, ","cat":"0"},
+        {"id":"3","item":"sculpted, ","cat":"0"},
+        {"id":"4","item":"photobashing, ","cat":"0"}
       ],
       "object": "",
       "location": "",
       "action": "",
       "color": [
-        {"id":"7","item":"colorful moebius,","cat":"5"}
+        {"id":"7","item":"colorful moebius, ","cat":"5"}
       ],
       "artist": "",
       "background": "",
       "resolution": "",
       "renderer": [
-        {"id":"8","item":"luminous portraits,","cat":"9"},
+        {"id":"8","item":"luminous portraits, ","cat":"9"},
         {"id":"9","item":"stanley artgerm chip zdarsky","cat":"9"}
       ],
       "lighting": "",
@@ -159,14 +159,14 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"Macro shot of the fur of","cat":"0"}
+      {"id":"1","item":"Macro shot of the fur of ","cat":"0"}
     ],
     "character": [
-      {"id":"2","item":"a cheetah.","cat":"1"}
+      {"id":"2","item":"a cheetah. ","cat":"1"}
     ],
     "style2": [
-      {"id":"3","item":"The scene is captured in dark and moody tones,","cat":"0"},
-      {"id":"4","item":"with deep blacks and a dramatic atmosphere.","cat":"0"}
+      {"id":"3","item":"The scene is captured in dark and moody tones, ","cat":"0"},
+      {"id":"4","item":"with deep blacks and a dramatic atmosphere. ","cat":"0"}
     ],
     "object": "",
     "location": "",
@@ -185,17 +185,17 @@
   "detailed_prompt": {
     "category":"",
     "character": [
-      {"id":"2","item":"Yakuza Ghost Craft Beer,","cat":"1"},
-      {"id":"3","item":"sticker design","cat":"1"}
+      {"id":"2","item":"Yakuza Ghost Craft Beer, ","cat":"1"},
+      {"id":"3","item":"sticker design, ","cat":"1"}
     ],
     "style": [
-      {"id":"1","item":"in the style of minimalist Japanese street art stickers,","cat":"0"},
-      {"id":"4","item":"Japanese street art,","cat":"0"},
-      {"id":"5","item":"ghettopunk,","cat":"0"},
-      {"id":"6","item":"harmonious balance,","cat":"0"},
-      {"id":"7","item":"mcdonaldpunk,","cat":"0"},
-      {"id":"8","item":"vector graphics,","cat":"0"},
-      {"id":"9","item":"ghettopunk,","cat":"0"}
+      {"id":"1","item":"in the style of minimalist Japanese street art stickers, ","cat":"0"},
+      {"id":"4","item":"Japanese street art, ","cat":"0"},
+      {"id":"5","item":"ghettopunk, ","cat":"0"},
+      {"id":"6","item":"harmonious balance, ","cat":"0"},
+      {"id":"7","item":"mcdonaldpunk, ","cat":"0"},
+      {"id":"8","item":"vector graphics, ","cat":"0"},
+      {"id":"9","item":"ghettopunk, ","cat":"0"}
     ],
     "object": "",
     "location": "",
@@ -203,7 +203,7 @@
     "color": "",
     "artist": "",
     "background": [
-      {"id":"10","item":"hall of mirrors,","cat":"7"}
+      {"id":"10","item":"hall of mirrors, ","cat":"7"}
     ],
     "resolution": "",
     "renderer": "",
@@ -219,19 +219,19 @@
   "detailed_prompt": {
     "category":"",
     "location": [
-      {"id":"2","item":"In a surreal scene set in the vastness of space,","cat":"3"}
+      {"id":"2","item":"In a surreal scene set in the vastness of space, ","cat":"3"}
     ],
     "character": [
-      {"id":"1","item":"an astronaut","cat":"1"}
+      {"id":"1","item":"an astronaut, ","cat":"1"}
     ],
     "style": [
       
     ],
     "object": [
-      {"id":"3","item":"in a futuristic space suit","cat":"2"}
+      {"id":"3","item":"in a futuristic space suit, ","cat":"2"}
     ],
     "location2": [
-      {"id":"4","item":"swims through a pool of liquid foil,","cat":"3"}
+      {"id":"4","item":"swims through a pool of liquid foil, ","cat":"3"}
     ],
     "action": "",
     "color": "",
@@ -250,14 +250,14 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"8bit","cat":"0"}
+      {"id":"1","item":"8bit, ","cat":"0"}
     ],
     "character": [
-      {"id":"2","item":"Shiba","cat":"1"}
+      {"id":"2","item":"Shiba, ","cat":"1"}
     ],
     "object": "",
     "action": [
-      {"id":"3","item":"Eating Ramen","cat":"4"}
+      {"id":"3","item":"Eating Ramen, ","cat":"4"}
     ],
     "location": [
       {"id":"4","item":"in Yatai Stand","cat":"3"}
@@ -279,18 +279,18 @@
       
     ],
     "character": [
-      {"id":"1","item":"camping scene,","cat":"2"},
-      {"id":"2","item":"hill,","cat":"2"},
-      {"id":"3","item":"mountains,","cat":"2"},
-      {"id":"4","item":"sunset,","cat":"2"},
-      {"id":"5","item":"trees,","cat":"2"},
-      {"id":"6","item":"path,","cat":"2"},
-      {"id":"7","item":"waterfall,","cat":"2"},
-      {"id":"8","item":"skyline,","cat":"2"},
-      {"id":"9","item":"nature,","cat":"2"},
-      {"id":"10","item":"environment,","cat":"2"},
-      {"id":"11","item":"forest,","cat":"2"},
-      {"id":"12","item":"mountain,","cat":"2"}
+      {"id":"1","item":"camping scene, ","cat":"2"},
+      {"id":"2","item":"hill, ","cat":"2"},
+      {"id":"3","item":"mountains, ","cat":"2"},
+      {"id":"4","item":"sunset, ","cat":"2"},
+      {"id":"5","item":"trees, ","cat":"2"},
+      {"id":"6","item":"path, ","cat":"2"},
+      {"id":"7","item":"waterfall, ","cat":"2"},
+      {"id":"8","item":"skyline, ","cat":"2"},
+      {"id":"9","item":"nature, ","cat":"2"},
+      {"id":"10","item":"environment, ","cat":"2"},
+      {"id":"11","item":"forest, ","cat":"2"},
+      {"id":"12","item":"mountain, ","cat":"2"}
     ],
     "object": "",
     "location": "",
@@ -312,10 +312,10 @@
       {"id":"3","item":"The universe in her eyes.","cat":"1"}
     ],
     "style": [
-      {"id":"3","item":"In the style of Peter Henry Emerson,","cat":"0"},
-      {"id":"3","item":"Victor Enrich,","cat":"0"},
-      {"id":"3","item":"Anna Dittmann,","cat":"0"},
-      {"id":"3","item":"Carlos Cruz","cat":"0"},
+      {"id":"3","item":"In the style of Peter Henry Emerson, ","cat":"0"},
+      {"id":"3","item":"Victor Enrich, ","cat":"0"},
+      {"id":"3","item":"Anna Dittmann, ","cat":"0"},
+      {"id":"3","item":"Carlos Cruz, ","cat":"0"},
       {"id":"3","item":"abstract surrealism","cat":"0"}
     ],
     "object": "",
@@ -335,29 +335,29 @@
   "detailed_prompt": {
     "category":"",
     "character": [
-      {"id":"1","item":"a sailing ship","cat":"1"}
+      {"id":"1","item":"a sailing ship, ","cat":"1"}
     ],
     "object": "",
     "location": [
-      {"id":"2","item":"in an ocean","cat":"3"}
+      {"id":"2","item":"in an ocean, ","cat":"3"}
     ],
     "style": [
-      {"id":"3","item":"in the style of jon foster,","cat":"0"},
-      {"id":"4","item":"2d game art,","cat":"0"}
+      {"id":"3","item":"in the style of jon foster, ","cat":"0"},
+      {"id":"4","item":"2d game art, ","cat":"0"}
     ],
     "action": "",
     "color": "",
     "background": [
-      {"id":"5","item":"with dramatic clouds,","cat":"7"}
+      {"id":"5","item":"with dramatic clouds, ","cat":"7"}
     ],
     "resolution": "",
     "renderer": "",
     "lighting": [
-      {"id":"6","item":"light navy and red,","cat":"9"}
+      {"id":"6","item":"light navy and red, ","cat":"9"}
     ],
     "parameters": [
-      {"id":"7","item":"realistic","cat":"9"},
-      {"id":"8","item":"hyper-detail,","cat":"9"}
+      {"id":"7","item":"realistic, ","cat":"9"},
+      {"id":"8","item":"hyper-detail, ","cat":"9"}
     ],
     "artist":[
       {"id":"9","item":"dmitry vishnevsky","cat":"6"}
@@ -403,26 +403,26 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"Impressionist","cat":"0"},
-      {"id":"2","item":"Cartoon","cat":"0"}
+      {"id":"1","item":"Impressionist, ","cat":"0"},
+      {"id":"2","item":"Cartoon, ","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"of a cute boar","cat":"1"}
+      {"id":"3","item":"of a cute boar, ","cat":"1"}
     ],
     "object": "",
     "location": [
-      {"id":"4","item":"on a mountain,","cat":"3"}
+      {"id":"4","item":"on a mountain, ","cat":"3"}
     ],
     "action": "",
     "artist": "",
     "background": [
-      {"id":"5","item":"alpine landscape,","cat":"7"}
+      {"id":"5","item":"alpine landscape, ","cat":"7"}
     ],
     "style2": [
-      {"id":"6","item":"in the style of Andy Kehoe and Skottie Young,","cat":"0"},
-      {"id":"7","item":"Keith Haring,","cat":"0"},
-      {"id":"8","item":"Stylized,","cat":"0"},
-      {"id":"9","item":"Layered 2d art,","cat":"0"}
+      {"id":"6","item":"in the style of Andy Kehoe and Skottie Young, ","cat":"0"},
+      {"id":"7","item":"Keith Haring, ","cat":"0"},
+      {"id":"8","item":"Stylized, ","cat":"0"},
+      {"id":"9","item":"Layered 2d art, ","cat":"0"}
     ],
     "color": [
       {"id":"10","item":"black and white","cat":"5"}
@@ -438,26 +438,26 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"a layered paper","cat":"0"}
+      {"id":"1","item":"a layered paper ","cat":"0"}
     ],
     "character": [
-      {"id":"2","item":"coelacanth","cat":"1"}
+      {"id":"2","item":"coelacanth ","cat":"1"}
     ],
     "object": "",
     "location": [
-      {"id":"3","item":"in a coral grotto,","cat":"3"}
+      {"id":"3","item":"in a coral grotto, ","cat":"3"}
     ],
     "style2": [
-      {"id":"4","item":"vintage manuscript,","cat":"0"}
+      {"id":"4","item":"vintage manuscript, ","cat":"0"}
     ],
     "action": "",
     "color": [
-      {"id":"5","item":"colorful,","cat":"5"}
+      {"id":"5","item":"colorful, ","cat":"5"}
     ],
     "style3": [
-      {"id":"6","item":"style of James Jean","cat":"0"},
-      {"id":"7","item":"and Studio Ghibli,","cat":"0"},
-      {"id":"8","item":"paper quilling,","cat":"0"}
+      {"id":"6","item":"style of James Jean ","cat":"0"},
+      {"id":"7","item":"and Studio Ghibli, ","cat":"0"},
+      {"id":"8","item":"paper quilling, ","cat":"0"}
     ],
     "artist": "",
     "background": "",
@@ -465,8 +465,8 @@
     "renderer": "",
     "lighting": "",
     "parameters": [
-      {"id":"9","item":"detailed,","cat":"9"},
-      {"id":"10","item":"high resolution,","cat":"9"},
+      {"id":"9","item":"detailed, ","cat":"9"},
+      {"id":"10","item":"high resolution, ","cat":"9"},
       {"id":"11","item":"3D","cat":"9"}
     ]},
   "imageUrl": "./assets/MidjourneyImages/fish.webp"

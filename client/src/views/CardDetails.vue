@@ -120,10 +120,10 @@ const hoveredItemId = ref(null)
 
 <div class="w-full flex justify-center px-8 pt-32 bg-[#121212]" v-if="prompt">
 
-    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold">
+    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold z-20 bg-[#121212]">
       
     <span v-for="ListCategory in prompt.detailed_prompt">
-      <span class="PromptHover group transition-all duration-200" v-for="(value, key) in ListCategory" :class="[{ 'opacity-50': hoveredItemId !== null && hoveredItemId !== value.id }]" @mouseover="hoveredItemId = value.id" @mouseout="hoveredItemId = null">
+      <span class="PromptHover group transition-all whitespace-pre-wrap duration-200" v-for="(value, key) in ListCategory" :class="[{ 'opacity-50': hoveredItemId !== null && hoveredItemId !== value.id }]" @mouseover="hoveredItemId = value.id" @mouseout="hoveredItemId = null">
         <span class="group-hover:block hidden pointer-events-none absolute transition-all duration-200 group-hover:text-white text-sm px-2 py-2 bg-neutral-800 rounded-md bottom-[2.2rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:left-5 before:-bottom-1.5 before:bg-neutral-800 before:-z-10 before:rotate-45">{{ ListChangeable[value.cat].title }}</span>
         <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id; ClickedPromptCat = value.cat">
           <span v-if=" ClickedList[value.id] != null">
@@ -143,7 +143,7 @@ const hoveredItemId = ref(null)
 
       
     <div class="flex items-center">
-    <button class="group rounded-l-none border-l-0 px-3 py-4 !important" @click="copyText">
+    <button class="group rounded-l-none border-l-0 pr-3 pl-5 -translate-x-2 py-4 z-0 !important" @click="copyText">
       <svg class="w-6 fill-white group-hover:fill-black duration-200 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
         <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
@@ -182,7 +182,7 @@ const hoveredItemId = ref(null)
       <path class="fill-black group-hover:fill-white transition-all" fill-rule="evenodd" clip-rule="evenodd" d="M20.4058 17.9175C20.4058 19.2375 19.3357 20.3076 18.0156 20.3076C16.6956 20.3076 15.6255 19.2375 15.6255 17.9175C15.6255 16.5974 16.6956 15.5273 18.0156 15.5273C19.3357 15.5273 20.4058 16.5974 20.4058 17.9175Z"/>
     </svg>
 
-      <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[9.8rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres de caméra</span>
+      <span class="pointer-events-none block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[9.8rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres de caméra</span>
   </button>
 
   <button v-on:click="openSettings = !openSettings" class="group">
@@ -191,7 +191,7 @@ const hoveredItemId = ref(null)
       <path d="M20.55 2.25C18.8698 2.25 18.0298 2.25 17.388 2.57698C16.8235 2.8646 16.3646 3.32354 16.077 3.88803C15.75 4.52976 15.75 5.36984 15.75 7.05V10.95C15.75 12.6302 15.75 13.4702 16.077 14.112C16.3646 14.6765 16.8235 15.1354 17.388 15.423C18.0298 15.75 18.8698 15.75 20.55 15.75H24.45C26.1302 15.75 26.9702 15.75 27.612 15.423C28.1765 15.1354 28.6354 14.6765 28.923 14.112C29.25 13.4702 29.25 12.6302 29.25 10.95V7.05C29.25 5.36984 29.25 4.52976 28.923 3.88803C28.6354 3.32354 28.1765 2.8646 27.612 2.57698C26.9702 2.25 26.1302 2.25 24.45 2.25H20.55Z"/>
       <path d="M11.55 20.25C9.86984 20.25 9.02976 20.25 8.38803 20.577C7.82354 20.8646 7.3646 21.3235 7.07698 21.888C6.75 22.5298 6.75 23.3698 6.75 25.05V28.95C6.75 30.6302 6.75 31.4702 7.07698 32.112C7.3646 32.6765 7.82354 33.1354 8.38803 33.423C9.02976 33.75 9.86984 33.75 11.55 33.75H15.45C17.1302 33.75 17.9702 33.75 18.612 33.423C19.1765 33.1354 19.6354 32.6765 19.923 32.112C20.25 31.4702 20.25 30.6302 20.25 28.95V25.05C20.25 23.3698 20.25 22.5298 19.923 21.888C19.6354 21.3235 19.1765 20.8646 18.612 20.577C17.9702 20.25 17.1302 20.25 15.45 20.25H11.55Z"/>
     </svg>
-    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[12rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres Midjourney</span>
+    <span class="pointer-events-none block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[12rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Paramètres Midjourney</span>
   </button>
 
   <div class="absolute translate-x-40 translate-y-[10px]" @click="openDialog">
@@ -214,7 +214,7 @@ const hoveredItemId = ref(null)
     <svg class="w-6 mx-8 fill-white group-hover:fill-black" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.7499 5.9848C12.7499 3.18698 12.7499 1.78808 12.2268 1.21521C11.774 0.719349 11.1025 0.483823 10.4392 0.588153C9.67282 0.708686 8.79892 1.80105 7.05114 3.98579L2.59867 9.55136C1.2672 11.2157 0.60146 12.0479 0.600704 12.7482C0.600047 13.3573 0.876976 13.9335 1.353 14.3135C1.90035 14.7504 2.96605 14.7504 5.09745 14.7504H5.64992C6.20997 14.7504 6.49 14.7504 6.70391 14.8594C6.89207 14.9553 7.04505 15.1082 7.14093 15.2964C7.24992 15.5103 7.24992 15.7903 7.24992 16.3504V18.016C7.24992 20.8138 7.24992 22.2127 7.77306 22.7856C8.22587 23.2814 8.89731 23.517 9.56066 23.4126C10.327 23.2921 11.2009 22.1997 12.9487 20.015L17.4012 14.4494C18.7326 12.7851 19.3984 11.9529 19.3991 11.2525C19.3998 10.6435 19.1229 10.0673 18.6468 9.6873C18.0995 9.25039 17.0338 9.25039 14.9024 9.25039H14.3499C13.7899 9.25039 13.5098 9.25039 13.2959 9.1414C13.1078 9.04552 12.9548 8.89254 12.8589 8.70438C12.7499 8.49047 12.7499 8.21044 12.7499 7.65039V5.9848Z"/>
     </svg>
-    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Ouvrir Midjourney</span>
+    <span class="pointer-events-none block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -left-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-right-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Ouvrir Midjourney</span>
   </button>
 </a>
 
@@ -223,7 +223,7 @@ const hoveredItemId = ref(null)
     <svg class="w-6 mx-8 fill-white group-hover:fill-black transition-all" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.88154 11.2192C2.45325 9.90064 0.739098 9.24135 0.307963 8.35607C-0.0649225 7.59041 -0.0223838 6.68758 0.420843 5.96037C0.933307 5.11955 2.70185 4.62436 6.23894 3.63398L16.234 0.835356C18.4734 0.208323 19.5931 -0.105194 20.3615 0.185803C21.0314 0.439517 21.5603 0.968408 21.814 1.63831C22.1049 2.40666 21.7914 3.52637 21.1644 5.76577L18.3657 15.7608C17.3753 19.2979 16.88 21.0664 16.0392 21.5789C15.312 22.0221 14.4092 22.0646 13.6435 21.6917C12.7582 21.2606 12.099 19.5464 10.7804 16.1181L10.0877 14.3167C9.95255 13.9655 9.885 13.7898 9.88126 13.6152C9.87796 13.4609 9.91043 13.3079 9.97613 13.1682C10.0504 13.0102 10.1835 12.8772 10.4496 12.611L12.9999 10.0607C13.2928 9.76784 13.2928 9.29296 12.9999 9.00007V9.00007C12.7071 8.70718 12.2322 8.70718 11.9393 9.00007L9.38911 11.5502C9.12298 11.8164 8.98991 11.9494 8.83189 12.0238C8.69221 12.0895 8.53921 12.1219 8.38489 12.1186C8.2103 12.1149 8.03466 12.0473 7.68338 11.9122L5.88154 11.2192Z"/>
     </svg>
-    <span class="block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Envoyer le prompt</span>
+    <span class="pointer-events-none block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Envoyer le prompt</span>
   </button>
 </div>
 
@@ -440,7 +440,7 @@ label{
 }
 
 .PromptHover{
-  @apply mx-[0.5px] px-[2px] hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-lg relative inline-block before:-z-10 z-10 cursor-pointer;
+  @apply mx-[0.5px] px-[1px] hover:before:absolute before:-inset-[3px] before:bg-white/10 before:rounded-lg relative inline-block before:-z-10 z-10 cursor-pointer;
 }
 
 </style>
