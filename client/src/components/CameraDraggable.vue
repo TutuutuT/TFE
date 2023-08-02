@@ -61,14 +61,14 @@ onMounted(() => {
 });
 
 const settingsCamera = [
-  { name: 'Extreme Low-angle', xRange: [48, 52], yRange: [98, 100] },
-  { name: 'Low-angle', xRange: [48, 52], yRange: [73, 77] },
-  { name: 'Eye-Level', xRange: [48, 52], yRange: [48, 52] },
-  { name: 'High-angle', xRange: [48, 52], yRange: [23, 27] },
-  { name: 'Extreme High-angle', xRange: [48, 52], yRange: [0, 2] },
-  { name: 'Bird-eye', xRange: [98, 100], yRange: [0, 2] },
-  { name: 'Side-angle', xRange: [98, 100], yRange: [48, 52] },
-  { name: 'Back-angle', xRange: [0, 2], yRange: [48, 52] }
+  { name: ':: Extreme Low-angle', xRange: [48, 52], yRange: [98, 100] },
+  { name: ':: Low-angle', xRange: [48, 52], yRange: [73, 77] },
+  { name: ':: Eye-Level', xRange: [48, 52], yRange: [48, 52] },
+  { name: ':: High-angle', xRange: [48, 52], yRange: [23, 27] },
+  { name: ':: Extreme High-angle', xRange: [48, 52], yRange: [0, 2] },
+  { name: ':: Bird-eye', xRange: [98, 100], yRange: [0, 2] },
+  { name: ':: Side-angle', xRange: [98, 100], yRange: [48, 52] },
+  { name: ':: Back-angle', xRange: [0, 2], yRange: [48, 52] }
   ]
 
   function convertToSetting(Xpercent, Ypercent) {

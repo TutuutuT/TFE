@@ -129,6 +129,7 @@ function updateFreePrompt() {
     FreePrompt.value = '';
   }
 }
+
 </script>
 
 
@@ -139,63 +140,48 @@ function updateFreePrompt() {
 
                   <!-- Champt de txt -->
 
-<section class="w-full flex-col flex justify-center px-8 pt-32 bg-[#121212]" v-if="prompt">
+<section class="w-full flex-col flex justify-center px-8 pt-32 bg-[#121212]">
 
-  <div class="w-full flex justify-center px-8">
-    <input class="min-w-[25vw] -mt-8 p-4 min-h-[40px] rounded-2xl border-2 border-white/40 max-w-3xl font-semibold z-20 bg-white/5 backdrop-blur-sm" v-model="Free" @input="updateFreePrompt" placeholder="Écrit ton idée ici" />
-  </div>
-
-  <div class="w-full flex justify-center px-8 pt-8">
-
-    <p ref="PromptCopie" class="p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold z-20 bg-[#121212]">
-
-      <span>
+    <div class="w-full flex justify-center px-8">
+        <input class="min-w-[25vw] -mt-8 p-4 min-h-[40px] rounded-2xl border-2 border-white/40 max-w-3xl font-semibold z-20 bg-white/5 backdrop-blur-sm" v-model="Free" @input="updateFreePrompt" placeholder="Écrit ton idée ici" />
+    </div>
+    
+    <div class="w-full flex justify-center px-8 pt-8">
+        <p ref="PromptCopie" class=" min-w-[30vw] p-4 min-h-[80px] rounded-3xl border-2 border-white/40 max-w-3xl font-semibold z-20 bg-[#121212]">
+          
+            <span>
             {{ FreePrompt }}
-      </span>
-      
-      <span v-for="ListCategory in prompt.detailed_prompt">
-        <span class="PromptHover group transition-all whitespace-pre-wrap duration-200" v-for="(value, key) in ListCategory" :class="[{ 'opacity-50': hoveredItemId !== null && hoveredItemId !== value.id }]" @mouseover="hoveredItemId = value.id" @mouseout="hoveredItemId = null">
-          <span class="group-hover:block hidden pointer-events-none absolute transition-all duration-200 group-hover:text-white text-sm px-2 py-2 bg-neutral-800 rounded-md bottom-[2.2rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:left-5 before:-bottom-1.5 before:bg-neutral-800 before:-z-10 before:rotate-45">{{ ListChangeable[value.cat].title }}</span>
-          <span @click="styleDialog = !styleDialog; ClickedPromptTemporary = value.id; ClickedPromptCat = value.cat">
-            <span v-if=" ClickedList[value.id] != null">
-              {{ ClickedList[value.id] }}
             </span>
-            <span v-else>
-              {{ value.item }}
+          
+          {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
+          {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
+          
+            <span v-if="selectedParams[1] != null">
+                --v {{ selectedParams[1] }}
             </span>
-          </span>
-        </span>
-      </span>
-        
-        {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
-        {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
-        
-        <span v-if="selectedParams[1] != null">
-                  --v {{ selectedParams[1] }}
-        </span>
-        <span>
+            
+            <span>
                 {{ ExcluPrompt }}
-        </span>
-    </p>
-  
-      
-    <div class="flex items-center">
-      <button class="group rounded-l-none border-l-0 pr-3 pl-5 -translate-x-2 py-4 z-0 !important" @click="copyText">
-        <svg class="w-6 fill-white group-hover:fill-black duration-200 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
-          <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
-        </svg>
-      </button>
-      <div v-if="ClickOk" class="flex absolute translate-x-16">
-        <div class="bg-neutral-800  rounded-md before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-translate-x-[10px] before:translate-y-[5px] before:bg-neutral-800 before:-z-10 before:rotate-45">Copié!</div>
+            </span>
+        </p>
+    
+          
+        <div class="flex items-center">
+        <button class="group rounded-l-none border-l-0 pr-3 pl-5 -translate-x-2 py-4 z-0 !important" @click="copyText">
+          <svg class="w-6 fill-white group-hover:fill-black duration-200 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.32" d="M17.9999 7.25V10C17.9999 12.8003 17.9999 14.2004 17.4549 15.27C16.9755 16.2108 16.2106 16.9757 15.2698 17.455C14.2003 18 12.8001 18 9.99988 18H7.25C7.25 18.6967 7.25 19.0451 7.29329 19.3369C7.55182 21.0797 8.92025 22.4482 10.6631 22.7067C10.9549 22.75 11.3033 22.75 12 22.75H16.35C18.5902 22.75 19.7103 22.75 20.566 22.314C21.3186 21.9305 21.9305 21.3186 22.314 20.566C22.75 19.7103 22.75 18.5902 22.75 16.35V12.0001C22.75 11.3033 22.75 10.9549 22.7067 10.663C22.4481 8.92023 21.0798 7.55186 19.337 7.29331C19.0451 7.25 18.6967 7.25 17.9999 7.25Z"/>
+            <path d="M7.65 1.25C5.40979 1.25 4.28968 1.25 3.43404 1.68597C2.68139 2.06947 2.06947 2.68139 1.68597 3.43404C1.25 4.28968 1.25 5.40979 1.25 7.65V10.35C1.25 12.5902 1.25 13.7103 1.68597 14.566C2.06947 15.3186 2.68139 15.9305 3.43404 16.314C4.28968 16.75 5.40979 16.75 7.65 16.75H10.35C12.5902 16.75 13.7103 16.75 14.566 16.314C15.3186 15.9305 15.9305 15.3186 16.314 14.566C16.75 13.7103 16.75 12.5902 16.75 10.35V7.65C16.75 5.40979 16.75 4.28968 16.314 3.43404C15.9305 2.68139 15.3186 2.06947 14.566 1.68597C13.7103 1.25 12.5902 1.25 10.35 1.25H7.65Z"/>
+          </svg>
+        </button>
+        <div v-if="ClickOk" class="flex absolute translate-x-16">
+          <div class="bg-neutral-800  rounded-md before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-translate-x-[10px] before:translate-y-[5px] before:bg-neutral-800 before:-z-10 before:rotate-45">Copié!</div>
+        </div>
       </div>
-  </div>
-  </div>
+    </div>
 
-  <div class="w-full flex justify-center px-8 pt-16">
-    <input class="min-w-[20vw] -mt-8 p-2 min-h-[40px] rounded-xl border-2 border-white/40 max-w-3xl z-20 bg-white/5 backdrop-blur-sm text-xs font-normal " v-model="Exclu" @input="updateExcluPrompt" placeholder="Exclus des éléments (arbres, montagnes, voitures...)" />
-  </div>
-
+    <div class="w-full flex justify-center px-8 pt-16">
+        <input class="min-w-[20vw] -mt-8 p-2 min-h-[40px] rounded-xl border-2 border-white/40 max-w-3xl z-20 bg-white/5 backdrop-blur-sm text-xs font-normal " v-model="Exclu" @input="updateExcluPrompt" placeholder="Exclus des éléments (arbres, montagnes, voitures...)" />
+    </div>
   
 </section>
 

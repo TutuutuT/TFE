@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import CardDetails from '../views/CardDetails.vue'
 import NotFound from '../views/NotFound.vue'
+import FreePrompt from '../views/FreePrompt.vue'
 
 const router = createRouter({
     routes:[{
@@ -20,6 +21,11 @@ const router = createRouter({
         name: 'CardDetails',
         component: CardDetails,
         props: true
+    },
+    {
+        path: '/TonPrompt',
+        name: 'FreePrompt',
+        component: FreePrompt,
     },
     // 404
     {

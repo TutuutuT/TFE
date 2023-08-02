@@ -51,7 +51,7 @@
     "resolution": "",
     "renderer": "",
     "lighting": [
-      {"id":"5","item":"glares and red reflections"}
+      {"id":"5","item":"glares and red reflections","cat":"10"}
     ],
     "parameters": [
       {"id":"6","item":"seen at ground level","cat":"11"}
@@ -586,25 +586,25 @@
   "AddParameters":[
     {
       "id":"1",
-      "title":"Aspect Ratio",
-      "titleShort":"--ar",
-      "descri":"Ratio de l’image",
+      "title":"Version",
+      "titleShort":"--v",
+      "descri":"Version de Midjourney",
       "params":[
-        {"paramId":"1", "param":"16:9"},
-        {"paramId":"2", "param":"1:1"},
-        {"paramId":"3", "param":"1:3"},
-        {"paramId":"4", "param":"2:3"}
+        {"paramId":"1", "param":"V1"},
+        {"paramId":"2", "param":"V2"},
+        {"paramId":"3", "param":"V3"},
+        {"paramId":"4", "param":"V4"}
       ]},
       {
         "id":"2",
-        "title":"Version",
-        "titleShort":"--v",
-        "descri":"Version de Midjourney",
+        "title":"Aspect Ratio",
+        "titleShort":"--ar",
+        "descri":"Ratio de l’image",
         "params":[
-          {"paramId":"1", "param":"V1"},
-          {"paramId":"2", "param":"V2"},
-          {"paramId":"3", "param":"V3"},
-          {"paramId":"4", "param":"V4"}
+          {"paramId":"1", "param":"16:9"},
+          {"paramId":"2", "param":"1:1"},
+          {"paramId":"3", "param":"1:3"},
+          {"paramId":"4", "param":"2:3"}
         ]},
         {
           "id":"3",
@@ -660,38 +660,38 @@
       "id":"1",
       "title":"Angle",
       "params":[
-        {"paramId":"1", "param":"Low-angle"},
-        {"paramId":"2", "param":"Extreme Low-angle"},
-        {"paramId":"3", "param":"High-angle"},
-        {"paramId":"4", "param":"Extreme High-angle"},
-        {"paramId":"5", "param":"Bird-eye"},
-        {"paramId":"6", "param":"Side-angle"},
-        {"paramId":"7", "param":"Eye-Level"},
-        {"paramId":"8", "param":"Back-angle"}
+        {"paramId":"1", "param":":: Low-angle"},
+        {"paramId":"2", "param":":: Extreme Low-angle"},
+        {"paramId":"3", "param":":: High-angle"},
+        {"paramId":"4", "param":":: Extreme High-angle"},
+        {"paramId":"5", "param":":: Bird-eye"},
+        {"paramId":"6", "param":":: Side-angle"},
+        {"paramId":"7", "param":":: Eye-Level"},
+        {"paramId":"8", "param":":: Back-angle"}
       ]},
       {
         "id":"2",
         "title":"Shot",
         "params":[
-          {"paramId":"1", "param":"Extreme Closeup", "imageUrl":"./assets/categoriesImages/extremeCloseup.webp"},
-          {"paramId":"2", "param":"Closeup", "imageUrl":"./assets/categoriesImages/closeup.webp"},
-          {"paramId":"3", "param":"Medium-full", "imageUrl":"./assets/categoriesImages/medium.webp"},
-          {"paramId":"4", "param":"Full-body", "imageUrl":"./assets/categoriesImages/Full.webp"}
+          {"paramId":"1", "param":":: Extreme Closeup", "imageUrl":"./assets/categoriesImages/extremeCloseup.webp"},
+          {"paramId":"2", "param":":: Closeup", "imageUrl":"./assets/categoriesImages/closeup.webp"},
+          {"paramId":"3", "param":":: Medium-full", "imageUrl":"./assets/categoriesImages/medium.webp"},
+          {"paramId":"4", "param":":: Full-body", "imageUrl":"./assets/categoriesImages/Full.webp"}
         ]},
         {
           "id":"3",
           "title":"Camera",
           "params":[
-            {"paramId":"1", "param":"DSLR", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
-            {"paramId":"2", "param":"GoPro", "imageUrl":"./assets/categoriesImages/go.jpg"},
-            {"paramId":"3", "param":"Disposable Camera", "imageUrl":"./assets/categoriesImages/dispo.jpg"},
-            {"paramId":"4", "param":"Polaroid", "imageUrl":"./assets/categoriesImages/pola.jpg"},
-            {"paramId":"5", "param":"Fujifilm Superia", "imageUrl":"./assets/categoriesImages/fujiSu.jpg"},
-            {"paramId":"6", "param":"Instax", "imageUrl":"./assets/categoriesImages/insta.jpg"},
-            {"paramId":"7", "param":"Kodak Ektar", "imageUrl":"./assets/categoriesImages/Ektar.jpg"},
-            {"paramId":"8", "param":"Kodak Portra", "imageUrl":"./assets/categoriesImages/portra.jpg"},
-            {"paramId":"9", "param":"Kodak Gold 200", "imageUrl":"./assets/categoriesImages/gold.jpg"},
-            {"paramId":"10", "param":"Tintype", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
+            {"paramId":"1", "param":":: DSLR", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
+            {"paramId":"2", "param":":: GoPro", "imageUrl":"./assets/categoriesImages/go.jpg"},
+            {"paramId":"3", "param":":: Disposable Camera", "imageUrl":"./assets/categoriesImages/dispo.jpg"},
+            {"paramId":"4", "param":":: Polaroid", "imageUrl":"./assets/categoriesImages/pola.jpg"},
+            {"paramId":"5", "param":":: Fujifilm Superia", "imageUrl":"./assets/categoriesImages/fujiSu.jpg"},
+            {"paramId":"6", "param":":: Instax", "imageUrl":"./assets/categoriesImages/insta.jpg"},
+            {"paramId":"7", "param":":: Kodak Ektar", "imageUrl":"./assets/categoriesImages/Ektar.jpg"},
+            {"paramId":"8", "param":":: Kodak Portra", "imageUrl":"./assets/categoriesImages/portra.jpg"},
+            {"paramId":"9", "param":":: Kodak Gold 200", "imageUrl":"./assets/categoriesImages/gold.jpg"},
+            {"paramId":"10", "param":":: Tintype", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
           ]},
         {
           "id":"4",
@@ -760,36 +760,36 @@
       "id":"1",
       "title":"style",
       "elements":[
-        {"name":"realistic", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"Isometric anime", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
-        {"name":"infographic drawing", "imageUrl": "./assets/categoriesImages/info.webp"},
-        {"name":"isometric illustration", "imageUrl": "./assets/categoriesImages/iso.webp"},
-        {"name":"futuristic style", "imageUrl": "./assets/categoriesImages/futur.jpg"},
-        {"name":"double exposure", "imageUrl": "./assets/categoriesImages/double.webp"},
-        {"name":"dark fantasy", "imageUrl": "./assets/categoriesImages/dark.webp"},
-        {"name":"patchwork collage", "imageUrl": "./assets/categoriesImages/collage.webp"},
-        {"name":"Japanese ink", "imageUrl": "./assets/categoriesImages/japan.webp"},
-        {"name":"pastel drawing", "imageUrl": "./assets/categoriesImages/pastel.webp"},
-        {"name":"stained glass portrait", "imageUrl": "./assets/categoriesImages/glass.webp"},
-        {"name":"graffiti portrait", "imageUrl": "./assets/categoriesImages/grafitti.webp"},
-        {"name":"typography art", "imageUrl": "./assets/categoriesImages/typo.webp"},
-        {"name":"one-line drawing", "imageUrl": "./assets/categoriesImages/line.webp"},
-        {"name":"op art", "imageUrl": "./assets/categoriesImages/op.webp"},
-        {"name":"pixel art", "imageUrl": "./assets/categoriesImages/pixel.webp"},
-        {"name":"Retro-futurism", "imageUrl": "./assets/categoriesImages/retro.webp"}
+        {"name":"realistic, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"Isometric anime, ", "imageUrl": "./assets/categoriesImages/isometricAnim.webp"},
+        {"name":"infographic drawing, ", "imageUrl": "./assets/categoriesImages/info.webp"},
+        {"name":"isometric illustration, ", "imageUrl": "./assets/categoriesImages/iso.webp"},
+        {"name":"futuristic style, ", "imageUrl": "./assets/categoriesImages/futur.jpg"},
+        {"name":"double exposure, ", "imageUrl": "./assets/categoriesImages/double.webp"},
+        {"name":"dark fantasy, ", "imageUrl": "./assets/categoriesImages/dark.webp"},
+        {"name":"patchwork collage, ", "imageUrl": "./assets/categoriesImages/collage.webp"},
+        {"name":"Japanese ink, ", "imageUrl": "./assets/categoriesImages/japan.webp"},
+        {"name":"pastel drawing, ", "imageUrl": "./assets/categoriesImages/pastel.webp"},
+        {"name":"stained glass portrait, ", "imageUrl": "./assets/categoriesImages/glass.webp"},
+        {"name":"graffiti portrait, ", "imageUrl": "./assets/categoriesImages/grafitti.webp"},
+        {"name":"typography art, ", "imageUrl": "./assets/categoriesImages/typo.webp"},
+        {"name":"one-line drawing, ", "imageUrl": "./assets/categoriesImages/line.webp"},
+        {"name":"pop art, ", "imageUrl": "./assets/categoriesImages/op.webp"},
+        {"name":"pixel art, ", "imageUrl": "./assets/categoriesImages/pixel.webp"},
+        {"name":"Retro-futurism, ", "imageUrl": "./assets/categoriesImages/retro.webp"}
       ]},
     {
       "id":"2",
       "title":"character",
       "elements":[
-        {"name":"Dog", "imageUrl": "./assets/categoriesImages/dog.jpg"},
-        {"name":"Cat", "imageUrl": "./assets/categoriesImages/cat.jpg"},
-        {"name":"Human", "imageUrl": "./assets/categoriesImages/human.jpg"},
-        {"name":"Snake", "imageUrl": "./assets/categoriesImages/snake.jpg"},
-        {"name":"unicorn", "imageUrl": "./assets/categoriesImages/unicorn.jpg"},
-        {"name":"a man and little child", "imageUrl": "./assets/categoriesImages/man.jpg"},
-        {"name":"a robot", "imageUrl": "./assets/categoriesImages/robot.jpg"},
-        {"name":"photo of interior design", "imageUrl": "./assets/categoriesImages/interior.jpg"}
+        {"name":"Dog, ", "imageUrl": "./assets/categoriesImages/dog.jpg"},
+        {"name":"Cat, ", "imageUrl": "./assets/categoriesImages/cat.jpg"},
+        {"name":"Human, ", "imageUrl": "./assets/categoriesImages/human.jpg"},
+        {"name":"Snake, ", "imageUrl": "./assets/categoriesImages/snake.jpg"},
+        {"name":"unicorn, ", "imageUrl": "./assets/categoriesImages/unicorn.jpg"},
+        {"name":"a man and little child, ", "imageUrl": "./assets/categoriesImages/man.jpg"},
+        {"name":"a robot, ", "imageUrl": "./assets/categoriesImages/robot.jpg"},
+        {"name":"photo of interior design, ", "imageUrl": "./assets/categoriesImages/interior.jpg"}
       ]},
     {
       "id":"3",
@@ -801,26 +801,26 @@
       "id":"4",
       "title":"location",
       "elements":[
-        {"name":"on earth", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in space", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in a bar", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"fashion show", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in a battle", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"on earth, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in space, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in a bar, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"fashion show, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"in a battle, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"5",
       "title":"action",
       "elements":[
-        {"name":"Dynamic Pose", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"under a torrent of rain", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"Dynamic Pose, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
+        {"name":"under a torrent of rain, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
       ]},
     {
       "id":"6",
       "title":"color",
       "elements":[
-        {"name":"pastel colors", "imageUrl": "./assets/categoriesImages/pastelCO.webp"},
-        {"name":"bronze and white", "imageUrl": "./assets/categoriesImages/bronze.webp"},
-        {"name":"black and white", "imageUrl": "./assets/categoriesImages/BW.webp"}
+        {"name":"pastel colors, ", "imageUrl": "./assets/categoriesImages/pastelCO.webp"},
+        {"name":"bronze and white, ", "imageUrl": "./assets/categoriesImages/bronze.webp"},
+        {"name":"black and white, ", "imageUrl": "./assets/categoriesImages/BW.webp"}
       ]},
     {
       "id":"7",
@@ -832,43 +832,43 @@
       "id":"8",
       "title":"background",
       "elements":[
-        {"name":"futuristic city on the background", "imageUrl": "./assets/categoriesImages/city.jpg"},
-        {"name":"forest in the background", "imageUrl": "./assets/categoriesImages/forest.jpg"},
-        {"name":"colorful garden", "imageUrl": "./assets/categoriesImages/garden.jpg"},
-        {"name":"blue sky", "imageUrl": "./assets/categoriesImages/sky.jpg"}
+        {"name":"futuristic city on the background, ", "imageUrl": "./assets/categoriesImages/city.jpg"},
+        {"name":"forest in the background, ", "imageUrl": "./assets/categoriesImages/forest.jpg"},
+        {"name":"colorful garden, ", "imageUrl": "./assets/categoriesImages/garden.jpg"},
+        {"name":"blue sky, ", "imageUrl": "./assets/categoriesImages/sky.jpg"}
       ]},
     {
       "id":"9",
       "title":"renderer",
       "elements":[
-        {"name":"octane render", "imageUrl": "./assets/categoriesImages/octane.jpg"},
-        {"name":"Unreal Engine 5", "imageUrl": "./assets/categoriesImages/unreal.jpg"}
+        {"name":"octane render, ", "imageUrl": "./assets/categoriesImages/octane.jpg"},
+        {"name":"Unreal Engine 5, ", "imageUrl": "./assets/categoriesImages/unreal.jpg"}
       ]},
     {
       "id":"10",
       "title":"details",
       "elements":[
-        {"name":"ultra details", "imageUrl": "./assets/categoriesImages/ultra.jpg"},
-        {"name":"Sharp Details", "imageUrl": "./assets/categoriesImages/sharp.jpg"}
+        {"name":"ultra details, ", "imageUrl": "./assets/categoriesImages/ultra.jpg"},
+        {"name":"Sharp Details, ", "imageUrl": "./assets/categoriesImages/sharp.jpg"}
       ]},
      {
       "id":"11",
       "title":"Temps",
       "elements":[
-        {"name":"Sunrise", "imageUrl": "./assets/categoriesImages/sunrise.jpg"},
-        {"name":"Afternoon", "imageUrl": "./assets/categoriesImages/after.jpg"},
-        {"name":"Golden hour", "imageUrl": "./assets/categoriesImages/golden.jpg"},
-        {"name":"Midnight", "imageUrl": "./assets/categoriesImages/midnight.jpg"}
+        {"name":"Sunrise, ", "imageUrl": "./assets/categoriesImages/sunrise.jpg"},
+        {"name":"Afternoon, ", "imageUrl": "./assets/categoriesImages/after.jpg"},
+        {"name":"Golden hour, ", "imageUrl": "./assets/categoriesImages/golden.jpg"},
+        {"name":"Midnight, ", "imageUrl": "./assets/categoriesImages/midnight.jpg"}
       ]},
       {
        "id":"12",
        "title":"Météo",
        "elements":[
-         {"name":"Sunny", "imageUrl": "./assets/categoriesImages/sunny.jpg"},
-         {"name":"Partly cloudy", "imageUrl": "./assets/categoriesImages/cloudy.jpg"},
-         {"name":"Raining", "imageUrl": "./assets/categoriesImages/raining.jpg"},
-         {"name":"Snow", "imageUrl": "./assets/categoriesImages/snow.jpg"},
-         {"name":"Foggy", "imageUrl": "./assets/categoriesImages/foggy.jpg"}
+         {"name":"Sunny, ", "imageUrl": "./assets/categoriesImages/sunny.jpg"},
+         {"name":"Partly cloudy, ", "imageUrl": "./assets/categoriesImages/cloudy.jpg"},
+         {"name":"Raining, ", "imageUrl": "./assets/categoriesImages/raining.jpg"},
+         {"name":"Snow, ", "imageUrl": "./assets/categoriesImages/snow.jpg"},
+         {"name":"Foggy, ", "imageUrl": "./assets/categoriesImages/foggy.jpg"}
        ]}
 ]
 }

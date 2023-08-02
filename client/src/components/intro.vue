@@ -25,7 +25,7 @@ onMounted(() => {
     .to(".bloc1 , .bloc2 , .bloc3", {y: '-200%', duration: 0.6, ease: "power5.inOut",delay: 0.1})
     .to(".bloc1 , .bloc2 , .bloc3", {scale:1  , duration: 0.2, ease: "power5.inOut"})
 
-    .to(".bloc1 , .bloc2 , .bloc3", { scale:0.9, duration: 0.2, ease: "power5.inOut",delay: 3})
+    .to(".bloc1 , .bloc2 , .bloc3", { scale:0.9, duration: 0.2, ease: "power5.inOut",delay: 8})
     .to(".bloc1 , .bloc2 , .bloc3", {y: '-100%', duration: 0.6, ease: "power5.inOut",delay: 0.1})
     .to(".bloc1 , .bloc2 , .bloc3", {scale:1  , duration: 0.2, ease: "power5.inOut"})
     .to(".bloc1 , .bloc2 , .bloc3", { scale:0.9, duration: 0.2, ease: "power5.inOut",delay: 3})
@@ -54,7 +54,7 @@ onMounted(() => {
                 <div class="appear w-[calc(65vw-30px)] mr-[15px] flex justify-center items-center bg-[white/5] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 transition-all">
                   <TestHover/>
                 </div>
-                <div class="appear w-[calc(35vw-30px)] hover:scale-[98%] cursor-pointer ring-white hover:ring-2 duration-200 text-center ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-lg font-semibold text-white border-2 border-white/40">
+                <div class="appear hover:scale-[98%] w-[calc(35vw-30px)] cursor-pointer ring-white hover:ring-2 duration-200 text-center ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-lg font-semibold text-white border-2 border-white/40">
                     <h2>C'est votre premier prompt ?</h2>
                 </div>
             </div>
@@ -64,13 +64,13 @@ onMounted(() => {
 
                 <div class="w-[calc(40vw-30px)] overflow-hidden pr-[15px]">
 
-                  <div class="overflow-hidden appear bloc2  w-full h-full flex justify-center items-center bg-[url('./images/icon-Wide.jpg')] bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                  <div class="overflow-hidden appear bloc2  w-full h-full flex justify-center items-center bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     <video class="" autoplay muted loop>
                       <source src="../assets/images/Anim1.mp4" type="video/mp4">
                     </video>
                   </div>
 
-                  <div class="overflow-hidden appear bloc1 w-full h-full flex justify-center items-center bg-[url('./images/icon-Wide.jpg')] bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white">
+                  <div class="overflow-hidden appear bloc1 w-full h-full flex justify-center items-center bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white">
                     
                     <div class="border-2 border-white/40 rounded-3xl bg-[#37A952] h-full w-[calc(50%-15px)] mr-[15px] flex flex-col justify-center text-center">
                       <svg class="my-auto w-[35%] mx-auto fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,10 @@ onMounted(() => {
 
                   </div>
 
-                  <div class="appear bloc3  w-full h-full flex justify-center items-center bg-[#c48d28] bg-[url('./images/icon-Wide.jpg')] bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                  <div class="overflow-hidden appear bloc3  w-full h-full flex justify-center items-center bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
+                    <video class="" autoplay muted loop>
+                      <source src="../assets/images/Anim2.mp4" type="video/mp4">
+                    </video>
                   </div>
                   
                 </div>
