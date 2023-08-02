@@ -19,15 +19,20 @@ onMounted(async () => {
     <h2 class="text-center py-20 font-secondary text-white/20 font-bold bg-[#121212]">PromptPilot</h2>
     <section class="card__container__section bg-[#121212]">
 
-        <div v-if="prompts" class="card__container card__container--6">
-                <router-link class="card ring-white hover:ring-2 bg-no-repeat" :to="{ name: 'FreePrompt'}">
+        <div v-if="prompts" class="card__container">
+                <router-link class="card ring-white hover:ring-2 bg-[#FF5145]" :to="{ name: 'FreePrompt'}">
                     <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
-                        <p class="card__prompt hover:text-white text-white">Partir de 0 ?</p>
+                        <p class="card__prompt hover:text-white text-white">Partir de 0</p>
                     </div>
                 </router-link>
                 <router-link v-for="prompt in prompts" :key="prompt.id" class="card ring-white hover:ring-2 bg-no-repeat" :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
                     <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
                         <p class="card__prompt hover:text-white text-white">{{ prompt.original_prompt }}</p>
+                    </div>
+                </router-link>
+                <router-link class="card ring-white hover:ring-2 bg-[#121212]" :to="{ name: 'FreePrompt'}">
+                    <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
+                        <p class="card__prompt hover:text-white text-white">deja fini</p>
                     </div>
                 </router-link>
         </div>
@@ -91,8 +96,7 @@ onMounted(async () => {
     &:has(> :last-child:nth-child(odd)) > :first-child,
     &:has(> :last-child:nth-child(odd)) > :nth-child(7),
     &:has(> :last-child:nth-child(odd)) > :nth-child(10),
-    &:has(> :last-child:nth-child(odd)) > :nth-child(16),
-    &:has(> :last-child:nth-child(odd)) > :nth-child(17) {
+    &:has(> :last-child:nth-child(odd)) > :nth-child(16) {
         width: calc((100%/2.5) - (30px));
         aspect-ratio: 230/140;
     }

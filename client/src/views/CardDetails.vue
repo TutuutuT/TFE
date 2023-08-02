@@ -133,7 +133,7 @@ function updateFreePrompt() {
 
 
 <template>
-<div class=" min-h-[120svh] bg-[#121212]">
+<div class=" min-h-[100svh] bg-[#121212]">
 
 <h2 class="absolute w-full text-center mt-9 font-secondary text-white/20 font-bold">PromptPilot</h2>
 
