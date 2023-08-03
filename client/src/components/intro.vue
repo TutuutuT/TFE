@@ -99,8 +99,10 @@ onMounted(() => {
 
                 <div class=" w-[calc(60vw-30px)] pl-[15px]">
 
-                  <div class="appear width-change-part2 w-full h-full flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
-                      <h2>Éveillez votre créativité avec Midjourney</h2>
+                  <div class="overflow-hidden appear width-change-part2 w-full h-full flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
+                    <video class="" autoplay muted loop>
+                      <source src="../assets/images/blanc-jaune-2.mp4" type="video/mp4">
+                    </video>
                   </div>
 
                 </div>

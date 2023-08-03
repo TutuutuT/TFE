@@ -117,7 +117,7 @@ a:focus-visible {
 	height: 100%;
 	width: 100%;
 	font-family: "input-mono", monospace;
-	font-size: 0.85rem;
+	font-size: 0.9rem;
 	word-wrap: break-word;
 	line-height: 1.15;
 	color: #fff;
