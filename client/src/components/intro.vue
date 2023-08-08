@@ -66,7 +66,7 @@ onMounted(() => {
 
                   <div class="overflow-hidden appear bloc2  w-full h-full flex justify-center items-center bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     <video class="" autoplay muted loop>
-                      <source src="../assets/images/Anim1.mp4" type="video/mp4">
+                      <source src="../assets/Anim1.mp4" type="video/mp4">
                     </video>
                   </div>
 
@@ -91,7 +91,7 @@ onMounted(() => {
 
                   <div class="overflow-hidden appear bloc3  w-full h-full flex justify-center items-center bg-cover bg-center backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40">
                     <video class="" autoplay muted loop>
-                      <source src="../assets/images/Anim2.mp4" type="video/mp4">
+                      <source src="../assets/Anim2.mp4" type="video/mp4">
                     </video>
                   </div>
                   
@@ -101,7 +101,7 @@ onMounted(() => {
 
                   <div class="overflow-hidden appear width-change-part2 w-full h-full flex justify-center items-center bg-[#FFBB00] backdrop-blur-sm rounded-3xl text-base font-semibold text-white border-2 border-white/40 p-5 text-center">
                     <video class="" autoplay muted loop>
-                      <source src="../assets/images/blanc-jaune-2.mp4" type="video/mp4">
+                      <source src="../assets/blanc-jaune-2.mp4" type="video/mp4">
                     </video>
                   </div>
 
