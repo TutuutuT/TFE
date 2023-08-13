@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue'
 import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
+import MidjourneyApi from '../components/MidjourneyApi.vue'
 
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
@@ -421,6 +422,9 @@ function updateFreePrompt() {
                   <!-- box image -->
 
 <div class="w-full flex justify-center px-8 py-6 bg-[#121212]">
+  <div>
+    <MidjourneyApi></MidjourneyApi>
+  </div>
   <div class="flex items-center px-8">
     <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
       <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">
