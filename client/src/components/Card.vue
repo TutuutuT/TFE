@@ -20,7 +20,7 @@ onMounted(async () => {
     <section class="card__container__section bg-[#121212]">
 
         <div v-if="prompts" class="card__container">
-                <router-link class="card ring-white hover:ring-2 bg-[#FF5145]" :to="{ name: 'FreePrompt'}">
+                <router-link class="card ring-white hover:ring-2 bg-[#FFBB00]" :to="{ name: 'FreePrompt'}">
                     <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
                         <p class="card__prompt hover:text-white text-white">Partir de 0</p>
                     </div>
