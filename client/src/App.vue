@@ -5,12 +5,6 @@
       redirect() {
         this.$router.push({ name: 'Home' })
       },
-      // back() {
-      //   this.$router.go(-1)
-      // },
-      // forward() {
-      //   this.$router.go(1)
-      // },
       homePage() {
         if(this.$route.path == "/" || this.$route.path == "/home" ) {
           return true

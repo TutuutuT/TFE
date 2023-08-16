@@ -607,7 +607,7 @@
         ]},
         {
           "id":"3",
-          "title":"Quality",
+          "title":"Qualitée",
           "titleShort":"--q",
           "descri":"Qualité de rendu",
           "params":[
@@ -679,7 +679,7 @@
         ]},
         {
           "id":"3",
-          "title":"Camera",
+          "title":"Caméra",
           "params":[
             {"paramId":"1", "param":"DSLR::", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
             {"paramId":"2", "param":"GoPro::", "imageUrl":"./assets/categoriesImages/go.jpg"},
@@ -779,7 +779,7 @@
       ]},
     {
       "id":"2",
-      "title":"character",
+      "title":"Personnage",
       "elements":[
         {"name":"Dog, ", "imageUrl": "./assets/categoriesImages/dog.jpg"},
         {"name":"Cat, ", "imageUrl": "./assets/categoriesImages/cat.jpg"},
@@ -792,13 +792,13 @@
       ]},
     {
       "id":"3",
-      "title":"object",
+      "title":"objets",
       "elements":[
         
       ]},
     {
       "id":"4",
-      "title":"location",
+      "title":"environnement",
       "elements":[
         {"name":"on earth, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
         {"name":"in space, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
@@ -815,7 +815,7 @@
       ]},
     {
       "id":"6",
-      "title":"color",
+      "title":"couleur",
       "elements":[
         {"name":"pastel colors, ", "imageUrl": "./assets/categoriesImages/pastelCO.webp"},
         {"name":"bronze and white, ", "imageUrl": "./assets/categoriesImages/bronze.webp"},
