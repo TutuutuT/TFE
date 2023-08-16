@@ -230,7 +230,6 @@ const decrment = () => {
         </div>
     </div>
 
-    
 </template>
 
 <style>

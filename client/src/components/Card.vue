@@ -21,8 +21,8 @@ onMounted(async () => {
 
         <div v-if="prompts" class="card__container">
                 <router-link class="card ring-white hover:ring-2 bg-[#FFBB00]" :to="{ name: 'FreePrompt'}">
-                    <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
-                        <p class="card__prompt hover:text-white text-white">Partir de 0</p>
+                    <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold text-2xl">
+                        <p class="card__prompt hover:text-white text-white">Prompt Libre</p>
                     </div>
                 </router-link>
                 <router-link v-for="prompt in prompts" :key="prompt.id" class="card ring-white hover:ring-2 bg-no-repeat" :style="{ backgroundImage: `url(${ prompt.imageUrl })` }" :to="{ name: 'CardDetails', params: { id: prompt.id }}">
@@ -30,9 +30,9 @@ onMounted(async () => {
                         <p class="card__prompt hover:text-white text-white">{{ prompt.original_prompt }}</p>
                     </div>
                 </router-link>
-                <router-link class="card ring-white hover:ring-2 bg-[#121212]" :to="{ name: 'FreePrompt'}">
-                    <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold">
-                        <p class="card__prompt hover:text-white text-white">deja fini</p>
+                <router-link class="card ring-white hover:ring-2 bg-[#FFBB00]" :to="{ name: 'FreePrompt'}">
+                    <div class=" backdrop-blur-lg px-4 py-2 flex items-center bg-neutral-600/[0.1] rounded-3xl font-semibold text-xl">
+                        <p class="card__prompt hover:text-white text-white">Prompt Libre</p>
                     </div>
                 </router-link>
         </div>
