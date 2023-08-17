@@ -254,7 +254,7 @@ function updateFreePrompt() {
 
 <div class="w-full flex justify-center mt-6 relative gap-8 bg-[#121212]">
   <a href="https://www.midjourney.com/app/" target="_blank">
-  <button class="group ring-blue-500 hover:ring">
+  <button class="ring-blue-500 hover:ring hover:bg-[#121212]">
     <svg  class="w-7 mx-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <rect width="100" height="100" fill="url(#pattern0)"/>
                         <defs>
@@ -269,9 +269,10 @@ function updateFreePrompt() {
 </a>
 
 
-  <button v-on:click="openSend = !openSend" class="group">
-    <svg class="w-6 mx-8 fill-white group-hover:fill-black transition-all" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.88154 11.2192C2.45325 9.90064 0.739098 9.24135 0.307963 8.35607C-0.0649225 7.59041 -0.0223838 6.68758 0.420843 5.96037C0.933307 5.11955 2.70185 4.62436 6.23894 3.63398L16.234 0.835356C18.4734 0.208323 19.5931 -0.105194 20.3615 0.185803C21.0314 0.439517 21.5603 0.968408 21.814 1.63831C22.1049 2.40666 21.7914 3.52637 21.1644 5.76577L18.3657 15.7608C17.3753 19.2979 16.88 21.0664 16.0392 21.5789C15.312 22.0221 14.4092 22.0646 13.6435 21.6917C12.7582 21.2606 12.099 19.5464 10.7804 16.1181L10.0877 14.3167C9.95255 13.9655 9.885 13.7898 9.88126 13.6152C9.87796 13.4609 9.91043 13.3079 9.97613 13.1682C10.0504 13.0102 10.1835 12.8772 10.4496 12.611L12.9999 10.0607C13.2928 9.76784 13.2928 9.29296 12.9999 9.00007V9.00007C12.7071 8.70718 12.2322 8.70718 11.9393 9.00007L9.38911 11.5502C9.12298 11.8164 8.98991 11.9494 8.83189 12.0238C8.69221 12.0895 8.53921 12.1219 8.38489 12.1186C8.2103 12.1149 8.03466 12.0473 7.68338 11.9122L5.88154 11.2192Z"/>
+  <button v-on:click="openSend = !openSend" class="group ">
+    <svg class="w-6 mx-8 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="fill-white group-hover:fill-black transition-all" opacity="0.12" x="2" y="10" width="20" height="12" rx="4"/>
+      <path class="stroke-white group-hover:stroke-black transition-all" d="M8 10L7.5 10V10C6.10444 10 5.40666 10 4.83886 10.1722C3.56046 10.56 2.56004 11.5605 2.17224 12.8389C2 13.4067 2 14.1044 2 15.5V16C2 17.8638 2 18.7956 2.30448 19.5307C2.71046 20.5108 3.48915 21.2895 4.46927 21.6955C5.20435 22 6.13623 22 8 22L16 22C17.8638 22 18.7956 22 19.5307 21.6955C20.5108 21.2895 21.2895 20.5108 21.6955 19.5307C22 18.7956 22 17.8638 22 16V15.5C22 14.1044 22 13.4067 21.8278 12.8389C21.44 11.5605 20.4395 10.56 19.1611 10.1722C18.5933 10 17.8956 10 16.5 10V10H16M12 15L12 2M12 2L8 6M12 2L16 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <span class="pointer-events-none block opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:text-white absolute text-xs px-2 py-2 bg-neutral-800 rounded-md -right-[8.5rem] top-[0.4rem] before:block before:absolute before:w-3 before:h-3 p-1 before:rounded-sm before:-left-1 before:top-2.5 before:bg-neutral-800 before:-z-10 before:rotate-45">Envoyer le prompt</span>
   </button>

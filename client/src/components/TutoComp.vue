@@ -22,7 +22,7 @@ const decrment = () => {
     <div v-if="tutoStep == 0" class="absolute w-full h-full flex justify-center items-center bg-black/50 backdrop-blur-sm z-40">
         <div class="h-[14rem] w-[40rem] rounded-3xl border-2 border-white/40 bg-neutral-800 p-6">
             <div class="flex justify-center text-xl font-bold mb-6">Bienvenue</div>
-            <p class="flex justify-center text-xl">Ce tuto va vous montrer comment utiliser PromptPilot.</p>
+            <p class="flex justify-center text-xl">Ce tuto va vous expliquer comment utiliser PromptPilot.</p>
             <div class="flex justify-center mt-6">
                 <button @click="incrment">Démarrer</button>
             </div>
@@ -43,8 +43,8 @@ const decrment = () => {
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
-          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Pour commencer, la champ de texte avec le prompt</p>
-          <p class="flex justify-center">Celui-ci vous permet de voir le prompt prédéfini (ou vide si vous avez choisi un Prompt Libre).</p>
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Pour commencer, le champ de texte avec le prompt.</p>
+          <p class="flex justify-center">Celui-ci vous permet de voir le prompt prédéfini (ou vide si vous avez choisi un prompt libre).</p>
           <div class="flex justify-center mt-6 gap-12">
             <button @click="decrment">Retour</button>
             <button @click="incrment">Suivant</button>
@@ -66,9 +66,9 @@ const decrment = () => {
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
-          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Penchons-nous sur les valeurs</p>
-          <p class="flex justify-center">Si vous survolez les différentes valeurs, vous pourrez voir à quelle catégorie elles appartiennent.</p>
-          <p class="flex justify-center mt-4">En cliquant dessus, vous pourrez choisir une autre valeur de la catégorie pour la remplacer, ou par votre propre valeur en utilisant le champ de texte</p>
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Penchons-nous sur les termes</p>
+          <p class="flex justify-center">Si vous survolez les différents termes, vous pourrez voir à quelle catégorie ils appartiennent.</p>
+          <p class="flex justify-center mt-4">En cliquant dessus, vous pourrez choisir un autre terme de la catégorie pour le remplacer, ou par votre propre terme en utilisant le champ de texte</p>
           <div class="flex justify-center mt-6 gap-12">
             <button @click="decrment">Retour</button>
             <button @click="incrment">Suivant</button>
@@ -91,9 +91,9 @@ const decrment = () => {
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
-          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Ajouter des valeurs personalisées</p>
-          <p class="flex justify-center">Si vous souhaitez ajouter vos propres valeurs sans passer par les catégories, c'est tout à fait possible.</p>
-          <p class="flex justify-center mt-4">En écrivant vos valeurs dans le champ de texte, elles s'ajouteront directement au prompt.</p>
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Ajouter des termes personalisés</p>
+          <p class="flex justify-center">Si vous souhaitez ajouter vos propres termes sans passer par les catégories, c'est tout à fait possible.</p>
+          <p class="flex justify-center mt-4">En écrivant vos termes dans le champ de texte, ils s'ajouteront directement au prompt.</p>
           <div class="flex justify-center mt-6 gap-12">
             <button @click="decrment">Retour</button>
             <button @click="incrment">Suivant</button>
@@ -117,8 +117,8 @@ const decrment = () => {
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
-          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Exclure des valeurs personalisées</p>
-          <p class="flex justify-center">Si vous souhaitez que certaines valeurs n'apparaissent pas dans l'image générée, vous pouvez les ajouter dans ce champ de texte.</p>
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Exclure des termes personalisés</p>
+          <p class="flex justify-center">Si vous souhaitez que certains termes n'apparaissent pas dans l'image générée, vous pouvez les ajouter dans ce champ de texte.</p>
           <div class="flex justify-center mt-6 gap-12">
             <button @click="decrment">Retour</button>
             <button @click="incrment">Suivant</button>
