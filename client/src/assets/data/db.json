@@ -28,12 +28,12 @@
   "imageUrl": "./assets/MidjourneyImages/foret.webp"
   },
 
-  {"id":"2", "original_prompt":"low angle shot::3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections",
+  {"id":"2", "original_prompt":"low angle shot3 of a ruby ac cobra seen at ground level with red neon sign lighting, glares and red reflections",
   "detailed_prompt": {
     "category":"",
     "style": [
       {"id":"1","item":"kodak portra 800 film stock","cat":"0"},
-      {"id":"2","item":"low angle shot::3","cat":"0"}
+      {"id":"2","item":"low angle shot3","cat":"0"}
     ],
     "character": [
       {"id":"3","item":"of a ruby ac cobra seen","cat":"1"}
@@ -589,10 +589,10 @@
       "titleShort":"--v",
       "descri":"Version de Midjourney",
       "params":[
-        {"paramId":"1", "param":"V1"},
-        {"paramId":"2", "param":"V2"},
-        {"paramId":"3", "param":"V3"},
-        {"paramId":"4", "param":"V4"}
+        {"paramId":"2", "param":"2"},
+        {"paramId":"3", "param":"3"},
+        {"paramId":"4", "param":"4"},
+        {"paramId":"4", "param":"5"}
       ]},
       {
         "id":"2",
@@ -613,8 +613,7 @@
           "params":[
             {"paramId":"1", "param":".25"},
             {"paramId":"2", "param":".5"},
-            {"paramId":"3", "param":"1"},
-            {"paramId":"4", "param":"2"}
+            {"paramId":"3", "param":"1"}
           ]}
   ],
 
@@ -635,12 +634,6 @@
           "descri":"Style anime"
           },
         {
-          "id":"6",
-          "title":"HD",
-          "titleShort":"--hd",
-          "descri":"Rendu hd"
-          },
-        {
           "id":"7",
           "title":"Sameseed",
           "titleShort":"--sameseed",
@@ -659,38 +652,38 @@
       "id":"1",
       "title":"Angle",
       "params":[
-        {"paramId":"1", "param":"Low-angle::"},
-        {"paramId":"2", "param":"Extreme Low-angle::"},
-        {"paramId":"3", "param":"High-angle::"},
-        {"paramId":"4", "param":"Extreme High-angle::"},
-        {"paramId":"5", "param":"Bird-eye::"},
-        {"paramId":"6", "param":"Side-angle::"},
-        {"paramId":"7", "param":"Eye-Level::"},
-        {"paramId":"8", "param":"Back-angle::"}
+        {"paramId":"1", "param":"Low-angle, "},
+        {"paramId":"2", "param":"Extreme Low-angle, "},
+        {"paramId":"3", "param":"High-angle, "},
+        {"paramId":"4", "param":"Extreme High-angle, "},
+        {"paramId":"5", "param":"Bird-eye, "},
+        {"paramId":"6", "param":"Side-angle, "},
+        {"paramId":"7", "param":"Eye-Level, "},
+        {"paramId":"8", "param":"Back-angle, "}
       ]},
       {
         "id":"2",
         "title":"Shot",
         "params":[
-          {"paramId":"1", "param":"Extreme Closeup::", "imageUrl":"./assets/categoriesImages/extremeCloseup.webp"},
-          {"paramId":"2", "param":"Closeup::", "imageUrl":"./assets/categoriesImages/closeup.webp"},
-          {"paramId":"3", "param":"Medium-full::", "imageUrl":"./assets/categoriesImages/medium.webp"},
-          {"paramId":"4", "param":"Full-body::", "imageUrl":"./assets/categoriesImages/Full.webp"}
+          {"paramId":"1", "param":"Extreme Closeup, ", "imageUrl":"./assets/categoriesImages/extremeCloseup.webp"},
+          {"paramId":"2", "param":"Closeup, ", "imageUrl":"./assets/categoriesImages/closeup.webp"},
+          {"paramId":"3", "param":"Medium-full, ", "imageUrl":"./assets/categoriesImages/medium.webp"},
+          {"paramId":"4", "param":"Full-body, ", "imageUrl":"./assets/categoriesImages/Full.webp"}
         ]},
         {
           "id":"3",
           "title":"Caméra",
           "params":[
-            {"paramId":"1", "param":"DSLR::", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
-            {"paramId":"2", "param":"GoPro::", "imageUrl":"./assets/categoriesImages/go.jpg"},
-            {"paramId":"3", "param":"Disposable Camera::", "imageUrl":"./assets/categoriesImages/dispo.jpg"},
-            {"paramId":"4", "param":"Polaroid::", "imageUrl":"./assets/categoriesImages/pola.jpg"},
-            {"paramId":"5", "param":"Fujifilm Superia::", "imageUrl":"./assets/categoriesImages/fujiSu.jpg"},
-            {"paramId":"6", "param":"Instax::", "imageUrl":"./assets/categoriesImages/insta.jpg"},
-            {"paramId":"7", "param":"Kodak Ektar::", "imageUrl":"./assets/categoriesImages/Ektar.jpg"},
-            {"paramId":"8", "param":"Kodak Portra::", "imageUrl":"./assets/categoriesImages/portra.jpg"},
-            {"paramId":"9", "param":"Kodak Gold 200::", "imageUrl":"./assets/categoriesImages/gold.jpg"},
-            {"paramId":"10", "param":"Tintype::", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
+            {"paramId":"1", "param":"DSLR, ", "imageUrl":"./assets/categoriesImages/sdlr.jpg"},
+            {"paramId":"2", "param":"GoPro, ", "imageUrl":"./assets/categoriesImages/go.jpg"},
+            {"paramId":"3", "param":"Disposable Camera, ", "imageUrl":"./assets/categoriesImages/dispo.jpg"},
+            {"paramId":"4", "param":"Polaroid, ", "imageUrl":"./assets/categoriesImages/pola.jpg"},
+            {"paramId":"5", "param":"Fujifilm Superia, ", "imageUrl":"./assets/categoriesImages/fujiSu.jpg"},
+            {"paramId":"6", "param":"Instax, ", "imageUrl":"./assets/categoriesImages/insta.jpg"},
+            {"paramId":"7", "param":"Kodak Ektar, ", "imageUrl":"./assets/categoriesImages/Ektar.jpg"},
+            {"paramId":"8", "param":"Kodak Portra, ", "imageUrl":"./assets/categoriesImages/portra.jpg"},
+            {"paramId":"9", "param":"Kodak Gold 200, ", "imageUrl":"./assets/categoriesImages/gold.jpg"},
+            {"paramId":"10", "param":"Tintype, ", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
           ]},
         {
           "id":"4",

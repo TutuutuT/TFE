@@ -55,8 +55,9 @@ onMounted(() => {
                   <TestHover/>
                 </div>
 
-                <router-link class="appear hover:scale-[98%] w-[calc(35vw-30px)] hover:text-white cursor-pointer ring-white hover:ring-2 duration-200 text-center ml-[15px] h-[30vh] flex justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-lg font-semibold text-white border-2 border-white/40" :to="{ name: 'Tuto'}">
+                <router-link class="appear hover:scale-[98%] w-[calc(35vw-30px)] hover:text-white cursor-pointer ring-white hover:ring-2 duration-200 text-center ml-[15px] h-[30vh] flex flex-col justify-center items-center bg-[#FF5145] backdrop-blur-sm rounded-3xl text-lg font-semibold text-white border-2 border-white/40" :to="{ name: 'Tuto'}">
                   <h2>C'est votre premier prompt ?</h2>
+                  <p>Cliquez pour commencer le tuto</p>
                 </router-link>
 
 

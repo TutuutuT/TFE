@@ -116,7 +116,7 @@ const ExcluPrompt = ref('');
 
 function updateExcluPrompt() {
   if (Exclu.value !== null && Exclu.value !== '') {
-    ExcluPrompt.value = `--no ${Exclu.value}`;
+    ExcluPrompt.value = ` --no ${Exclu.value}`;
   } else {
     ExcluPrompt.value = '';
   }
@@ -124,7 +124,7 @@ function updateExcluPrompt() {
 
 function updateFreePrompt() {
   if (Free.value !== null && Free.value !== '') {
-    FreePrompt.value = `${Free.value}::`;
+    FreePrompt.value = `${Free.value}, `;
   } else {
     FreePrompt.value = '';
   }
@@ -153,16 +153,18 @@ function updateFreePrompt() {
             {{ FreePrompt }}
             </span>
           
-          {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
+          {{ selectedParams[2] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
           {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
           
-            <span v-if="selectedParams[1] != null">
-                --v {{ selectedParams[1] }}
-            </span>
-            
-            <span>
+          <span v-if="selectedParams[3] != null">
+                  --q {{ selectedParams[3] }}
+        </span>
+        <span v-if="selectedParams[1] != null">
+                  --v {{ selectedParams[1] }}
+        </span>
+        <span>
                 {{ ExcluPrompt }}
-            </span>
+        </span>
         </p>
     
           

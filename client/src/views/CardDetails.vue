@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, provide } from 'vue'
 import Footer from '../components/Footer.vue'
 import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
@@ -34,9 +34,7 @@ const message = ref(null);
 const share = (network) => {
   message.value = PromptCopie.value.innerText;
   const shareUrl = getShareUrl(network, message.value);
-  window.open(shareUrl, '_blank');
-  console.log(message.value);
-  // Faites quelque chose avec l'URL de partage, par exemple, ouvrez une nouvelle fenêtre avec l'URL
+  window.open(shareUrl, '_blank')
 };
 
 const getShareUrl = (network, message) => {
@@ -66,6 +64,87 @@ const getShareUrl = (network, message) => {
 
   return url;
 };
+
+
+
+
+
+import axios from 'axios';
+
+// Les données à envoyer dans la requête POST
+const requestData = {
+  msg: "",
+  ref: "",
+  webhookOverride: ""
+};
+
+// Les en-têtes de la requête POST
+const requestHeaders = {
+  Authorization: 'Bearer ced426ef-dd5d-4a98-84cd-bedbe854bad0',
+  'Content-Type': 'application/json'
+};
+
+// URL de l'image générée
+const imageUrl = ref("");
+
+// Fonction pour effectuer la requête POST
+const postData = async () => {
+  try {
+    requestData.msg = PromptCopie.value.innerText;
+    const response = await axios.post(
+      'https://api.thenextleg.io/v2/imagine',
+      requestData,
+      { headers: requestHeaders }
+    );
+
+    console.log(JSON.stringify(response.data));
+    
+    // Après la requête POST, récupérer les détails du message pour obtenir l'URL de l'image
+    getMessage(response.data.messageId);
+    console.log(response.data.messageId);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// Fonction pour effectuer la requête GET et obtenir les détails du message
+const getMessage = async (messageId) => {
+  const authToken = 'ced426ef-dd5d-4a98-84cd-bedbe854bad0';
+  const getMessageUrl = `https://api.thenextleg.io/v2/message/${messageId}?expireMins=2`;
+
+  try {
+    const response = await axios.get(getMessageUrl, {
+      headers: {
+        Authorization: `Bearer ${authToken}`
+      }
+    });
+
+    // Utiliser directement response.data.imageUrl
+    imageUrl.value = response.data.imageUrl;
+    console.log(JSON.stringify(response.data));
+    console.log('Image URL:', imageUrl.value);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// Fonction pour gérer le clic sur le bouton "Imagine"
+const sendMessage = () => {
+  requestData.msg = PromptCopie.value.innerText;
+  console.log(PromptCopie.value.innerText);
+  postData();
+};
+
+
+
+
+
+
+
+
+
+
+
 
 
 onMounted(async () => {
@@ -117,7 +196,7 @@ const ExcluPrompt = ref('');
 
 function updateExcluPrompt() {
   if (Exclu.value !== null && Exclu.value !== '') {
-    ExcluPrompt.value = `--no ${Exclu.value}`;
+    ExcluPrompt.value = ` --no ${Exclu.value}`;
   } else {
     ExcluPrompt.value = '';
   }
@@ -125,7 +204,7 @@ function updateExcluPrompt() {
 
 function updateFreePrompt() {
   if (Free.value !== null && Free.value !== '') {
-    FreePrompt.value = `${Free.value}::`;
+    FreePrompt.value = `${Free.value}, `;
   } else {
     FreePrompt.value = '';
   }
@@ -137,6 +216,10 @@ function updateFreePrompt() {
 <div class=" min-h-[100svh] bg-[#121212]">
 
 <h2 class="absolute w-full text-center mt-9 font-secondary text-white/20 font-bold">PromptPilot</h2>
+
+<div v-if="imageUrl">
+      <img :src="imageUrl" alt="Generated Image" />
+    </div>
 
                   <!-- Champt de txt -->
 
@@ -168,9 +251,12 @@ function updateFreePrompt() {
         </span>
       </span>
         
-        {{ selectedParams[2] }} {{ selectedParams[3] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
+        {{ selectedParams[2] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
         {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
         
+        <span v-if="selectedParams[3] != null">
+                  --q {{ selectedParams[3] }}
+        </span>
         <span v-if="selectedParams[1] != null">
                   --v {{ selectedParams[1] }}
         </span>
@@ -199,7 +285,6 @@ function updateFreePrompt() {
 
   
 </section>
-
 
 
 <div class="absolute flex justify-center w-full bg-[#121212]">
@@ -427,6 +512,10 @@ function updateFreePrompt() {
 
 
                   <!-- box image -->
+
+<div class="w-full flex justify-center mt-8">
+  <button class="bg-blue-600" @click="sendMessage">Générer l'image</button>
+</div>
 
 <div class="w-full flex justify-center px-8 py-6 bg-[#121212]">
   <div>

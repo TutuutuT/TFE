@@ -212,7 +212,9 @@ const decrment = () => {
           <div class="flex justify-center text-xl font-bold mb-6">Fini.</div>
           <p class="flex justify-center text-xl">Merci d'avoir suivi ce tuto.</p>
           <div class="flex justify-center mt-6">
-            <button @click="incrment">Terminer</button>
+            <router-link class=" bg-white/5 backdrop-blur-sm rounded-2xl text-base font-semibold text-white border-2 border-white/40 px-5 py-2 cursor-pointer hover:bg-white hover:text-zinc-950 transition-all duration-200" :to="{ name: 'Home'}">
+              Terminer
+            </router-link>
           </div>
         </div>
     </div>
