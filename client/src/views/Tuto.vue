@@ -3,7 +3,6 @@ import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue'
 import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
-import MidjourneyApi from '../components/MidjourneyApi.vue'
 import TutoComp from '../components/TutoComp.vue'
 
 
@@ -431,10 +430,21 @@ function updateFreePrompt() {
 
                   <!-- box image -->
 
-<div class="w-full flex justify-center px-8 py-6 bg-[#121212]">
-  <div>
-    <MidjourneyApi></MidjourneyApi>
-  </div>
+<div class="w-full flex justify-center mt-6">
+  <button class="bg-blue-600 after:content-['Délai_de_1min_max'] after:absolute after:block after:text-white after:font-light after:text-xs after:w-full after:-mx-5 after:mt-3">Générer l'image</button>
+</div>
+
+<div class="w-full flex justify-center mt-14 mb-6">
+  <ul class="flex gap-4">
+    <li><div class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black">1</div></li>
+    <li><div class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black">2</div></li>
+    <li><div class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black">3</div></li>
+    <li><div class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black">4</div></li>
+  </ul>
+  <span class="absolute block text-white font-light text-xs mt-16">Liens vers les images</span>
+</div>
+
+<div class="w-full flex justify-center px-8 py-10 bg-[#121212]">
   <div class="flex items-center px-8">
     <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
       <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">

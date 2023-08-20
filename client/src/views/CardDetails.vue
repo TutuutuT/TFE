@@ -1,9 +1,8 @@
 <script setup>
-import { ref, computed, onMounted, provide } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import Footer from '../components/Footer.vue'
 import CameraDraggable from '../components/CameraDraggable.vue'
 import promptsValue from "../assets/data/db.json"
-import MidjourneyApi from '../components/MidjourneyApi.vue'
 
 
 const props = defineProps(['id'],['ClickedPrompt'],['ClickedPromptTemporary'])
@@ -28,6 +27,7 @@ let SelectList = ref(0)
 const styleDialog = ref(false)
 let PromptCopie = ref(null)
 let ClickOk = ref(false)
+const imageLoad = ref(false)
 
 const message = ref(null);
 
@@ -75,7 +75,7 @@ import axios from 'axios';
 const requestData = {
   msg: "",
   ref: "",
-  webhookOverride: ""
+  webhookOverride: "https://webhook.site/4c311fba-4ef4-48c8-b3b8-2e6cb93f2816"
 };
 
 // Les en-têtes de la requête POST
@@ -86,28 +86,52 @@ const requestHeaders = {
 
 // URL de l'image générée
 const imageUrl = ref("");
+const imageUrls = ref([]);
 
 // Fonction pour effectuer la requête POST
 const postData = async () => {
   try {
-    requestData.msg = PromptCopie.value.innerText;
     const response = await axios.post(
       'https://api.thenextleg.io/v2/imagine',
       requestData,
       { headers: requestHeaders }
     );
 
-    console.log(JSON.stringify(response.data));
-    
-    // Après la requête POST, récupérer les détails du message pour obtenir l'URL de l'image
-    getMessage(response.data.messageId);
-    console.log(response.data.messageId);
+    // console.log(JSON.stringify(response.data));
+
+    // Attendre que l'URL de l'image soit disponible
+    await waitForImageUrl(response.data.messageId);
   } catch (error) {
     console.log(error);
   }
 };
 
-// Fonction pour effectuer la requête GET et obtenir les détails du message
+const waitForImageUrl = async (messageId) => {
+  const maxAttempts = 20;
+  let attempts = 0;
+
+  while (attempts < maxAttempts) {
+    try {
+      const response = await getMessage(messageId);
+      if (response && response.imageUrl) {
+        imageUrl.value = response.imageUrl;
+        imageUrls.value = response.imageUrls || [];
+        imageLoad.value = false;
+        break;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    attempts++;
+  }
+
+  if (attempts >= maxAttempts) {
+    console.log('L\'URL de l\'image n\'a pas été trouvée après plusieurs tentatives.');
+  }
+};
+
 const getMessage = async (messageId) => {
   const authToken = 'ced426ef-dd5d-4a98-84cd-bedbe854bad0';
   const getMessageUrl = `https://api.thenextleg.io/v2/message/${messageId}?expireMins=2`;
@@ -119,20 +143,16 @@ const getMessage = async (messageId) => {
       }
     });
 
-    // Utiliser directement response.data.imageUrl
-    imageUrl.value = response.data.imageUrl;
-    console.log(JSON.stringify(response.data));
-    console.log('Image URL:', imageUrl.value);
+    return response.data.response;
   } catch (error) {
     console.log(error);
   }
 };
 
-// Fonction pour gérer le clic sur le bouton "Imagine"
 const sendMessage = () => {
   requestData.msg = PromptCopie.value.innerText;
-  console.log(PromptCopie.value.innerText);
   postData();
+  imageLoad.value = true;
 };
 
 
@@ -217,9 +237,6 @@ function updateFreePrompt() {
 
 <h2 class="absolute w-full text-center mt-9 font-secondary text-white/20 font-bold">PromptPilot</h2>
 
-<div v-if="imageUrl">
-      <img :src="imageUrl" alt="Generated Image" />
-    </div>
 
                   <!-- Champt de txt -->
 
@@ -251,11 +268,14 @@ function updateFreePrompt() {
         </span>
       </span>
         
-        {{ selectedParams[2] }} {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
+        {{ selectedParams[4] }} {{ selectedParams[5] }} {{ selectedParams[6] }} {{ selectedParams[7] }} {{ selectedParams[8] }}
         {{ cameraAngle.value }} {{ selectedCameraParams[1] }} {{ selectedCameraParams[2] }} {{ selectedCameraParams[3] }} {{ selectedCameraParams[4] }} {{ selectedCameraParams[5] }} {{ selectedCameraParams[6] }}
         
         <span v-if="selectedParams[3] != null">
                   --q {{ selectedParams[3] }}
+        </span>
+        <span v-if="selectedParams[2] != null">
+                  --ar {{ selectedParams[2] }}
         </span>
         <span v-if="selectedParams[1] != null">
                   --v {{ selectedParams[1] }}
@@ -513,17 +533,52 @@ function updateFreePrompt() {
 
                   <!-- box image -->
 
-<div class="w-full flex justify-center mt-8">
-  <button class="bg-blue-600" @click="sendMessage">Générer l'image</button>
+<div class="w-full flex justify-center mt-6">
+  <button v-if="imageLoad == true" class="bg-blue-600 hover:bg-blue-600" disabled>
+    <svg class="h-6 w-6 mx-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="2">
+              <path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z">
+                  <animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/>
+              </path>
+              <path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12">
+                  <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/>
+                  <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+              </path>
+          </g>
+      </svg>
+  </button>
+  <button v-else class="bg-blue-600 after:content-['Délai_de_1min_max'] after:absolute after:block after:text-white after:font-light after:text-xs after:w-full after:-mx-5 after:mt-3" @click="sendMessage">Générer l'image</button>
+</div>
+
+<div v-if="imageUrl" class="w-full flex justify-center mt-14 mb-6">
+  <ul class="flex gap-4">
+    <li><a class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black" :href="imageUrls[0]" target="_blank">1</a></li>
+    <li><a class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black" :href="imageUrls[1]" target="_blank">2</a></li>
+    <li><a class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black" :href="imageUrls[2]" target="_blank">3</a></li>
+    <li><a class="p-4 rounded-lg border-white/40 border-2 bg-blue-600 hover:bg-white hover:text-black" :href="imageUrls[3]" target="_blank">4</a></li>
+  </ul>
+  <span class="absolute block text-white font-light text-xs mt-10">Liens vers les images</span>
 </div>
 
 <div class="w-full flex justify-center px-8 py-6 bg-[#121212]">
-  <div>
-    <MidjourneyApi></MidjourneyApi>
-  </div>
   <div class="flex items-center px-8">
     <div class="rounded-xl flex overflow-hidden border-2 border-white/40">
-      <img class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">
+      <img v-if="imageUrl" class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="imageUrl" alt="Generated Image">
+      <div v-else-if="imageLoad == true" class="w-96 h-96 flex justify-center items-center">
+        <svg class="h-6 w-6 mr-3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="2">
+              <path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z">
+                  <animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/>
+              </path>
+              <path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12">
+                  <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/>
+                  <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+              </path>
+          </g>
+      </svg>
+        Chargement...
+      </div>
+      <img v-else class=" max-h-[600px] lg:max-w-4xl max-w-auto" :src="`${ prompt ? prompt.imageUrl: '' }`">
     </div>
   </div>
 </div>

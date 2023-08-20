@@ -545,13 +545,32 @@
   {"id":"18", "original_prompt":"a fashion illustration of a young female, in the style of alejandro burdisio, colorful pixel-art, fenghua zhong, himalayan art, michael malm, dark cyan and yellow, vibrant neo-traditional",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style":[
+      {"id":"1","item":"a fashion illustration of","cat":"0"}
+    ],
+    "character":[
+      {"id":"2","item":"a young female,","cat":"1"}
+    ],
+    "style2":[
+      {"id":"3","item":"in the style of alejandro burdisio,","cat":"0"}
+    ],
+    "parameter":[
+      {"id":"4","item":"colorful","cat":"9"}
+    ],
+    "style3":[
+      {"id":"5","item":"pixel-art,","cat":"0"}
+    ],
+    "artist":[
+      {"id":"6","item":"fenghua zhong,","cat":"7"},
+      {"id":"7","item":" michael malm,","cat":"7"}
+    ],
+    "style4":[
+      {"id":"8","item":"himalayan art,","cat":"0"}
+    ],
     "object": "",
     "location": "",
     "action": "",
     "color": "",
-    "artist": "",
     "background": "",
     "resolution": "",
     "renderer": "",

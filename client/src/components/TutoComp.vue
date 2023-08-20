@@ -189,6 +189,34 @@ const decrment = () => {
       <div class="h-[9.4rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem]"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem]"></div>
+      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+
+        <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Générer votre image.</p>
+          <p class="flex justify-center">Lorsque vous êtes satisfait de votre prompt, vous pouvez générer l'image en utilisant ce bouton.</p>
+          <p class="flex justify-center mt-4">L'image apparaîtra après environ 20 secondes.</p>
+          <div class="flex justify-center mt-6 gap-12">
+            <button @click="decrment">Retour</button>
+            <button @click="incrment">Suivant</button>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <div v-if="tutoStep == 8" class="grid auto-rows-auto absolute pointer-events-none w-full h-full z-40 max-h-[824px]">
+
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[9.4rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem]"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="h-[4.7rem]"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
@@ -198,7 +226,7 @@ const decrment = () => {
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Partagez votre prompt.</p>
-          <p class="flex justify-center">Lorsque vous êtes satisfait de votre prompt, vous pouvez le partager en utilisant le bouton de partage.</p>
+          <p class="flex justify-center">Vous pouvez également le partager en utilisant le bouton de partage.</p>
           <p class="flex justify-center mt-4">Et si vous souhaitez accéder au site de Midjourney, vous pouvez vous y rendre à l'aide du bouton de gauche.</p>
           <div class="flex justify-center mt-6 gap-12">
             <button @click="decrment">Retour</button>
@@ -207,7 +235,36 @@ const decrment = () => {
         </div>
     </div>
 
-    <div v-if="tutoStep == 8" class="absolute w-full h-full flex justify-center items-center bg-black/50 backdrop-blur-sm z-40">
+
+
+
+    <div v-if="tutoStep == 9" class="grid auto-rows-auto absolute pointer-events-none w-full h-full z-40 max-h-[824px]">
+
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[9.4rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem]"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[9.4rem]"></div>
+      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+
+        <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
+          <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Accéder aux images.</p>
+          <p class="flex justify-center">Lorsque votre image sera générée, ces boutons apparaîtront et vous pourrez ainsi accéder à l'image souhaitée.</p>
+          <div class="flex justify-center mt-6 gap-12">
+            <button @click="decrment">Retour</button>
+            <button @click="incrment">Suivant</button>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <div v-if="tutoStep == 10" class="absolute w-full h-full flex justify-center items-center bg-black/50 backdrop-blur-sm z-40">
         <div class="h-[14rem] w-[40rem] rounded-3xl border-2 border-white/40 bg-neutral-800 p-6">
           <div class="flex justify-center text-xl font-bold mb-6">Fini.</div>
           <p class="flex justify-center text-xl">Merci d'avoir suivi ce tuto.</p>
