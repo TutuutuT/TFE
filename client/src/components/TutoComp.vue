@@ -285,7 +285,9 @@ const decrment = () => {
             <div class="h-5 w-5 rounded-full border-4 border-black -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 4, grey : tutoStep < 4}"></div>
             <div class="h-5 w-5 rounded-full border-4 border-black -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 5, grey : tutoStep < 5}"></div>
             <div class="h-5 w-5 rounded-full border-4 border-black -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 6, grey : tutoStep < 6}"></div>
-            <div class="h-5 w-5 rounded-full border-4 border-black translate-x-0.5 -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 7, grey : tutoStep < 7}"></div>
+            <div class="h-5 w-5 rounded-full border-4 border-black -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 6, grey : tutoStep < 7}"></div>
+            <div class="h-5 w-5 rounded-full border-4 border-black -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 6, grey : tutoStep < 8}"></div>
+            <div class="h-5 w-5 rounded-full border-4 border-black translate-x-0.5 -mt-[0.55rem] duration-200 transition-all" :class="{ white : tutoStep >= 9, grey : tutoStep < 9}"></div>
         </div>
     </div>
 

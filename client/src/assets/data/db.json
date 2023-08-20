@@ -3,23 +3,23 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"National Geographic featured photo","cat":"0"}
+      {"id":"1","item":"National Geographic featured photo ","cat":"0"}
     ],
-    "character": [
-      {"id":"2","item":"of a gorge","cat":"1"}
+    "style2": [
+      {"id":"2","item":"of Landscape photography ","cat":"0"}
     ],
     "object": [
-      {"id":"3","item":"of a gorge","cat":"2"}
+      {"id":"3","item":"of a gorge ","cat":"2"}
     ],
     "location": [
-      {"id":"4","item":"in a forest","cat":"3"},
-      {"id":"5","item":"with a fast flowing stream","cat":"3"}
+      {"id":"4","item":"in a forest ","cat":"3"},
+      {"id":"5","item":"with a fast flowing stream ","cat":"3"}
     ],
     "action": "",
     "color": "",
     "artist": "",
     "background": [
-      {"id":"6","item":"fallen trees and dense vegetation","cat":"7"}
+      {"id":"6","item":"fallen trees and dense vegetation ","cat":"7"}
     ],
     "resolution": "",
     "renderer": "",
@@ -32,14 +32,14 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"kodak portra 800 film stock","cat":"0"},
-      {"id":"2","item":"low angle shot3","cat":"0"}
+      {"id":"1","item":"kodak portra 800 film stock ","cat":"0"},
+      {"id":"2","item":"low angle shot3 ","cat":"0"}
     ],
     "character": [
-      {"id":"3","item":"of a ruby ac cobra seen","cat":"1"}
+      {"id":"3","item":"of a ruby ac cobra seen ","cat":"1"}
     ],
     "object": [
-      {"id":"4","item":"with red neon sign lighting","cat":"2"}
+      {"id":"4","item":"with red neon sign lighting ","cat":"2"}
     ],
     "location": [
       
@@ -51,7 +51,7 @@
     "resolution": "",
     "renderer": "",
     "lighting": [
-      {"id":"5","item":"glares and red reflections","cat":"10"}
+      {"id":"5","item":"glares and red reflections ","cat":"10"}
     ],
     "parameters": [
       {"id":"6","item":"seen at ground level","cat":"11"}
@@ -88,7 +88,7 @@
     "details": [
       {"id":"8","item":"hyper-detailed, ","cat":"9"},
       {"id":"9","item":"digital art, ","cat":"9"},
-      {"id":"10","item":"mechanical realism ","cat":"9"}
+      {"id":"10","item":"mechanical realism","cat":"9"}
       
     ]},
   "imageUrl": "./assets/MidjourneyImages/anubis.webp"
@@ -290,7 +290,7 @@
       {"id":"9","item":"nature, ","cat":"2"},
       {"id":"10","item":"environment, ","cat":"2"},
       {"id":"11","item":"forest, ","cat":"2"},
-      {"id":"12","item":"mountain, ","cat":"2"}
+      {"id":"12","item":"mountain","cat":"2"}
     ],
     "object": "",
     "location": "",
@@ -309,14 +309,14 @@
   "detailed_prompt": {
     "category":"",
     "character": [
-      {"id":"3","item":"The universe in her eyes.","cat":"1"}
+      {"id":"1","item":"The universe in her eyes. ","cat":"1"}
     ],
     "style": [
-      {"id":"3","item":"In the style of Peter Henry Emerson, ","cat":"0"},
+      {"id":"2","item":"In the style of Peter Henry Emerson, ","cat":"0"},
       {"id":"3","item":"Victor Enrich, ","cat":"0"},
-      {"id":"3","item":"Anna Dittmann, ","cat":"0"},
-      {"id":"3","item":"Carlos Cruz, ","cat":"0"},
-      {"id":"3","item":"abstract surrealism","cat":"0"}
+      {"id":"4","item":"Anna Dittmann, ","cat":"0"},
+      {"id":"5","item":"Carlos Cruz, ","cat":"0"},
+      {"id":"6","item":"abstract surrealism","cat":"0"}
     ],
     "object": "",
     "location": "",
@@ -370,24 +370,21 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"a cute fluffy chubby marmot","cat":"0"}
-    ],
-    "character": [
-      {"id":"2","item":"a cute fluffy chubby marmot","cat":"1"}
+      {"id":"1","item":"a cute fluffy chubby marmot ","cat":"0"}
     ],
     "object": "",
     "action": [
-      {"id":"3","item":"sunbathing","cat":"4"}
+      {"id":"3","item":"sunbathing ","cat":"4"}
     ],
     "location": [
-      {"id":"4","item":"on a pile of rocks,","cat":"3"}
+      {"id":"4","item":"on a pile of rocks, ","cat":"3"}
     ],
     "color": "",
     "artist": "",
     "background": [
-      {"id":"5","item":"snow mountains background,","cat":"7"},
-      {"id":"6","item":"turquoise glacier lake afar,","cat":"7"},
-      {"id":"7","item":"clear blue sky,","cat":"7"}
+      {"id":"5","item":"snow mountains background, ","cat":"7"},
+      {"id":"6","item":"turquoise glacier lake afar, ","cat":"7"},
+      {"id":"7","item":"clear blue sky, ","cat":"7"}
     ],
     "resolution": "",
     "renderer": "",
@@ -476,15 +473,15 @@
   "detailed_prompt": {
     "category":"",
     "style": [
-      {"id":"1","item":"National Geographic featured photo of","cat":"0"},
-      {"id":"2","item":"a colorful","cat":"0"},
-      {"id":"3","item":"and ornate","cat":"0"}
+      {"id":"1","item":"National Geographic featured photo of ","cat":"0"},
+      {"id":"2","item":"a colorful ","cat":"0"},
+      {"id":"3","item":"and ornate ","cat":"0"}
     ],
     "character":[
-      {"id":"3","item":"bower bird,","cat":"1"}
+      {"id":"3","item":"bower bird, ","cat":"1"}
     ],
     "object": [
-      {"id":"4","item":"richly decorated feathers,","cat":"2"}
+      {"id":"4","item":"richly decorated feathers, ","cat":"2"}
     ],
     "location": "",
     "action": "",
@@ -494,15 +491,15 @@
     "renderer": "",
     "lighting": "",
     "parameters": [
-      {"id":"5","item":"elaborate details,","cat":"9"},
-      {"id":"6","item":"beautiful,","cat":"9"},
-      {"id":"7","item":"dynamic composition","cat":"9"},
-      {"id":"8","item":"and dramatic lighting,","cat":"9"}
+      {"id":"5","item":"elaborate details, ","cat":"9"},
+      {"id":"6","item":"beautiful, ","cat":"9"},
+      {"id":"7","item":"dynamic composition ","cat":"9"},
+      {"id":"8","item":"and dramatic lighting, ","cat":"9"}
     ],
     "color": [
-      {"id":"9","item":"blue,","cat":"5"},
-      {"id":"10","item":"red,","cat":"5"},
-      {"id":"11","item":"turquoise,","cat":"5"},
+      {"id":"9","item":"blue, ","cat":"5"},
+      {"id":"10","item":"red, ","cat":"5"},
+      {"id":"11","item":"turquoise, ","cat":"5"},
       {"id":"12","item":"orange","cat":"5"}
     ]
   },
@@ -513,18 +510,18 @@
   "detailed_prompt": {
     "category":"",
     "character":[
-      {"id":"1","item":"a girl","cat":"1"}
+      {"id":"1","item":"a girl ","cat":"1"}
     ],
     "object": "",
     "location": "",
     "action": [
-      {"id":"2","item":"with face looks up,","cat":"4"}
+      {"id":"2","item":"with face looks up, ","cat":"4"}
     ],
     "style": [
-      {"id":"3","item":"in the style of horror-inspired,","cat":"0"}
+      {"id":"3","item":"in the style of horror-inspired, ","cat":"0"}
     ],
     "color": [
-      {"id":"4","item":"dark gray and blue,","cat":"5"}
+      {"id":"4","item":"dark gray and blue, ","cat":"5"}
     ],
     "artist": "",
     "background": "",
@@ -532,10 +529,10 @@
     "renderer": "",
     "lighting": "",
     "parameters": [
-      {"id":"5","item":"32k uhd,","cat":"9"},
-      {"id":"6","item":"hyper-realistic water,","cat":"9"},
-      {"id":"7","item":"gothcore,","cat":"9"},
-      {"id":"8","item":"zombiecore,","cat":"9"},
+      {"id":"5","item":"32k uhd, ","cat":"9"},
+      {"id":"6","item":"hyper-realistic water, ","cat":"9"},
+      {"id":"7","item":"gothcore, ","cat":"9"},
+      {"id":"8","item":"zombiecore, ","cat":"9"},
       {"id":"9","item":"shiny eyes","cat":"9"}
     ]
   },
@@ -546,26 +543,32 @@
   "detailed_prompt": {
     "category":"",
     "style":[
-      {"id":"1","item":"a fashion illustration of","cat":"0"}
+      {"id":"1","item":"a fashion illustration of ","cat":"0"}
     ],
     "character":[
-      {"id":"2","item":"a young female,","cat":"1"}
+      {"id":"2","item":"a young female, ","cat":"1"}
     ],
     "style2":[
-      {"id":"3","item":"in the style of alejandro burdisio,","cat":"0"}
+      {"id":"3","item":"in the style of alejandro burdisio, ","cat":"0"}
     ],
     "parameter":[
-      {"id":"4","item":"colorful","cat":"9"}
+      {"id":"4","item":"colorful ","cat":"9"}
     ],
     "style3":[
-      {"id":"5","item":"pixel-art,","cat":"0"}
+      {"id":"5","item":"pixel-art, ","cat":"0"}
     ],
     "artist":[
-      {"id":"6","item":"fenghua zhong,","cat":"7"},
-      {"id":"7","item":" michael malm,","cat":"7"}
+      {"id":"6","item":"fenghua zhong, ","cat":"7"},
+      {"id":"7","item":" michael malm, ","cat":"7"}
     ],
     "style4":[
-      {"id":"8","item":"himalayan art,","cat":"0"}
+      {"id":"8","item":"himalayan art, ","cat":"0"}
+    ],
+    "colors":[
+      {"id":"9","item":"dark cyan and yellow, ","cat":"5"}
+    ],
+    "Style5":[
+      {"id":"10","item":"vibrant neo-traditional","cat":"0"}
     ],
     "object": "",
     "location": "",
@@ -579,22 +582,35 @@
   "imageUrl": "./assets/MidjourneyImages/yellow.webp"
 },
 
-  {"id":"19", "original_prompt":"an illustration of a night scene with the clock tower near by, in the style of sam spratt, aerial view, xbox 360 graphics, victorian, detailed cityscapes, detailed sketches, impressive panoramas",
+  {"id":"19", "original_prompt":"A cinmatic scene from Openheimer trinity explosion, filmed in imax, film directed by Nolan, --ar 1:1 Eye-Level, Full-body, Kodak Gold 200, --v 5",
   "detailed_prompt": {
     "category":"",
-    "style": ["simple"],
-    "character": ["planet" , "patern"],
+    "style":[
+      {"id":"1","item":"A cinmatic scene ","cat":"0"}
+    ],
+    "character":[
+      {"id":"2","item":"from Openheimer trinity explosion, ","cat":"1"}
+    ],
+    "renderer":[
+      {"id":"3","item":"filmed in imax, ","cat":"8"}
+    ],
+    "artist":[
+      {"id":"4","item":"directed by Nolan, ","cat":"6"}
+    ],
+    "parameter":[
+      {"id":"5","item":"--ar 1:1 ","cat":"9"},
+      {"id":"6","item":"Eye-Level,  ","cat":"9"},
+      {"id":"7","item":"Kodak Gold 200","cat":"9"}
+    ],
     "object": "",
     "location": "",
     "action": "",
     "color": "",
-    "artist": "",
     "background": "",
     "resolution": "",
-    "renderer": "",
     "lighting": "",
     "parameters": ""},
-  "imageUrl": "./assets/MidjourneyImages/london.webp"
+  "imageUrl": "./assets/MidjourneyImages/openhei.png"
 }
 ],
 
@@ -806,24 +822,28 @@
       "id":"3",
       "title":"objets",
       "elements":[
-        
+        {"name":"a mug, ", "imageUrl": "./assets/categoriesImages/mug.jpeg"},
+        {"name":"a sword, ", "imageUrl": "./assets/categoriesImages/sword.webp"},
+        {"name":"a flail, ", "imageUrl": "./assets/categoriesImages/flail.jpeg"},
+        {"name":"money, ", "imageUrl": "./assets/categoriesImages/money.jpeg"},
+        {"name":"a car, ", "imageUrl": "./assets/categoriesImages/car.jpg"}
       ]},
     {
       "id":"4",
       "title":"environnement",
       "elements":[
-        {"name":"on earth, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in space, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in a bar, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"fashion show, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"in a battle, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"on earth, ", "imageUrl": "./assets/categoriesImages/earth.jpeg"},
+        {"name":"in space, ", "imageUrl": "./assets/categoriesImages/space.jpeg"},
+        {"name":"in a bar, ", "imageUrl": "./assets/categoriesImages/bar.jpeg"},
+        {"name":"fashion show, ", "imageUrl": "./assets/categoriesImages/show.webp"},
+        {"name":"in a battle, ", "imageUrl": "./assets/categoriesImages/battle.webp"}
       ]},
     {
       "id":"5",
       "title":"action",
       "elements":[
-        {"name":"Dynamic Pose, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"},
-        {"name":"under a torrent of rain, ", "imageUrl": "./assets/categoriesImages/realistic.jpg"}
+        {"name":"Dynamic Pose, ", "imageUrl": "./assets/categoriesImages/realistic.jpeg"},
+        {"name":"under a torrent of rain, ", "imageUrl": "./assets/categoriesImages/rain.jpeg"}
       ]},
     {
       "id":"6",
@@ -837,7 +857,13 @@
       "id":"7",
       "title":"artist",
       "elements":[
-        
+        {"name":"Esao Andrews, ", "imageUrl": "./assets/categoriesImages/esao.jpeg"},
+        {"name":"Lois van Baarle, ", "imageUrl": "./assets/categoriesImages/lois.jpg"},
+        {"name":"Richard Corben, ", "imageUrl": "./assets/categoriesImages/richard.jpeg"},
+        {"name":"Pino Daeni, ", "imageUrl": "./assets/categoriesImages/pino.jpeg"},
+        {"name":"Philippe Druillet, ", "imageUrl": "./assets/categoriesImages/philip.jpeg"},
+        {"name":"Roberto Ferri, ", "imageUrl": "./assets/categoriesImages/roberto.jpeg"},
+        {"name":"Zdzisław Beksiński, ", "imageUrl": "./assets/categoriesImages/zdz.jpeg"}
       ]},
     {
       "id":"8",
@@ -850,7 +876,7 @@
       ]},
     {
       "id":"9",
-      "title":"renderer",
+      "title":"rendu",
       "elements":[
         {"name":"octane render, ", "imageUrl": "./assets/categoriesImages/octane.jpg"},
         {"name":"Unreal Engine 5, ", "imageUrl": "./assets/categoriesImages/unreal.jpg"}
