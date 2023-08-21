@@ -801,11 +801,10 @@
         {"name":"Dog, ", "imageUrl": "./assets/categoriesImages/dog.jpg"},
         {"name":"Cat, ", "imageUrl": "./assets/categoriesImages/cat.jpg"},
         {"name":"Human, ", "imageUrl": "./assets/categoriesImages/human.jpg"},
-        {"name":"Snake, ", "imageUrl": "./assets/categoriesImages/snake.jpg"},
-        {"name":"unicorn, ", "imageUrl": "./assets/categoriesImages/unicorn.jpg"},
-        {"name":"a man and little child, ", "imageUrl": "./assets/categoriesImages/man.jpg"},
-        {"name":"a robot, ", "imageUrl": "./assets/categoriesImages/robot.jpg"},
-        {"name":"photo of interior design, ", "imageUrl": "./assets/categoriesImages/interior.jpg"}
+        {"name":"Snake, ", "imageUrl": "./assets/categoriesImages/snake.webp"},
+        {"name":"unicorn, ", "imageUrl": "./assets/categoriesImages/unicorn.jpeg"},
+        {"name":"a robot, ", "imageUrl": "./assets/categoriesImages/robo.jpeg"},
+        {"name":"photo of interior design, ", "imageUrl": "./assets/categoriesImages/interior.jpeg"}
       ]},
     {
       "id":"3",
@@ -815,7 +814,7 @@
         {"name":"a sword, ", "imageUrl": "./assets/categoriesImages/sword.webp"},
         {"name":"a flail, ", "imageUrl": "./assets/categoriesImages/flail.jpeg"},
         {"name":"money, ", "imageUrl": "./assets/categoriesImages/money.jpeg"},
-        {"name":"a car, ", "imageUrl": "./assets/categoriesImages/car.jpg"}
+        {"name":"a car, ", "imageUrl": "./assets/categoriesImages/car.jpeg"}
       ]},
     {
       "id":"4",
@@ -858,10 +857,10 @@
       "id":"8",
       "title":"background",
       "elements":[
-        {"name":"futuristic city on the background, ", "imageUrl": "./assets/categoriesImages/city.jpg"},
-        {"name":"forest in the background, ", "imageUrl": "./assets/categoriesImages/forest.jpg"},
-        {"name":"colorful garden, ", "imageUrl": "./assets/categoriesImages/garden.jpg"},
-        {"name":"blue sky, ", "imageUrl": "./assets/categoriesImages/sky.jpg"}
+        {"name":"futuristic city on the background, ", "imageUrl": "./assets/categoriesImages/city.png"},
+        {"name":"forest in the background, ", "imageUrl": "./assets/categoriesImages/forest.png"},
+        {"name":"colorful garden, ", "imageUrl": "./assets/categoriesImages/garden.jpeg"},
+        {"name":"blue sky, ", "imageUrl": "./assets/categoriesImages/sky.jpeg"}
       ]},
     {
       "id":"9",
@@ -874,8 +873,8 @@
       "id":"10",
       "title":"details",
       "elements":[
-        {"name":"ultra details, ", "imageUrl": "./assets/categoriesImages/ultra.jpg"},
-        {"name":"Sharp Details, ", "imageUrl": "./assets/categoriesImages/sharp.jpg"}
+        {"name":"ultra details, ", "imageUrl": "./assets/categoriesImages/ultra.webp"},
+        {"name":"Sharp Details, ", "imageUrl": "./assets/categoriesImages/sharp.png"}
       ]},
      {
       "id":"11",
