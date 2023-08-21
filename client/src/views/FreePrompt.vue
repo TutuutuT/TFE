@@ -35,7 +35,6 @@ const share = (network) => {
   message.value = PromptCopie.value.innerText;
   const shareUrl = getShareUrl(network, message.value);
   window.open(shareUrl, '_blank');
-  console.log(message.value);
   // Faites quelque chose avec l'URL de partage, par exemple, ouvrez une nouvelle fenêtre avec l'URL
 };
 
@@ -90,6 +89,7 @@ const requestHeaders = {
 
 // URL de l'image générée
 const imageUrl = ref("");
+const imageUrls = ref([]);
 
 // Fonction pour effectuer la requête POST
 const postData = async () => {
