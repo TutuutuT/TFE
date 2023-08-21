@@ -39,8 +39,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Pour commencer, le champ de texte avec le prompt.</p>
@@ -62,8 +62,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Penchons-nous sur les termes</p>
@@ -87,8 +87,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Ajouter des termes personalisés</p>
@@ -113,8 +113,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Exclure des termes personalisés</p>
@@ -139,8 +139,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Les paramètres caméra.</p>
@@ -166,8 +166,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class=" h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Les paramètres Midjourney.</p>
@@ -193,8 +193,8 @@ const decrment = () => {
       <div class="h-[4.7rem]"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Générer votre image.</p>
@@ -221,8 +221,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Partagez votre prompt.</p>
@@ -248,8 +248,8 @@ const decrment = () => {
       <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
       <div class="h-[9.4rem]"></div>
-      <div class="bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
-      <div class=" bg-black/50 backdrop-blur-sm h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
+      <div class="h-[4.7rem] pointer-events-auto"></div>
 
         <div class="absolute bottom-6 max-w-sm left-6 rounded-3xl border-2 pointer-events-auto border-white/40 bg-neutral-800 p-6">
           <p class="flex justify-center text-xl text-center mb-4 pb-4 border-b-2 border-white/40">Accéder aux images.</p>

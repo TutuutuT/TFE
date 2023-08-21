@@ -721,17 +721,6 @@
             {"paramId":"10", "param":"Tintype, ", "imageUrl":"./assets/categoriesImages/tiny.jpg"}
           ]},
         {
-          "id":"4",
-          "title":"ISO",
-          "params":[
-            {"paramId":"1", "param":"200 iso"},
-            {"paramId":"2", "param":"400 iso"},
-            {"paramId":"3", "param":"800 iso"},
-            {"paramId":"4", "param":"1600 iso"},
-            {"paramId":"5", "param":"3200 iso"},
-            {"paramId":"6", "param":"6400 iso"}
-          ]},
-        {
           "id":"5",
           "title":"Shutter",
           "params":[
